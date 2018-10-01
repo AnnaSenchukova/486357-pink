@@ -5,8 +5,475 @@
     <title>HTML Academy: Пинк</title>
   </head>
   <body>
+<header class = "page-header">
+  <nav class = "page-navigation">
+    <a class = "page-navigation__logo logo">
+      <img class="logo__image" src="img/logo.svg" alt="Логотип промо-сайта для приложения Pink">
+    </a>
+<button class="page-navigation__button" type="button">
+  <span class="visually-hidden">Кнопка взаимодействия с меню</span>
+</button>
+    <ul class="page-navigation__list site-list">
+      <li class="site-list__item site-list__item--active">
+        <a class="site-list__link">
+          Главная
+        </a>
+      </li>
+      <li class="site-list__item">
+        <a class="site-list__link" href="photo.html">
+          Фотографии
+        </a>
+      </li>
+      <li class="site-list__item">
+        <a class="site-list__link" href="contest.html">
+          Конкурс
+        </a>
+      </li>
+      <li class="site-list__item">
+        <a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive">
+          HTML Academy
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+  <main class="page-main">
+    <h1 class="visually-hidden">
+      Промо-сайт приложения Pink
+    </h1>
+    <section class="page-main__promotion promotion">
+      <h2 class="visually-hidden">
+        Установите приложение Pink!
+      </h2>
+      <img class="promotion__image" src="img/pink-effect.png" alt="Pink-эффект от использования приложения на вашем смартфоне">
+      <a class="promotion__button button button--download" href="https://www.apple.com/ru/itunes/"aria-label="Ссылка на iTunes">
+          Скачать приложние
+        </a>
+      <div class="promotion__wrapper">
+      <ul class="promotion__market">
+<li class="promotion__market-item">
+  <a class="promotion__market-link promotion__market-link--itunes">
+    <span class="visually-hidden">
+      iTunes
+    </span>
+  </a>
+</li>
+        <li class="promotion__market-item">
+          <a class="promotion__market-link promotion__market-link--android">
+    <span class="visually-hidden">
+      Android
+    </span>
+          </a>
+        </li>
+        <li class="promotion__market-item">
+          <a class="promotion__market-link promotion__market-link--microsoft">
+    <span class="visually-hidden">
+      Microsoft Store
+    </span>
+          </a>
+        </li>
+      </ul>
+      <p>
+        Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+      </p>
+      </div>
+    </section>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Профессиональный HTML и CSS</a>», уровень 2.</p>
+    <section class="page-main__advantages advantages">
+      <h2 class="visually-hidden">
+        Наши преимущества.
+      </h2>
+      <b class="advantages__slogan">
+        Устали от серости мегаполиса?
+      </b>
+      <b class="advantages__slogan">
+        Нам есть, что вам предложить!
+      </b>
+      <ul class="advantages__list">
+        <li class="advantages__item">
+          <h3 class="advantages__title">
+            Поднимает настроение
+          </h3>
+          <p class="advantages__description">
+            Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
+          </p>
+        </li>
+        <li class="advantages__item">
+          <h3 class="advantages__title">
+            Меняет мир вокруг
+          </h3>
+          <p class="advantages__description">
+            Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
+          </p>
+        </li>
+        <li class="advantages__item">
+          <h3 class="advantages__title">
+            Заводит новых друзей
+          </h3>
+          <p class="advantages__description">
+            Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
+          </p>
+        </li>
+      </ul>
+    </section>
 
+    <section class="page-main__comments comments">
+      <h2 class="visually-hidden">
+        Отзывы тех, кто уже установил себе приложение Pink
+      </h2>
+      <div class="comments__wrapper slider">
+        <div class="comments__list slider__list">
+          <blockquote class="comments__item slider__item">
+            <p class="comments__text">
+              Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я
+              познакомился со своей будущей женой в комментариях к выложенной фотографии!
+            </p>
+            <cite class="comments__author">
+              Николай Петров
+            </cite>
+          </blockquote>
+        </div>
+        <p class="comments__toggles slider__toggles">
+          <button class="slider__toggle" type="button">1</button>
+          <button class="slider__toggle" type="button">2</button>
+          <button class="slider__toggle" type="button">3</button>
+        </p>
+      </div>
+    </section>
+
+    <section class="page-main__subscription subscription">
+      <h2 class="visually-hidden">
+        Выбирите свой тарифный план
+      </h2>
+      <div class="subscription__wrapper slider">
+        <ul class="subscription__tariffs-list slider__list">
+          <li class="slider__item">
+            <table class="subscription__tariff">
+              <thead class="subscription__tariff-caption">
+              <th class="subscription__tariff-marker">
+                <h3 class="subscription__tariff-name">
+                  Стандарт
+                </h3>
+                <span class="subscription__tariff-price">
+                    3,99 USD
+                </span>
+              </th>
+              </thead>
+              <tr class="subscription__tariff-options">
+                <td class="subscription__option-name">
+                  Розовый фильтр
+                </td>
+                <td class="subscription__option-are subscription__option-are--options-enabled">
+                  <span class="visually-hidden">
+                    есть
+                  </span>
+                </td>
+              </tr>
+              <tr class="subscription__tariff-options">
+                <td class="subscription__option-name">
+                  Смайлики
+                </td>
+                <td class="subscription__option-are subscription__option-are--disabled">
+                  <span class="visually-hidden">
+                    нет
+                  </span>
+                </td>
+              </tr>
+              <tr class="subscription__tariff-options">
+                <td class="subscription__option-name">
+                  Комментарии
+                </td>
+                <td class="subscription__option-are subscription__option-are--disabled">
+                  <span class="visually-hidden">
+                    нет
+                  </span>
+                </td>
+            </table>
+          </li>
+          <li class="slider__item">
+            <table class="subscription__tariff">
+              <thead class="subscription__tariff-caption">
+              <th class="subscription__tariff-marker">
+                <h3 class="subscription__tariff-name">
+                  Стандарт
+                </h3>
+                <span class="subscription__tariff-price">
+                    3,99 USD
+                  </span>
+              </th>
+              </thead>
+              <tr class="subscription__tariff-options">
+                <td class="subscription__option-name">
+                  Розовый фильтр
+                </td>
+                <td class="subscription__option-are subscription__option-are--options-enabled">
+                  <span class="visually-hidden">
+                    есть
+                  </span>
+                </td>
+              </tr>
+              <tr class="subscription__tariff-options">
+                <td class="subscription__option-name">
+                  Смайлики
+                </td>
+                <td class="subscription__option-are subscription__option-are--disabled">
+                  <span class="visually-hidden">
+                    есть
+                  </span>
+                </td>
+              </tr>
+              <tr class="subscription__tariff-options">
+                <td class="subscription__option-name">
+                  Комментарии
+                </td>
+                <td class="subscription__option-are subscription__option-are--disabled">
+                  <span class="visually-hidden">
+                    нет
+                  </span>
+                </td>
+            </table>
+          </li>
+          <li class="slider__item">
+            <table class="subscription__tariff">
+              <thead class="subscription__tariff-caption">
+              <th class="subscription__tariff-marker">
+                <h3 class="subscription__tariff-name">
+                  Стандарт
+                </h3>
+                <span class="subscription__tariff-price">
+                    3,99 USD
+                </span>
+              </th>
+              </thead>
+              <tr class="subscription__tariff-options">
+                <td class="subscription__option-name">
+                  Розовый фильтр
+                </td>
+                <td class="subscription__option-are subscription__option-are--options-enabled">
+                  <span class="visually-hidden">
+                    есть
+                  </span>
+                </td>
+              </tr>
+              <tr class="subscription__tariff-options">
+                <td class="subscription__option-name">
+                  Смайлики
+                </td>
+                <td class="subscription__option-are subscription__option-are--disabled">
+                  <span class="visually-hidden">
+                    есть
+                  </span>
+                </td>
+              </tr>
+              <tr class="subscription__tariff-options">
+                <td class="subscription__option-name">
+                  Комментарии
+                </td>
+                <td class="subscription__option-are subscription__option-are--disabled">
+                  <span class="visually-hidden">
+                    есть
+                  </span>
+                </td>
+            </table>
+          </li>
+        </ul>
+      </div>
+      <p class="subscription__toggles slider__toggles">
+        <button class="slider__toggle" type="button">1</button>
+        <button class="slider__toggle" type="button">2</button>
+        <button class="slider__toggle" type="button">3</button>
+      </p>
+      </div>
+
+<!--
+          <table class="subscription__tariff">
+            <thead class="subscription__tariff-caption">
+            <tr class=subscription__tariff-description>
+              <th class="subscription__tariff-marker visually-hidden">
+                Тарифный план
+              </th>
+              <th class=subscription__tariff-marker>
+                <h3 class="subscription__tariff-name">
+                  Стандарт
+                </h3>
+                <span class="subscription__tariff-price">
+                    3,99 USD
+                </span>
+              </th>
+              <th>
+                <h3 class="subscription__tariff-name">
+                  Стандарт
+                </h3>
+                <span class="subscription__tariff-price">
+                    3,99 USD
+                </span>
+              </th>
+              <th>
+                <h3 class="subscription__tariff-name">
+                  Стандарт
+                </h3>
+                <span class="subscription__tariff-price">
+                    3,99 USD
+                </span>
+              </th>
+            </tr>
+            </thead>
+            <tr class="subscription__tariff-options">
+              <td class="subscription__option-name">
+                Розовый фильтр
+              </td>
+              <td class="subscription__option-are subscription__option-are--options-enabled">
+                <span class="subscription__option-name">
+                Розовый фильтр
+                </span>
+                <span class="visually-hidden">
+                есть
+                </span>
+              </td>
+              <td class="subscription__option-are subscription__option-are--options-enabled">
+                <span class="subscription__option-name">
+                Розовый фильтр
+                </span>
+                <span class="visually-hidden">
+                есть
+                </span>
+              </td>
+              <td class="subscription__option-are subscription__option-are--options-enabled">
+                <span class="subscription__option-name">
+                Розовый фильтр
+                </span>
+                <span class="visually-hidden">
+                есть
+                </span>
+              </td>
+            </tr>
+            <tr class="subscription__tariff-options">
+              <td class="subscription__option-name">
+                Смайлики
+              </td>
+              <td class="subscription__option-are subscription__option-are--disabled">
+                <span class="subscription__option-name">
+                Смайлики
+                </span>
+                <span class="visually-hidden">
+                нет
+                </span>
+              </td>
+              <td class="subscription__option-are subscription__option-are--options-enabled">
+                <span class="subscription__option-name">
+                Смайлики
+                </span>
+                <span class="visually-hidden">
+                есть
+                </span>
+              </td>
+              <td class="subscription__option-are subscription__option-are--options-enabled">
+                <span class="subscription__option-name">
+                Смайлики
+                </span>
+                <span class="visually-hidden">
+                есть
+                </span>
+              </td>
+            </tr>
+            <tr class="subscription__tariff-options">
+              <td class="subscription__option-name">
+                Комментарии
+              </td>
+              <td class="subscription__option-are subscription__option-are--disabled">
+                <span class="subscription__option-name">
+                Комментарии
+                </span>
+                <span class="visually-hidden">
+                нет
+                </span>
+              </td>
+              <td class="subscription__option-are subscription__option-are--disabled">
+                <span class="subscription__option-name">
+                Комментарии
+                </span>
+                <span class="visually-hidden">
+                нет
+                </span>
+              </td>
+              <td class="subscription__option-are subscription__option-are--options-enabled">
+                <span class="subscription__option-name">
+                Комментарии
+                </span>
+                <span class="visually-hidden">
+                есть
+                </span>
+              </td>
+            </tr>
+          </table>
+-->
+    </section>
+    <section class="contacts">
+      <h2 class="visually-hidden">
+        Контактная информация
+      </h2>
+      <b class="contacts__slogan">
+        Остались вопросы?
+      </b>
+      <b class="contacts__slogan">
+        Свяжитесь с нами!
+      </b>
+      <p class="contacts__title">
+        Звоните:
+      </p>
+      <p class="contacts__description">
+        +7 (812) 555-66-66
+      </p>
+      <p class="contacts__title">
+        Пишите:
+      </p>
+      <p class="contacts__description">
+        mail@htmlacademy.ru
+      </p>
+      <p class="contacts__title">
+        Приезжайте в гости:
+      </p>
+      <p class="contacts__description">
+        ул. Большая Конюшенная, 19/8
+      </p>
+      <section class="map"></section>
+    </section>
+  </main>
+<footer class="page-footer">
+  <a class="page-footer__logo logo--down" href="index.html">
+    <img class="logo__image--down" src="img/logo-down.svg" alt="Логотип промо-сайта для приложения Pink. Ссылка на главную страницу">
+  </a>
+  <ul class="page-footer__social social">
+    <li class="social__item">
+      <a class="social__link social__link--tw" href="https://www.twitter.com">
+            <span class="visually-hidden">
+              Twitter
+            </span>
+      </a>
+    </li>
+    <li class="social__item">
+      <a class="social__link social__link--fb" href="https://www.facebook.com">
+            <span class="visually-hidden">
+              Facebook
+            </span>
+      </a>
+    </li>
+    <li class="social__item">
+      <a class="social__link social__link--youtube" href="https://www.youtube.com">
+            <span class="visually-hidden">
+              YouTube
+            </span>
+      </a>
+    </li>
+  </ul>
+  <a class="page-footer__copyright-link copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">
+    <p class="copyright-link__description">
+      Разработано
+    </p>
+    <p class="visually-hidden">
+      HTML Academy
+    </p>
+  </a>
+</footer>
   </body>
 </html>
