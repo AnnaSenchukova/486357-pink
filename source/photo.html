@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>HTML Academy: Пинк</title>
+  <meta charset="UTF-8">
+  <title>HTML Academy: Пинк</title>
 </head>
 <body>
 <header class="page-header">
@@ -38,196 +38,246 @@
   </nav>
 </header>
 <main class="page-main">
-  <h1 class="page-main__caption">
-    Фотографии пользователей
-  </h1>
-  <p class="page-main__description">
-    Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
-  </p>
-  <ul class="user-photo__list">
-<li class="user-photo__item">
-      <blokquote class="user-photo__upload">
-        <p class="user-photo__pictures">
-          <img class="user-photo__image" src="img/photo.jpg" alt="Фото загруженное пользователем">
-        </p>
-        <cite class="user-photo__autor">
-          Анна
-        </cite>
-        <time class="user-photo__time">
-          (5 минут назад)
-        </time>
-        <p class="user-photo__comment">
-          Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!
-        </p>
-      </blokquote>
-      <p class="user-photo__likes">
+  <header class="page-main__header header">
+    <h1 class="header__caption">
+      Фотографии пользователей
+    </h1>
+  </header>
+  <section class="user-photo">
+    <h2 class="visually-hidden">
+      Галерея фотографий
+    </h2>
+    <p class="user-photo__description">
+      Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
+    </p>
+    <ul class="user-photo__list">
+      <li class="user-photo__item">
+        <blockquote class="user-photo__upload">
+          <a class="user-photo__link" href="#">
+            <img class="user-photo__link-image" src="img/photo.jpg" alt="Фото загруженное пользователем">
+          </a>
+          <cite class="user-photo__autor">
+            Анна
+          </cite>
+          <time class="user-photo__time">
+            (5 минут назад)
+          </time>
+          <p class="user-photo__comment">
+            Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои
+            вопросы!
+          </p>
+        </blockquote>
+        <p class="user-photo__likes">
           <span class="user-photo__likes-text">
             Нравится:
           </span>
           <span class="user-photo__likes-count">
             215
           </span>
-      </p>
-</li>
-    <li class="user-photo__item">
-      <blokquote class="user-photo__upload">
-        <p class="user-photo__pictures">
-          <img class="user-photo__image" src="img/photo.jpg" alt="Фото загруженное пользователем">
         </p>
-        <cite class="user-photo__autor">
-          Левон
-        </cite>
-        <time class="user-photo__time">
-          (5 часов назад)
-        </time>
-        <p class="user-photo__comment">
-          Вчера он на луну летал, сегодня в руки к нам попал.
-        </p>
-      </blokquote>
-      <p class="user-photo__likes">
+      </li>
+      <li class="user-photo__item">
+        <blockquote class="user-photo__upload">
+          <a class="user-photo__link" href="#">
+            <img class="user-photo__link-image" src="img/photo.jpg" alt="Фото загруженное пользователем">
+          </a>
+          <cite class="user-photo__autor">
+            Левон
+          </cite>
+          <time class="user-photo__time">
+            (5 часов назад)
+          </time>
+          <p class="user-photo__comment">
+            Вчера он на луну летал, сегодня в руки к нам попал.
+          </p>
+        </blockquote>
+        <p class="user-photo__likes">
           <span class="user-photo__likes-text">
             Нравится:
           </span>
-        <span class="user-photo__likes-count">
+          <span class="user-photo__likes-count">
             356
           </span>
-      </p>
-    </li>
-    <li class="user-photo__item">
-    <blokquote class="user-photo__upload">
-      <p class="user-photo__pictures">
-        <img class="user-photo__image" src="img/photo.jpg" alt="Фото загруженное пользователем">
-      </p>
-      <cite class="user-photo__autor">
-        Антон
-      </cite>
-      <time class="user-photo__time">
-        (12 часов назад)
-      </time>
-      <p class="user-photo__comment">
-        Соседи будут рады!
-      </p>
-    </blokquote>
-    <p class="user-photo__likes">
+        </p>
+      </li>
+      <li class="user-photo__item">
+        <blockquote class="user-photo__upload">
+          <a class="user-photo__link" href="#">
+            <img class="user-photo__link-image" src="img/photo.jpg" alt="Фото загруженное пользователем">
+          </a>
+          <cite class="user-photo__autor">
+            Антон
+          </cite>
+          <time class="user-photo__time">
+            (12 часов назад)
+          </time>
+          <p class="user-photo__comment">
+            Соседи будут рады!
+          </p>
+        </blockquote>
+        <p class="user-photo__likes">
           <span class="user-photo__likes-text">
             Нравится:
           </span>
-      <span class="user-photo__likes-count">
+          <span class="user-photo__likes-count">
             666
           </span>
-    </p>
-    </li>
-    <li class="user-photo__item">
-      <blokquote class="user-photo__upload">
-        <p class="user-photo__pictures">
-          <img class="user-photo__image" src="img/photo.jpg" alt="Фото загруженное пользователем">
         </p>
-        <cite class="user-photo__autor">
-          Борис
-        </cite>
-        <time class="user-photo__time">
-          (20 часов назад)
-        </time>
-        <p class="user-photo__comment">
-          Здесь могла быть ваша цитата о высоком и вечном.
-        </p>
-      </blokquote>
-      <p class="user-photo__likes">
+      </li>
+      <li class="user-photo__item">
+        <blockquote class="user-photo__upload">
+          <a class="user-photo__link" href="#">
+            <img class="user-photo__link-image" src="img/photo.jpg" alt="Фото загруженное пользователем">
+          </a>
+          <cite class="user-photo__autor">
+            Борис
+          </cite>
+          <time class="user-photo__time">
+            (20 часов назад)
+          </time>
+          <p class="user-photo__comment">
+            Здесь могла быть ваша цитата о высоком и вечном.
+          </p>
+        </blockquote>
+        <p class="user-photo__likes">
           <span class="user-photo__likes-text">
             Нравится:
           </span>
-        <span class="user-photo__likes-count">
+          <span class="user-photo__likes-count">
             213
           </span>
-      </p>
-    </li>
-    <li class="user-photo__item">
-      <blokquote class="user-photo__upload">
-        <p class="user-photo__pictures">
-          <img class="user-photo__image" src="img/photo.jpg" alt="Фото загруженное пользователем">
         </p>
-        <cite class="user-photo__autor">
-          Сергей
-        </cite>
-        <time class="user-photo__time">
-          (25 часов назад)
-        </time>
-        <p class="user-photo__comment">
-          Самая кубанская в мире!
-        </p>
-      </blokquote>
-      <p class="user-photo__likes">
+      </li>
+      <li class="user-photo__item">
+        <blockquote class="user-photo__upload">
+          <a class="user-photo__link" href="#">
+            <img class="user-photo__link-image" src="img/photo.jpg" alt="Фото загруженное пользователем">
+          </a>
+          <cite class="user-photo__autor">
+            Сергей
+          </cite>
+          <time class="user-photo__time">
+            (25 часов назад)
+          </time>
+          <p class="user-photo__comment">
+            Самая кубанская в мире!
+          </p>
+        </blockquote>
+        <p class="user-photo__likes">
           <span class="user-photo__likes-text">
             Нравится:
           </span>
-        <span class="user-photo__likes-count">
+          <span class="user-photo__likes-count">
             4
           </span>
-      </p>
-    </li>
-    <li class="user-photo__item">
-      <blokquote class="user-photo__upload">
-        <p class="user-photo__pictures">
-          <img class="user-photo__image" src="img/photo.jpg" alt="Фото загруженное пользователем">
         </p>
-        <cite class="user-photo__autor">
-          Максим
-        </cite>
-        <time class="user-photo__time">
-          (40 часов назад)
-        </time>
-        <p class="user-photo__comment">
-          Где снег-то?
-        </p>
-      </blokquote>
-      <p class="user-photo__likes">
+      </li>
+      <li class="user-photo__item">
+        <blockquote class="user-photo__upload">
+          <a class="user-photo__link" href="#">
+            <img class="user-photo__link-image" src="img/photo.jpg" alt="Фото загруженное пользователем">
+          </a>
+          <cite class="user-photo__autor">
+            Максим
+          </cite>
+          <time class="user-photo__time">
+            (40 часов назад)
+          </time>
+          <p class="user-photo__comment">
+            Где снег-то?
+          </p>
+        </blockquote>
+        <p class="user-photo__likes">
           <span class="user-photo__likes-text">
             Нравится:
           </span>
-        <span class="user-photo__likes-count">
+          <span class="user-photo__likes-count">
             150
           </span>
-      </p>
-    </li>
-    <li class="user-photo__item">
-      <blokquote class="user-photo__upload">
-        <p class="user-photo__pictures">
-          <img class="user-photo__image" src="img/photo.jpg" alt="Фото загруженное пользователем">
         </p>
-        <cite class="user-photo__autor">
-          Надежда
-        </cite>
-        <time class="user-photo__time">
-          (45 часов назад)
-        </time>
-        <p class="user-photo__comment">
-          Всем GM и взаимные лайки
-        </p>
-      </blokquote>
-      <p class="user-photo__likes">
+      </li>
+      <li class="user-photo__item">
+        <blockquote class="user-photo__upload">
+          <a class="user-photo__link" href="#">
+            <img class="user-photo__link-image" src="img/photo.jpg" alt="Фото загруженное пользователем">
+          </a>
+          <cite class="user-photo__autor">
+            Надежда
+          </cite>
+          <time class="user-photo__time">
+            (45 часов назад)
+          </time>
+          <p class="user-photo__comment">
+            Всем GM и взаимные лайки
+          </p>
+        </blockquote>
+        <p class="user-photo__likes">
           <span class="user-photo__likes-text">
             Нравится:
           </span>
-        <span class="user-photo__likes-count">
+          <span class="user-photo__likes-count">
             2560
           </span>
-      </p>
-    </li>
-  </ul>
-
-  <section class="img__upload">
-    <p>Затмите их всех!</p>
-    <p>Выкладывайте все, что накопилось в телефоне!</p>
-
+        </p>
+      </li>
+    </ul>
   </section>
-
-</main>
-
-
-
+    <section class="photo-editor">
+      <h2 class="visually-hidden">
+        Фото-редактор
+      </h2>
+      <p class="photo-editor__slogan">
+        Затмите их всех!
+      </p>
+      <p class="photo-editor__slogan">
+        Выкладывайте все, что накопилось в телефоне!
+      </p>
+      <form class="photo-editor__form" method="post" action="https://echo.htmlacademy.ru">
+        <div class="photo-editor__image-upload">
+          <img class="photo-editor__image" src="img/photo.jpeg" alt="Загружнное фото">
+        </div>
+        <fieldset class="photo-editor__options">
+          <legend class="visually-hidden">Опции редактора</legend>
+          <ul class="photo-editor__options-list">
+            <li class="photo-editor__options-item">
+              <label class="photo-editor__options-label" for="scale">Маштаб</label>
+              <div class="photo-editor__options-scale">
+                <input class="visually-hidden" id="scale" type="range" min="0" max="100" step="10" value="80">
+                <div class="photo-editor__options-toggle"></div>
+                <div class="photo-editor__options-line"></div>
+              </div>
+            </li>
+            <li class="photo-editor__options-item">
+              <label class="photo-editor__options-label" for="fill">Заливка</label>
+              <div class="photo-editor__options-scale">
+                <input class="visually-hidden" id="fill" type="range" min="0" max="100" step="10" value="80">
+                <div class="photo-editor__options-toggle"></div>
+                <div class="photo-editor__options-line"></div>
+              </div>
+            </li>
+            <li class="photo-editor__options-item">
+              <label class="photo-editor__options-label" for="brightness">Яркость</label>
+              <div class="photo-editor__options-scale">
+                <input class="visually-hidden" id="brightness" type="range" min="0" max="100" step="10" value="80">
+                <div class="photo-editor__options-toggle"></div>
+                <div class="photo-editor__options-line"></div>
+              </div>
+            </li>
+          </ul>
+          <button class="button button--active" type="submit">
+            Запостить
+          </button>
+          <button class="button button--disabled" type="button">
+            Отмена
+          </button>
+        </fieldset>
+      </form>
+    </section>
+  </main>
 <footer class="page-footer">
   <a class="page-footer__logo logo--down" href="index.html">
-    <img class="logo__image--down" src="img/logo-down.svg" alt="Логотип промо-сайта для приложения Pink. Ссылка на главную страницу">
+    <img class="logo__image--down" src="img/logo-down.svg"
+         alt="Логотип промо-сайта для приложения Pink. Ссылка на главную страницу">
   </a>
   <ul class="page-footer__social social">
     <li class="social__item">
