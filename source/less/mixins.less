@@ -1,0 +1,94 @@
+.font-bold(@font-size:18px, @line-height:30px, @color:@black) {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: @font-size;
+  line-height: @line-height;
+  font-weight: 700;
+  color: @color;
+}
+
+.font-regular(@font-size:14px, @line-height:24px, @color:@sapphire) {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: @font-size;
+  line-height: @line-height;
+  font-weight: 400;
+  color: @color;
+}
+
+.font-light(@font-size:24px, @line-height:30px, @color:@sapphire) {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: @font-size;
+  line-height: @line-height;
+  font-weight: 400;
+  color: @color;
+}
+
+.image(@src, @color:transparent) {
+  background-color: @color;
+  background-image: url(../img/#{$src});
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.icon (@src, @width-icon, @height-icon, @top:0, @left:0) {
+  &::before {
+    content: "";
+    position: absolute;
+    top: @top;
+    left: @left;
+
+    width: @width-icon;
+    height: @height-icon;
+
+    & when not (@src = none) {
+      .image();
+    }
+  }
+}
+
+.navigation-dynamic(@color-link:@white, @link:none, @pseudo-before:none, @pseudo-after: none, @svg:none) {
+  & when not (@link = none) {
+    color: @white;
+    &:hover {
+      color: @pink;
+    }
+    &:active {
+      color: fade(@color-link, 30%);
+    }
+  }
+  & when not (@pseudo-before = none) {
+    border-color: @white;
+    &::before:hover {
+      border-color: @pink;
+    }
+
+    &::before:active {
+      border-color: fade(@color-link, 30%);
+    }
+  }
+  & when not (@pseudo-after = none) {
+    border-color: @white;
+    &::after:hover {
+      border-color: @pink;
+    }
+    &::after:active {
+      border-color: fade(@color-link, 30%);
+    }
+  }
+  & when not (@svg = none) {
+    fill: @white;
+    &:hover {
+      fill: @pink;
+    }
+    &:active {
+      fill: fade(@color-link, 30%);
+    }
+  }
+}
+
+/*.site-list__link{
+  .navigation-dynamic(@link:true);
+}
+*/
+
+
+
