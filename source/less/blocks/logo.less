@@ -6,6 +6,21 @@
   min-height: 65px;
 
   background-color: @sapphire;
+  &--footer {
+    justify-content: center;
+    background-color: transparent;
+  }
+  &:hover .logo__svg-name--footer {
+    fill: @pink;
+  }
+  &:active .logo__svg-name--footer {
+    fill: fade(@sapphire, 30%);
+  }
+  &:active .logo__svg-glasses--footer {
+    fill: fade(@pink, 30%);
+  }
 }
+
+
 
 
