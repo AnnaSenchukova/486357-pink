@@ -45,6 +45,24 @@
   }
 }
 
+.form-dynamic(@pseudo:none) {
+  border: 2px solid #e5e5e5;
+  &:hover {
+    border-color: @sapphire;
+  }
+  &:active {
+    border-color: @pink;
+  }
+  & when not (@pseudo = none) {
+    &:hover::before {
+      border-color: @sapphire;
+    }
+    &:active::before {
+      border-color: @pink;
+    }
+  }
+}
+
 .navigation-dynamic(@color-link:@white, @link:none, @pseudo-before:none, @pseudo-after: none, @svg:none) {
   & when not (@link = none) {
     color: @white;
