@@ -1,0 +1,18 @@
+.copyright-link__description {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+
+  .font-regular(@line-height:18px);
+}
+.copyright-link {
+  &:hover .copyright-link__svg-image {
+    fill:@sapphire;
+  }
+  &:active .copyright-link__svg-image {
+    fill: fade(@sapphire, 30%);
+  }
+}
+
+
+
