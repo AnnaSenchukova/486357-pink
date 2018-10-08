@@ -1,0 +1,40 @@
+.social {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.social__link {
+  position: relative;
+  
+  display: block;
+  width: 51px;
+  height: 51px;
+
+  background-color: transparent;
+  border: 3px solid fade(@sapphire, 10%);
+  border-radius: 50%;
+  &--tw {
+    .icon("icon-twitter.svg", 18px, 19px, 35%, 30%, @image:true);
+  }
+
+  &--fb {
+    .icon("icon-facebook.svg", 18px, 19px, 27%, 40%, @image:true);
+  }
+
+  &--youtube {
+    .icon("icon-youtube.svg", 18px, 19px, 35%, 37%, @image:true);
+  }
+  &:hover {
+    border-color: @sapphire;
+  }
+  &:active {
+    border-color: fade(@sapphire, 40%);
+    opacity: 0.3;
+  }
+}
+
+
+

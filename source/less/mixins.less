@@ -24,23 +24,24 @@
 
 .image(@src, @color:transparent) {
   background-color: @color;
-  background-image: url(../img/#{$src});
+  background-image:url("@{src-base}@{src}");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
 
-.icon (@src, @width-icon, @height-icon, @top:0, @left:0) {
+.icon (@src, @width-icon, @height-icon, @top:0, @left:0, @image:none) {
   &::before {
     content: "";
     position: absolute;
+    display: block;
     top: @top;
     left: @left;
 
     width: @width-icon;
     height: @height-icon;
 
-    & when not (@src = none) {
-      .image();
+    & when not (@image = none) {
+      .image(@src);
     }
   }
 }
@@ -63,33 +64,39 @@
   }
 }
 
-.navigation-dynamic(@color-link:@white, @link:none, @pseudo-before:none, @pseudo-after: none, @svg:none) {
+.navigation-dynamic(@color-link:@white, @link:none, @pseudo-before:none, @pseudo-after: none, @svg:none, @shadow:none) {
   & when not (@link = none) {
     color: @white;
-    &:hover {
+    &:hover:not(.site-list__link--active) {
       color: @pink;
     }
-    &:active {
+    &:active:not(.site-list__link--active) {
       color: fade(@color-link, 30%);
     }
   }
   & when not (@pseudo-before = none) {
-    border-color: @white;
-    &::before:hover {
-      border-color: @pink;
+    &:hover::before {
+      background-color: @pink;
+      & when not(@shadow = none) {
+        box-shadow: 0 3px 0 -1px fade(@pink, 30%), 0 11px 0 0 @pink, 0 19px 0 -1px fade(@pink, 30%), 0 22px 0 0 @pink;
+      }
     }
-
-    &::before:active {
-      border-color: fade(@color-link, 30%);
+    &:active::before {
+      background-color:@color-link;
+      opacity: 0.3;
+      & when not(@shadow = none) {
+        box-shadow: 0 3px 0 -1px fade(@pink, 30%), 0 11px 0 0 @pink, 0 19px 0 -1px fade(@pink, 30%), 0 22px 0 0 @pink;
+      }
     }
   }
   & when not (@pseudo-after = none) {
-    border-color: @white;
-    &::after:hover {
-      border-color: @pink;
+    &:hover::after {
+      content:"";
+      background-color: @pink;
     }
-    &::after:active {
-      border-color: fade(@color-link, 30%);
+    &:active::after {
+      content:"";
+      background-color: fade(@color-link, 30%);
     }
   }
   & when not (@svg = none) {
