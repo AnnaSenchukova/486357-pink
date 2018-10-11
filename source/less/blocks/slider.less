@@ -1,0 +1,52 @@
+.slider {
+  position: relative;
+}
+
+.slider__check {
+  position: absolute;
+  width: 0;
+}
+
+.slider__controls {
+  position: relative;
+}
+
+.slider__toggle {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 6px;
+  height: 6px;
+  margin: 0;
+  padding: 0;
+
+  font-size: 0;
+
+  background-color: fade(@sapphire, 30%);
+  border: none;
+  border-radius: 50%;
+}
+
+.slide-1:checked ~ .comments__toggles .slider__toggle-1::after,
+.slide-2:checked ~ .comments__toggles .slider__toggle-2::after,
+.slide-3:checked ~ .comments__toggles .slider__toggle-3::after,
+.slide-1:checked ~ .subscription__toggles .slider__toggle-1::after,
+.slide-2:checked ~ .subscription__toggles .slider__toggle-2::after,
+.slide-3:checked ~ .subscription__toggles .slider__toggle-3::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 6px;
+  height: 6px;
+
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px @sapphire;
+}
+
+
+
+
+

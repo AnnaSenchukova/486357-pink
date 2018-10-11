@@ -41,13 +41,13 @@
 <main class="page-main">
   <header class="page-main__header header">
     <h1 class="header__caption visually-hidden">
-    Промо-сайт приложения Pink
-  </h1>
+      Промо-сайт приложения Pink
+    </h1>
   <section class="header__promotion promotion">
     <h2 class="visually-hidden">
       Установите приложение Pink!
     </h2>
-    <img class="promotion__image" src="img/pink-effect.png" alt="Pink-эффект от использования приложения на вашем смартфоне">
+    <img class="promotion__image" src="img/iphone-hand-mobile@1x.png" alt="Pink-эффект от использования приложения на вашем смартфоне">
     <a class="promotion__button button button--download" href="https://www.apple.com/ru/itunes/" aria-label="Ссылка на iTunes">
       Скачать приложние
     </a>
@@ -75,7 +75,7 @@
           </a>
         </li>
       </ul>
-      <p>
+      <p class="promotion__description">
         Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
       </p>
     </div>
@@ -85,14 +85,16 @@
     <h2 class="visually-hidden">
       Наши преимущества.
     </h2>
-    <b class="advantages__slogan">
+    <div class="advantages__wrapper">
+    <p class="advantages__slogan">
       Устали от серости мегаполиса?
-    </b>
-    <b class="advantages__slogan">
+    </p>
+    <p class="advantages__slogan">
       Нам есть, что вам предложить!
-    </b>
+    </p>
+    </div>
     <ul class="advantages__list">
-      <li class="advantages__item">
+      <li class="advantages__item advantages__item--joy">
         <h3 class="advantages__title">
           Поднимает настроение
         </h3>
@@ -100,7 +102,7 @@
           Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
         </p>
       </li>
-      <li class="advantages__item">
+      <li class="advantages__item advantages__item--peace">
         <h3 class="advantages__title">
           Меняет мир вокруг
         </h3>
@@ -108,7 +110,7 @@
           Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
         </p>
       </li>
-      <li class="advantages__item">
+      <li class="advantages__item advantages__item--friends">
         <h3 class="advantages__title">
           Заводит новых друзей
         </h3>
@@ -123,6 +125,9 @@
       Отзывы тех, кто уже установил себе приложение Pink
     </h2>
     <div class="comments__wrapper slider">
+      <input class="slider__check slide-1" id="comments-1" type="radio" name="toggle" value="slide-1" checked>
+      <input class="slider__check slide-2" id="comments-2" type="radio" name="toggle" value="slide-2">
+      <input class="slider__check slide-3" id="comments-3" type="radio" name="toggle" value="slide-3">
       <div class="comments__list slider__list">
         <blockquote class="comments__item slider__item">
           <p class="comments__text">
@@ -134,10 +139,10 @@
           </cite>
         </blockquote>
       </div>
-      <p class="comments__toggles slider__toggles">
-        <button class="slider__toggle" type="button">1</button>
-        <button class="slider__toggle" type="button">2</button>
-        <button class="slider__toggle" type="button">3</button>
+      <p class="comments__toggles slider__controls">
+        <label class="slider__toggle slider__toggle-1" for="comments-1">1</label>
+        <label class="slider__toggle slider__toggle-2" for="comments-2">2</label>
+        <label class="slider__toggle slider__toggle-3" for="comments-3">3</label>
       </p>
     </div>
   </section>
@@ -146,6 +151,9 @@
       Выбирите свой тарифный план
     </h2>
     <div class="subscription__wrapper slider">
+      <input class="slider__check slide-1" id="tariff-1" type="radio" name="toggle" value="slide-1">
+      <input class="slider__check slide-2" id="tariff-2" type="radio" name="toggle" value="slide-2">
+      <input class="slider__check slide-3" id="tariff-3" type="radio" name="toggle" value="slide-3">
       <ul class="subscription__tariffs-list slider__list">
         <li class="slider__item">
           <table class="subscription__tariff">
@@ -278,10 +286,10 @@
         </li>
       </ul>
     </div>
-    <p class="subscription__toggles slider__toggles">
-      <button class="slider__toggle" type="button">1</button>
-      <button class="slider__toggle" type="button">2</button>
-      <button class="slider__toggle" type="button">3</button>
+    <p class="subscription__toggles slider__controls">
+      <label class="slider__toggle slider__toggle-1" for="tariff-1">1</label>
+      <label class="slider__toggle slider__toggle-2" for="tariff-2">2</label>
+      <label class="slider__toggle slider__toggle-3" for="tariff-3">3</label>
     </p>
     </div>
 
