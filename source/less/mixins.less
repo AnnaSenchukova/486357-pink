@@ -22,11 +22,12 @@
   color: @color;
 }
 
-.image(@src, @color:transparent) {
+.image(@src, @color:transparent, @x:0, @y:0) {
   background-color: @color;
   background-image:url("@{src-base}@{src}");
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position-x: @x;
+  background-position-y: @y;
 }
 
 .icon (@width-icon, @height-icon, @top:0, @left:0, @image:none, @src) {
@@ -42,7 +43,7 @@
 
     & when not (@image = none) {
       .image(@src);
-    }
+     }
   }
 }
 
