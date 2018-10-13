@@ -16,12 +16,20 @@
   max-width: 280px;//temporarity + margin
   margin: 0 auto;
 
+
   background-color: @grey;
 }
 
 .user-photo__upload {
+  position: relative;
   width: 100%;
   margin: 0;
+}
+
+.user-photo__item:first-child .user-photo__link-image {
+  width: 100%;
+  height: 100%;
+
 }
 
 .user-photo__description {
@@ -52,9 +60,21 @@ font-style: normal;
 }
 
 .user-photo__likes {
+  position: relative;
+
+  margin: 0;
+
   .font-regular(12px, 24px, @pink);
   text-transform: uppercase;
+
+  .icon(12.5px, 12px, 21%, 0, @image: true, "icon-heart.svg");
 }
+
+.user-photo__likes-text {
+  margin-left: 15px;
+}
+
+
 
 
 

@@ -58,6 +58,63 @@
   &--download {
     border: 4px solid @white;
     border-radius: 15%;
+    &:hover {
+      color: @pink;
+
+      background-color: @white;
+    }
+    &:active {
+      color:fade(@pink, 30%);
+
+      background-color: @white;
+      outline: none;
+    }
+  }
+
+  &--active {
+    margin: 0;
+    padding: 0;
+
+    color:@pink;
+
+    border: 3px solid @pink;
+    border-radius: 15%;
+    &:hover {
+      color: @white;
+
+      background-color: @pink;
+      outline: none;
+    }
+    &:active {
+      color: fade(@white, 30%);
+
+      background-color: @pink;
+      outline: none;
+    }
+  }
+
+  &--disabled {
+    margin: 0;
+    padding: 0;
+
+    color:@sapphire;
+
+    border: 3px solid @sapphire;
+    border-radius: 15%;
+    outline: none;
+    opacity: 0.1;
+    &:hover {
+      outline: none;
+      opacity: 0.3;
+    }
+    &:active {
+      color:fade(@white, 30%);
+
+      background-color: fade(@sapphire, 30%);
+      border:none;
+      outline: none;
+
+    }
   }
 }
 
