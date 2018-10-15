@@ -9,23 +9,25 @@
 
   display: block;
   width: 100%;
+
   &::before {
     content: "Панорама дня";
 
     position: absolute;
     top: 0;
     right: 0;
-
     z-index: 10;
+
     display: inline-block;
+    vertical-align: middle;
     width: 140px;
     height: 35px;
 
-    background-color: @pink;
     .font-bold(12px, 24px, @white);
     text-transform: uppercase;
     text-align: center;
-    vertical-align: middle;
+
+    background-color: @pink;
   }
 }
 
@@ -88,13 +90,3 @@
 .panorama__likes-text {
   margin-left: 15px;
 }
-
-
-
-
-
-
-
-
-
-

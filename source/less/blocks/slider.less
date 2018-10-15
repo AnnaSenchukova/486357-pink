@@ -4,7 +4,7 @@
 
 .slider__check {
   position: absolute;
-  right:0;
+  right: 0;
   bottom: 0;
 
   width: 0;
@@ -19,6 +19,7 @@
 
 .slider__item {
   width: 100%;
+
   overflow: hidden;
 }
 
@@ -43,9 +44,11 @@
   background-color: fade(@sapphire, 30%);
   border: none;
   border-radius: 50%;
+
   &:hover {
     background-color: fade(@sapphire, 60%);
   }
+
   &:active {
     background-color: fade(@sapphire, 10%);
   }
@@ -55,6 +58,7 @@
 .slide-2:checked ~ .slider__controls .slider__toggle--2::after,
 .slide-3:checked ~ .slider__controls .slider__toggle--3::after {
   content: "";
+
   position: absolute;
   top: 0;
   left: 0;
@@ -66,6 +70,3 @@
   border-radius: 50%;
   box-shadow: 0 0 0 2px @sapphire;
 }
-
-
-

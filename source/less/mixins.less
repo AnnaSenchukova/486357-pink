@@ -24,7 +24,7 @@
 
 .image(@src, @color:transparent, @x:0, @y:0) {
   background-color: @color;
-  background-image:url("@{src-base}@{src}");
+  background-image: url("@{src-base}@{src}");
   background-repeat: no-repeat;
   background-position-x: @x;
   background-position-y: @y;
@@ -34,33 +34,37 @@
   &::before {
     content: "";
     position: absolute;
-    display: block;
     top: @top;
     left: @left;
 
+    display: block;
     width: @width-icon;
     height: @height-icon;
 
     & when not (@image = none) {
       .image(@src);
-     }
+    }
   }
 }
 
 .form-dynamic(@pseudo:none) {
   border: 2px solid #e5e5e5;
+
   &:hover {
     border-color: @sapphire;
   }
+
   &:active,
   &:focus {
     border-color: @pink;
     outline: none;
   }
+
   & when not (@pseudo = none) {
     &:hover + .contest__label::before {
       border-color: @sapphire;
     }
+
     &:active + .contest__label::before,
     &:focus + .contest__label::before {
       border-color: @pink;
@@ -70,73 +74,61 @@
 }
 
 .navigation-dynamic(@color-link:@white, @link:none, @pseudo-before:none, @pseudo-after: none, @svg:none, @shadow:none) {
+
   & when not (@link = none) {
     color: @white;
+
     &:hover:not(.site-list__link--active) {
       color: @pink;
     }
+
     &:active:not(.site-list__link--active) {
       color: fade(@color-link, 30%);
     }
   }
+
   & when not (@pseudo-before = none) {
     &:hover::before {
       background-color: @pink;
+
       & when not(@shadow = none) {
         box-shadow: 0 3px 0 -1px fade(@pink, 30%), 0 11px 0 0 @pink, 0 19px 0 -1px fade(@pink, 30%), 0 22px 0 0 @pink;
       }
     }
+
     &:active::before {
-      background-color:@color-link;
+      background-color: @color-link;
       opacity: 0.3;
+
       & when not(@shadow = none) {
         box-shadow: 0 3px 0 -1px fade(@pink, 30%), 0 11px 0 0 @pink, 0 19px 0 -1px fade(@pink, 30%), 0 22px 0 0 @pink;
       }
     }
   }
+
   & when not (@pseudo-after = none) {
     &:hover::after {
-      content:"";
+      content: "";
+
       background-color: @pink;
     }
+
     &:active::after {
-      content:"";
+      content: "";
+
       background-color: fade(@color-link, 30%);
     }
   }
+
   & when not (@svg = none) {
     fill: @white;
+
     &:hover {
       fill: @pink;
     }
+
     &:active {
       fill: fade(@color-link, 30%);
     }
   }
 }
-
-.placeholder() {
-  &::-webkit-input-placeholder {
-    color: @sapphire;
-  }
-
-  &::-moz-placeholder {
-    color: @sapphire;
-  }
-
-  &:-moz-placeholder {
-    color: @sapphire;
-  }
-
-  &:-ms-input-placeholder {
-    color: @sapphire;
-  }
-}
-
-/*.site-list__link{
-  .navigation-dynamic(@link:true);
-}
-*/
-
-
-

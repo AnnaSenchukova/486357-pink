@@ -1,6 +1,7 @@
-.promotion__wrapper{
+.promotion__wrapper {
   background-color: #1d2631;
 }
+
 .promotion__market {
   display: flex;
   justify-content: space-around;
@@ -19,17 +20,21 @@
 
 .promotion__market-link {
   position: relative;
+
   display: block;
   width: 51px;
   height: 60px;
 
   background-color: transparent;
+
   &--itunes {
     .icon(46px, 57px, 0, 0, @image:true, "logo-apple.svg");
   }
+
   &--android {
     .icon(42px, 47px, 0, 0, @image:true, "logo-android.svg");
   }
+
   &--microsoft {
     .icon(44px, 42px, 0, 0, @image:true, "logo-microsoft.svg");
   }

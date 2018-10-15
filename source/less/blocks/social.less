@@ -5,9 +5,11 @@
 
   list-style: none;
 }
+
 .social__item {
   width: min-content;
 }
+
 .social__link {
   position: relative;
 
@@ -18,8 +20,9 @@
   background-color: transparent;
   border: 3px solid fade(@sapphire, 10%);
   border-radius: 50%;
+
   &--tw {
-    .icon(18px, 19px, 35%, 30%, @image:true,"icon-twitter.svg");
+    .icon(18px, 19px, 35%, 30%, @image:true, "icon-twitter.svg");
   }
 
   &--fb {
@@ -29,14 +32,13 @@
   &--youtube {
     .icon(18px, 19px, 35%, 37%, @image:true, "icon-youtube.svg");
   }
+
   &:hover {
     border-color: @sapphire;
   }
+
   &:active {
     border-color: fade(@sapphire, 40%);
     opacity: 0.3;
   }
 }
-
-
-
