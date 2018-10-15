@@ -1,0 +1,27 @@
+.site-list {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+
+  list-style: none;
+}
+
+.site-list__item {
+  width: inherit;
+
+  background-color: @sapphire;
+  box-shadow: 0 0 0 1px @black, inset 0 1px 0 0 fade(@white, 15%);
+}
+
+.site-list__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 65px;
+
+  .font-bold(@line-height: 32px, @color:@white);
+  text-transform: uppercase;
+
+  .navigation-dynamic(@pink, true);
+}

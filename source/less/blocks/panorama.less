@@ -1,0 +1,92 @@
+.panorama {
+  width: 100%;
+
+  background-color: @white;
+}
+
+.panorama__link {
+  position: relative;
+
+  display: block;
+  width: 100%;
+
+  &::before {
+    content: "Панорама дня";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+
+    display: inline-block;
+    vertical-align: middle;
+    width: 140px;
+    height: 35px;
+
+    .font-bold(12px, 24px, @white);
+    text-transform: uppercase;
+    text-align: center;
+
+    background-color: @pink;
+  }
+}
+
+.panorama__link-image {
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+
+.panorama__item {
+  max-width: 280px; //temporarity + margin
+  margin: 0 auto;
+
+  background-color: @grey;
+}
+
+.panorama__upload {
+  width: 100%;
+  margin: 0;
+}
+
+.panorama__description {
+  margin: 0;
+
+  .font-regular(@line-height: 30px);
+  text-align: center;
+}
+
+.panorama__autor {
+  margin: 0;
+
+  font-style: normal;
+  .font-bold(14px, 24px, @sapphire);
+}
+
+.panorama__time {
+  margin: 0;
+
+  .font-light(12px, 24px);
+  text-transform: uppercase;
+}
+
+.panorama__comment {
+  margin: 0;
+
+  .font-regular();
+}
+
+.panorama__likes {
+  position: relative;
+
+  margin: 0;
+
+  .font-regular(12px, 24px, @pink);
+  text-transform: uppercase;
+
+  .icon(12.5px, 12px, 21%, 0, @image: true, "icon-heart.svg");
+}
+
+.panorama__likes-text {
+  margin-left: 15px;
+}

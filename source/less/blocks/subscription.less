@@ -1,0 +1,132 @@
+.subscription {
+  .image("bg-triangle-white.svg", @grey);
+  background-size: 100% auto;
+}
+
+.subscription__tariff {
+  width: 276px; //temporarily
+
+  border-collapse: collapse;
+}
+
+.subscription__tariff-caption {
+  position: relative;
+
+  height: 100px;
+  width: 100%;
+
+  background-color: @sapphire;
+
+  &--hit {
+    .icon(74px, 73px, 0, 0, @image:true, "bg-hit.svg");
+  }
+
+  &--hit::after {
+    content: "ХИТ";
+
+    position: absolute;
+    top: 1.6%;
+    left: 0;
+
+    padding-left: 15px;
+
+    .font-bold(14px, @color:@white);
+    text-transform: uppercase;
+
+    transform: rotate(-45deg);
+  }
+}
+
+.subscription__tariff-marker {
+  vertical-align: middle;
+  height: 100px;
+  width: 100%;
+
+  text-align: center;
+
+  border-left: 2px solid @white;
+  box-shadow: 0 0 0 2px @white;
+}
+
+.subscription__tariff-title {
+  width: 100%;
+}
+
+.subscription__tariff-name {
+  margin: 0;
+
+  .font-bold(@color:@white);
+  text-transform: uppercase;
+}
+
+.subscription__tariff-price {
+  .font-light(@color: @white);
+  text-transform: uppercase;
+}
+
+.subscription__tariff-options {
+  vertical-align: middle;
+  width: 100%; //temporarily
+  height: 62px;
+
+  text-align: left;
+
+  background-color: @white;
+  border: 2px solid #e5e5e5;
+  border-top: none;
+}
+
+.subscription__option-name {
+  .font-regular(@line-height:30px);
+  text-transform: uppercase;
+}
+
+.subscription__option-are {
+  position: relative;
+
+  display: block;
+  width: 60px;
+  height: 62px;
+  margin-left: -60px;
+
+  background-color: transparent;
+
+  &--enabled::before {
+    content: "";
+
+    display: block;
+    width: 15px;
+    height: 30px;
+    margin: 12px 25px;
+
+    border-right: 2px solid #3dc644;
+    border-bottom: 2px solid #3dc644;
+
+    transform: rotate(45deg);
+  }
+
+  &--disabled::before,
+  &--disabled::after {
+    content: "";
+
+    position: absolute;
+    top: 45%;
+    left: 0;
+
+    display: block;
+    width: 35px;
+    height: 3px;
+    margin: -3px 10px;
+
+    background-color: #f25b26;
+    border-radius: 30%;
+  }
+
+  &--disabled::before {
+    transform: rotate(45deg);
+  }
+
+  &--disabled::after {
+    transform: rotate(-45deg);
+  }
+}
