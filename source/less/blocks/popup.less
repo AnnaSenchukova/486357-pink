@@ -1,0 +1,44 @@
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  z-index: 100;
+  display: none;
+  width: 100%;
+  padding-bottom: 50px;
+
+  box-shadow: 0 7px 15px 0 fade(#000101, 15%);
+  transform: translate(-50%, -50%);
+  &--warning {
+    background-color: @white;
+  }
+  &--submit {
+    background-color: @grey;
+  }
+  &--show {
+    display: block;
+  }
+}
+
+.popup__caption {
+  margin: 0;
+  padding-top: 45px;
+
+  .font-bold(@line-height: 24px);
+  text-align: center;
+
+  background-color: @white;
+}
+
+.popup__description {
+  margin: 0;
+
+  .font-regular();
+  text-align: center;
+
+  background-color: @white;
+}
+
+
+

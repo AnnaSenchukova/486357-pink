@@ -52,15 +52,19 @@
   &:hover {
     border-color: @sapphire;
   }
-  &:active {
+  &:active,
+  &:focus {
     border-color: @pink;
+    outline: none;
   }
   & when not (@pseudo = none) {
-    &:hover::before {
+    &:hover + .contest__label::before {
       border-color: @sapphire;
     }
-    &:active::before {
+    &:active + .contest__label::before,
+    &:focus + .contest__label::before {
       border-color: @pink;
+      outline: none;
     }
   }
 }
@@ -108,6 +112,24 @@
     &:active {
       fill: fade(@color-link, 30%);
     }
+  }
+}
+
+.placeholder() {
+  &::-webkit-input-placeholder {
+    color: @sapphire;
+  }
+
+  &::-moz-placeholder {
+    color: @sapphire;
+  }
+
+  &:-moz-placeholder {
+    color: @sapphire;
+  }
+
+  &:-ms-input-placeholder {
+    color: @sapphire;
   }
 }
 

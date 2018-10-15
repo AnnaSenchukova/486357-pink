@@ -1,0 +1,178 @@
+.contest {
+  width: 100%;
+
+  background-color: @white;
+}
+
+.contest__slogan {
+  margin: 0;
+
+  .font-regular(@line-height:30px);
+  text-align: center;
+}
+
+.contest__form {
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+}
+
+.contest__item {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  &:nth-child(2n) {
+    background-color: @grey;
+  }
+}
+
+.contest__title,
+.contest__note {
+  display: block;
+  width: 100%;
+  margin: 0;
+
+  .font-regular(@line-height:30px, @color:@pink);
+  text-transform: uppercase;
+  &--question {
+    text-align: center;
+  }
+}
+
+.contest__field {
+  width: 100%;
+  min-width: 280px; //temporarity
+  height: 60px;
+  padding-left: 23px;
+
+  .font-regular(18px, 30px);
+
+  background-color: transparent;
+  border: 2px solid #e5e5e5;
+  border-radius: 3%;
+
+  .placeholder();
+
+  .form-dynamic();
+  &--textarea {
+    margin: 0;
+    padding: 0 20px;
+  }
+}
+
+.contest__label {
+  position: relative;
+
+  .font-regular(18px, 30px);
+  vertical-align: middle;
+}
+
+.contest__input {
+  position: absolute;
+
+  z-index: -1;
+  display: block;
+  width: 39px;
+  height: 39px;
+  & + .contest__label {
+    position: relative;
+    display: block;
+    min-height: 39px;
+    padding-left: 63px;
+  }
+  & + .contest__label:not(:last-child) {
+    margin-bottom: 21px;
+  }
+  &--checkbox {
+    & + .contest__label::before {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      display: inline-block;
+      vertical-align: middle;
+      width: 39px;
+      height: 39px;
+
+      background-color: transparent;
+      border: 2px solid #e5e5e5;
+      border-radius: 10%;
+    }
+    .form-dynamic(@pseudo: true);
+    &:checked + .contest__label::after {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      width: 11px;
+      height: 22px;
+
+      margin: 12px 14px;
+
+      border-right: 2px solid @pink;
+      border-bottom: 2px solid @pink;
+      transform: rotate(45deg);
+    }
+  }
+  &--radio {
+    & + .contest__label::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      display: inline-block;
+      vertical-align: middle;
+
+      width: 40px;
+      height: 40px;
+
+      padding: 0;
+
+      background-color: transparent;
+      border: 2px solid #e5e5e5;
+      border-radius: 50%;
+    }
+    .form-dynamic(@pseudo: true);
+    &:checked + .contest__label::after {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 16px;
+      height: 16px;
+
+      margin: 12px;
+
+      background-color: @pink;
+      border-radius: 50%;
+    }
+  }
+}
+
+.contest__note {
+  margin: 0;
+  .font-regular(@line-height:30px, @color:@sapphire);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.contest__note-star {
+  color: @pink;
+}
+
+
+

@@ -53,41 +53,41 @@
         <label class="contest__title" for="surname">
           Фамилия:
         </label>
-        <input class="contest__input" id="surname" type="text" name="surname" placeholder="Укажите фамилию *" required autofocus>
+        <input class="contest__field" id="surname" type="text" name="surname" placeholder="Укажите фамилию *" required autofocus>
         <label class="contest__title" for="name">
           Имя:
         </label>
-        <input class="contest__input" id="name" type="text" name="name" placeholder="Введите ваше имя *" required>
+        <input class="contest__field" id="name" type="text" name="name" placeholder="Введите ваше имя *" required>
         <label class="contest__title" for="patronymic">
           Отчество:
         </label>
-        <input class="contest__input" id="patronymic" type="text" name="patronymic" placeholder="Ну и отчество тоже">
+        <input class="contest__field" id="patronymic" type="text" name="patronymic" placeholder="Ну и отчество тоже">
       </fieldset>
       <fieldset class="contest__item">
-        <legend class="contest__title">
+        <p class="contest__title contest__title--question">
           Ваши безбашенные достижения в путешествии
-        </legend>
-        <input class="contest__checkbox visually-hidden" id="selfie" type="checkbox" name="selfie" value="self-advantages" checked>
+        </p>
+        <input class="contest__input contest__input--checkbox" id="selfie" type="checkbox" name="selfie" value="self-advantages" checked>
         <label class="contest__label" for="selfie">
           Сделал селфи с акулой
         </label>
-        <input class="contest__checkbox visually-hidden" id="beach" type="checkbox" name="beach" value="self-advantages" checked>
+        <input class="contest__input contest__input--checkbox" id="beach" type="checkbox" name="beach" value="self-advantages" checked>
         <label class="contest__label" for="beach">
           Обгорел на пляже
         </label>
-        <input class="contest__checkbox visually-hidden" id="chack" type="checkbox" name="chack" value="self-advantages">
+        <input class="contest__input contest__input--checkbox" id="chack" type="checkbox" name="chack" value="self-advantages">
         <label class="contest__label" for="chack">
           Видел Чака Норриса
         </label>
-        <input class="contest__checkbox visually-hidden" id="gift" type="checkbox" name=gift value="self-advantages">
+        <input class="contest__input contest__input--checkbox" id="gift" type="checkbox" name=gift value="self-advantages">
         <label class="contest__label" for="gift">
           Накупил сувениров
         </label>
-        <input class="contest__checkbox visually-hidden" id="tower" type="checkbox" name=tower value="self-advantages" checked>
+        <input class="contest__input contest__input--checkbox" id="tower" type="checkbox" name=tower value="self-advantages" checked>
         <label class="contest__label" for="tower">
           Удержал башню
         </label>
-        <input class="contest__checkbox visually-hidden" id="hotel" type="checkbox" name=hotel value="self-advantages">
+        <input class="contest__input contest__input--checkbox" id="hotel" type="checkbox" name=hotel value="self-advantages">
         <label class="contest__label" for="hotel">
           Разгромил отель
         </label>
@@ -96,41 +96,46 @@
         <label class="contest__title" for="telephone">
           Номер телефона
         </label>
-        <input class="contest__input" id="telephone" type="tel" placeholder="Номер, пожалуйста">
+        <input class="contest__field" id="telephone" type="tel" placeholder="Номер, пожалуйста">
         <label class="contest__title" for="email">
           Номер телефона
         </label>
-        <input class="contest__input" id="email" type="email" placeholder="Введите почту *" required>
+        <input class="contest__field" id="email" type="email" placeholder="Введите почту *" required>
       </fieldset>
       <fieldset class="contest__item">
-        <legend class="contest__title">
+        <p class="contest__title contest__title--question">
           С каким приложением путешествовали?
-        </legend>
-        <input class="contest__radio" id="iOS" type="radio" name="platform" value="iOS" checked>
+        </p>
+        <input class="contest__input contest__input--radio" id="iOS" type="radio" name="platform" value="iOS" checked>
         <label class="contest__label" for="iOS">
           Pink для iOS
         </label>
-        <input class="contest__radio" id="android" type="radio" name="platform" value="android">
+        <input class="contest__input contest__input--radio" id="android" type="radio" name="platform" value="android">
         <label class="contest__label" for="android">
           Pink на Android
         </label>
-        <input class="contest__radio" id="windows" type="radio" name="platform" value="windows">
+        <input class="contest__input contest__input--radio" id="windows" type="radio" name="platform" value="windows">
         <label class="contest__label" for="windows">
           Windows Phone
         </label>
       </fieldset>
       <fieldset class="contest__item">
-        <label class="contest__title" for="comment">
+        <label class="contest__title contest__title--question" for="comment">
           Опишите свои эмоции
         </label>
-        <textarea class="contest__input" name="comment" id="comment" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+        <textarea class="contest__field contest__field--textarea" name="comment" id="comment" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
       </fieldset>
       <button class="button button--form" type="submit">
         Отправить форму
       </button>
-      <small>
-        * - обязательные поля
-      </small>
+      <p class="contest__note">
+        <span class="contest__note-star">
+          *
+        </span>
+      <span class="contest__note-text">
+        — обязательные поля
+      </span>
+      </p>
     </form>
   </section>
   <section class="popup popup--warning">
