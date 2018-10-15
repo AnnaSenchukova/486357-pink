@@ -1,0 +1,48 @@
+.promotion__wrapper {
+  background-color: #1d2631;
+}
+
+.promotion__market {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.promotion__market-item {
+  width: min-content;
+  margin-right: 33px; //возможно временно
+}
+
+.promotion__market-link {
+  position: relative;
+
+  display: block;
+  width: 51px;
+  height: 60px;
+
+  background-color: transparent;
+
+  &--itunes {
+    .icon(46px, 57px, 0, 0, @image:true, "logo-apple.svg");
+  }
+
+  &--android {
+    .icon(42px, 47px, 0, 0, @image:true, "logo-android.svg");
+  }
+
+  &--microsoft {
+    .icon(44px, 42px, 0, 0, @image:true, "logo-microsoft.svg");
+  }
+}
+
+.promotion__description {
+  margin: 0;
+
+  .font-light(14px, @color:@white);
+  text-align: center;
+}
