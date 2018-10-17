@@ -1,15 +1,32 @@
 .header {
   width: 100%;
-  min-height: 106px;
 
-  .image("bg-back-mobile@1x.jpg", #1d2631);
-  background-size: cover;
+  .image("bg-back-mobile@1x.jpg", #1d2631, 50%, -32%);
 }
 
 .header__caption {
   width: min-content;
+  min-height: 109px;
   margin: 0 auto;
 
   .font-light(24px, 30px, @white);
   text-align: center;
+
+  &--hidden {
+    font-size: 0;
+  }
+}
+
+@media (min-width: @tablet) {
+  .header__caption {
+    position: relative;
+    z-index: 10;
+
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-right: 300px;
+
+  font-size: 40px;
+    line-height: 48px;
+  }
 }

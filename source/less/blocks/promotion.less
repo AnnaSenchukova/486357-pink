@@ -1,21 +1,38 @@
 .promotion__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 20px;
+  padding-top: 28px;
+  padding-bottom: 35px;
+
   background-color: #1d2631;
+}
+
+.promotion__image {
+  display: block;
+  margin: 0 auto;
+  padding-right: 65px;
 }
 
 .promotion__market {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 30px 0;
 
   list-style: none;
 }
 
 .promotion__market-item {
   width: min-content;
-  margin-right: 33px; //возможно временно
+
+  &:not(:last-child) {
+    margin-right: 35px; //возможно временно
+  }
+
 }
 
 .promotion__market-link {
@@ -32,17 +49,60 @@
   }
 
   &--android {
-    .icon(42px, 47px, 0, 0, @image:true, "logo-android.svg");
+    .icon(42px, 47px, 15%, 0, @image:true, "logo-android.svg");
   }
 
   &--microsoft {
-    .icon(44px, 42px, 0, 0, @image:true, "logo-microsoft.svg");
+    .icon(44px, 42px, 15%, 0, @image:true, "logo-microsoft.svg");
   }
 }
 
 .promotion__description {
+  width: 230px;
+  max-width: 300px;
   margin: 0;
 
-  .font-light(14px, @color:@white);
+  .font-light(14px, 24px, @color:@white);
   text-align: center;
+}
+
+@media (min-width: @tablet) {
+  .promotion {
+    position: relative;
+
+    display:flex;
+    justify-content: flex-start;
+    max-width: @tablet;
+    margin: 0 auto;
+  }
+
+  .promotion__image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    height: 545px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .promotion__wrapper {
+    z-index: 10;
+
+    width: 300px;
+
+    margin-left: 20px;
+    padding-top: 35px;
+    padding-left: 0;
+    padding-bottom: 115px;
+    padding-right: 0;
+
+    background-color: transparent;
+  }
+
+  .promotion__description {
+    width: 100%;
+
+    font-size: 18px;
+  }
 }
