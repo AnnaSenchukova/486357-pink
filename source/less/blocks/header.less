@@ -11,22 +11,18 @@
 
   .font-light(24px, 30px, @white);
   text-align: center;
-
-  &--hidden {
-    font-size: 0;
-  }
 }
 
 @media (min-width: @tablet) {
-  .header__caption {
-    position: relative;
-    z-index: 10;
+  .header {
+    background-image: url("../../img/bg-back-tablet@1x.jpg");
+    background-position-y: 100%;
+  }
+}
 
-    margin: 0 auto;
-    padding-top: 100px;
-    padding-right: 300px;
-
-  font-size: 40px;
-    line-height: 48px;
+@media (min-width: @desktop) {
+  .header {
+    background-image: url("../../img/bg-back-desktop@1x.jpg");
+    background-position-y: 0;
   }
 }
