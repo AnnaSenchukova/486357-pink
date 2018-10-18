@@ -1,0 +1,42 @@
+.container {
+  margin: 0 auto;
+
+  &--promotion {
+    padding-top: 109px;
+  }
+}
+
+@media (min-width: @tablet){
+  .container {
+    width: 660px;
+    padding-left: 20px;
+    padding-right: 20px;
+    &--promotion {
+      width: 100%;
+      min-width: 660px; //or width 960 position for center
+      padding-top: 73px;
+      padding-bottom: 110px;
+    }
+    &--article {
+      padding-top: 100px;
+      padding-bottom: 60px;
+    }
+  }
+}
+
+@media (min-width: @desktop) {
+  .container {
+    width: 960px; // or width 960 position for center
+    padding-left: 10px;
+    padding-right: 10px;
+    &--promotion {
+      padding:0 10px;
+      padding-top: 83px;
+      padding-bottom: 120px; //+10
+    }
+    &--article {
+      padding-top: 170px;
+      padding-bottom: 119px;
+    }
+  }
+}
