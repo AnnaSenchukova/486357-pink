@@ -1,5 +1,7 @@
 .slider {
   position: relative;
+
+  width: 100%;
 }
 
 .slider__check {
@@ -19,14 +21,80 @@
 
 .slider__item {
   width: 100%;
+}
 
-  overflow: hidden;
+.slider__pagination {
+  position: absolute;
+  top:50%;
+  left:50%;
+
+  display: flex;
+  justify-content: space-between;
+  width: 97.9%;
+
+  transform: translate(-50%, -50%);
+}
+
+.slider__arrow {
+  position: relative;
+  z-index: 10;
+
+  width: 60px;
+  height: 50px;
+  padding: 0;
+
+  font-size: 0;
+
+  background-color: transparent;
+  border: none;
+  opacity: 0.3;
+
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top:0;
+    left:0;
+
+    width: 22px;
+    height: 22px;
+
+    background-color: transparent;
+    border-top: 3px solid @sapphire;
+    border-right: 3px solid @sapphire;
+  }
+
+  &--prev::before {
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%) rotate(-135deg);
+  }
+
+
+  &--next::before {
+    top: 50%;
+    left:50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 .slider__controls {
   position: relative;
 
   margin: 0;
+
+  text-align: center;
 }
 
 .slider__toggle {
@@ -37,6 +105,7 @@
   width: 6px;
   height: 6px;
   margin: 0;
+  margin-right: 15px;
   padding: 0;
 
   font-size: 0;
@@ -54,6 +123,62 @@
   }
 }
 
+.slide-1:checked ~ .slider__list .slider__item--1,
+.slide-2:checked ~ .slider__list .slider__item--2,
+.slide-3:checked ~ .slider__list .slider__item--3 {
+  display: flex;
+}
+
+/*
+
+.slider__list--subscription {
+  width: fit-content;
+  transform: translateX(200px);
+}
+
+.slide-1:checked ~ .slider__list--subscription {
+transform: translateX(3%);
+
+}
+
+.slide-2:checked ~ .slider__list--subscription {
+transform: translateX(-25%);
+
+}
+
+.slide-3:checked ~ .slider__list--subscription {
+transform: translateX(-47%);
+
+
+
+}
+
+*/
+
+.slider__wrapper {
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.slide-1:checked ~ .slider__wrapper .slider__list--subscription {
+  transform: translateX(50%);
+
+}
+
+.slide-2:checked ~ .slider__wrapper .slider__list--subscription {
+  transform: translateX(0%);
+
+}
+
+.slide-3:checked ~ .slider__wrapper .slider__list--subscription {
+  transform: translateX(-50%);
+
+
+
+}
+
+
 .slide-1:checked ~ .slider__controls .slider__toggle--1::after,
 .slide-2:checked ~ .slider__controls .slider__toggle--2::after,
 .slide-3:checked ~ .slider__controls .slider__toggle--3::after {
@@ -70,3 +195,6 @@
   border-radius: 50%;
   box-shadow: 0 0 0 2px @sapphire;
 }
+
+
+

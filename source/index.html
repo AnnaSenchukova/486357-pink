@@ -96,7 +96,7 @@
       </p>
     </div>
     <div class="advantages__list-wrapper">
-    <ul class="advantages__list container">
+    <ul class="advantages__list container container--advantages">
       <li class="advantages__item advantages__item--joy">
         <h3 class="advantages__title">
           Поднимает настроение
@@ -132,7 +132,7 @@
         <p class="article__descriptions">
           Британские ученые провели исследования и&nbsp;доказали, что&nbsp;положительный эффект от&nbsp;использования приложения длится целые сутки!
         </p>
-        <a class="article__link">
+        <a class="article__link" href="https://youtu.be/5gGJ5Qcc-MU">
           Узнать больше об исследовании
         </a>
         </div>
@@ -143,19 +143,58 @@
     <h2 class="visually-hidden">
       Отзывы тех, кто уже установил себе приложение Pink
     </h2>
-    <div class="comments__wrapper slider">
+    <div class="comments__wrapper slider container container--comments">
       <input class="slider__check slide-1" id="comments-1" type="radio" name="toggle--comments" value="slide-1--comments" checked>
       <input class="slider__check slide-2" id="comments-2" type="radio" name="toggle--comments" value="slide-2--comments">
       <input class="slider__check slide-3" id="comments-3" type="radio" name="toggle--comments" value="slide-3--comments">
-      <div class="comments__list slider__list">
-        <blockquote class="comments__item slider__item">
+      <div class="comments__list slider__list slider__list--comments">
+        <blockquote class="comments__item slider__item slider__item--1">
           <p class="comments__text">
-            Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
+            «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
           </p>
-          <cite class="comments__author">
+          <div class="comments__author">
+          <cite class="comments__author-name">
             Николай Петров
           </cite>
+            <p class="comments__author-info">
+              25 лет, водитель трамвая
+            </p>
+          </div>
         </blockquote>
+        <blockquote class="comments__item slider__item slider__item--2">
+          <p class="comments__text">
+            «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+          </p>
+          <div class="comments__author">
+            <cite class="comments__author-name">
+              Просто Петров
+            </cite>
+            <p class="comments__author-info">
+              25 лет, водитель трамвая
+            </p>
+          </div>
+        </blockquote>
+        <blockquote class="comments__item slider__item slider__item--3">
+          <p class="comments__text">
+            «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+          </p>
+          <div class="comments__author">
+            <cite class="comments__author-name">
+              Петр Петров
+            </cite>
+            <p class="comments__author-info">
+              25 лет, водитель трамвая
+            </p>
+          </div>
+        </blockquote>
+      </div>
+      <div class="comments__pagination slider__pagination">
+      <button class="slider__arrow slider__arrow--prev" type="button">
+        Назад
+      </button>
+      <button class="slider__arrow slider__arrow--next" type="button">
+        Вперед
+      </button>
       </div>
       <p class="comments__toggles slider__controls">
         <label class="slider__toggle slider__toggle--1" for="comments-1">
@@ -178,8 +217,54 @@
       <input class="slider__check slide-1" id="tariff-1" type="radio" name="toggle--tariff" value="slide-1--tariff">
       <input class="slider__check slide-2" id="tariff-2" type="radio" name="toggle--tariff" value="slide-2--tariff" checked>
       <input class="slider__check slide-3" id="tariff-3" type="radio" name="toggle--tariff" value="slide-3--tariff">
-      <ul class="subscription__tariffs-list slider__list">
-        <li class="slider__item">
+      <div class="slider__wrapper">
+      <ul class="subscription__tariffs-list slider__list slider__list--subscription">
+        <li class="slider__item slider__item--1 slider__item--tariff-1">
+          <table class="subscription__tariff">
+            <thead class="subscription__tariff-caption">
+            <tr class="subscription__tariff-marker">
+              <th class="subscription__tariff-title">
+                <p class="subscription__tariff-name">
+                  База
+                </p>
+                <span class="subscription__tariff-price">
+                  1,99 USD
+                </span>
+              </th>
+            </tr>
+            </thead>
+            <tr class="subscription__tariff-options">
+              <td class="subscription__option-name">
+                Розовый фильтр
+              </td>
+              <td class="subscription__option-are subscription__option-are--enabled">
+                  <span class="visually-hidden">
+                    есть
+                  </span>
+              </td>
+            </tr>
+            <tr class="subscription__tariff-options">
+              <td class="subscription__option-name">
+                Смайлики
+              </td>
+              <td class="subscription__option-are subscription__option-are--disabled">
+                  <span class="visually-hidden">
+                    нет
+                  </span>
+              </td>
+            </tr>
+            <tr class="subscription__tariff-options">
+              <td class="subscription__option-name">
+                Комментарии
+              </td>
+              <td class="subscription__option-are subscription__option-are--disabled">
+                  <span class="visually-hidden">
+                    нет
+                  </span>
+              </td>
+          </table>
+        </li>
+        <li class="slider__item slider__item--2 slider__item--tariff-2">
           <table class="subscription__tariff">
             <thead class="subscription__tariff-caption subscription__tariff-caption--hit">
             <tr class="subscription__tariff-marker">
@@ -207,51 +292,6 @@
               <td class="subscription__option-name">
                 Смайлики
               </td>
-              <td class="subscription__option-are subscription__option-are--disabled">
-                  <span class="visually-hidden">
-                    нет
-                  </span>
-              </td>
-            </tr>
-            <tr class="subscription__tariff-options">
-              <td class="subscription__option-name">
-                Комментарии
-              </td>
-              <td class="subscription__option-are subscription__option-are--disabled">
-                  <span class="visually-hidden">
-                    нет
-                  </span>
-              </td>
-          </table>
-        </li>
-        <li class="slider__item">
-          <table class="subscription__tariff">
-            <thead class="subscription__tariff-caption">
-            <tr class="subscription__tariff-marker">
-              <th class="subscription__tariff-title">
-                <p class="subscription__tariff-name">
-                  Стандарт
-                </p>
-                <span class="subscription__tariff-price">
-                  3,99 USD
-                </span>
-              </th>
-            </tr>
-            </thead>
-            <tr class="subscription__tariff-options">
-              <td class="subscription__option-name">
-                Розовый фильтр
-              </td>
-              <td class="subscription__option-are subscription__option-are--enabled">
-                  <span class="visually-hidden">
-                    есть
-                  </span>
-              </td>
-            </tr>
-            <tr class="subscription__tariff-options">
-              <td class="subscription__option-name">
-                Смайлики
-              </td>
               <td class="subscription__option-are subscription__option-are--enabled">
                   <span class="visually-hidden">
                     есть
@@ -269,16 +309,16 @@
               </td>
           </table>
         </li>
-        <li class="slider__item">
+        <li class="slider__item slider__item--3 slider__item--tariff-3">
           <table class="subscription__tariff">
             <thead class="subscription__tariff-caption">
             <tr class="subscription__tariff-marker">
               <th class="subscription__tariff-title">
                 <p class="subscription__tariff-name">
-                  Стандарт
+                  Анлим
                 </p>
                 <span class="subscription__tariff-price">
-                  3,99 USD
+                  9,99 USD
                 </span>
               </th>
             </tr>
@@ -315,6 +355,8 @@
           </table>
         </li>
       </ul>
+      </div>
+
       <p class="subscription__toggles slider__controls">
         <label class="slider__toggle slider__toggle--1" for="tariff-1">
           1

@@ -1,6 +1,19 @@
 .subscription {
+  padding-top: 90px;
+  padding-bottom: 40px;
+
   .image("bg-triangle-white.svg", @grey);
   background-size: 100% auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subscription__tariffs-list {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
 }
 
 .subscription__tariff {
@@ -10,23 +23,22 @@
 }
 
 .subscription__tariff-caption {
-  position: relative;
-
   height: 100px;
   width: 100%;
 
   background-color: @sapphire;
 
   &--hit {
-    .icon(74px, 73px, 0, 0, @image:true, "bg-hit.svg");
+    position: relative;
+
+  .icon(74px, 73px, 0, auto, @image:true, "bg-hit.svg");
   }
 
   &--hit::after {
     content: "ХИТ";
 
     position: absolute;
-    top: 1.6%;
-    left: 0;
+    top: 4.5%;
 
     padding-left: 15px;
 

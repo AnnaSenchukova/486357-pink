@@ -1,21 +1,100 @@
 .comments {
+  width: 100%;
+  padding-bottom: 40px;
+
   background-color: @white;
 }
 
 .comments__item {
+  display: none;
+  flex-direction: column;
   margin: 0;
 }
 
 .comments__text {
+  order:1;
   margin: 0;
+  padding-bottom: 38px;
 
   .font-regular(@line-height:30px);
   text-align: center;
 }
 
 .comments__author {
+  margin:0;
+  padding-bottom: 30px;
+
+  text-align: center;
+}
+
+.comments__author-name {
   margin: 0;
 
   font-style: normal;
   .font-bold();
+}
+
+.comments__author-info {
+  display: none;
+}
+
+.comments__pagination {
+  display: none;
+}
+
+@media (min-width:660px) {
+  .comments__text {
+    order: 0;
+    min-width: 620px;
+    padding-bottom: 45px;
+
+    font-size: 18px;
+  }
+
+  .comments__author {
+    padding-bottom: 45px;
+  }
+
+  .comments__author-name {
+    margin-bottom: 20px;
+
+    font-size: 20px;
+  }
+
+  .comments__author-info {
+    display: block;
+    margin: 0;
+
+    .font-regular(@line-height: 30px);
+  }
+}
+
+@media (min-width:960px) {
+  .comments__wrapper {
+    .image("icon-quotes.svg", transparent, 50%, 15%);
+  }
+
+.comments__text {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+  .comments__author-name {
+    font-size: 24px;
+  }
+
+  .comments__author-info {
+    font-size: 18px;
+  }
+
+
+.comments__toggles {
+  display: none;
+}
+
+.comments__pagination {
+  display: flex;
+}
+
+
 }
