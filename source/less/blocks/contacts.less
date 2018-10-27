@@ -4,6 +4,12 @@
   background-color: @white;
 }
 
+.contacts__caption {
+  margin: 0;
+  padding-top: 45px;
+  padding-bottom: 40px;
+}
+
 .contacts__slogan {
   margin: 0;
 
@@ -23,4 +29,10 @@
 
   .font-light(@color:@pink);
   text-align: center;
+  &:not(:last-of-type){
+    padding-bottom: 27px;
+  }
+  &:last-of-type {
+    padding-bottom: 45px;
+  }
 }
