@@ -9,6 +9,7 @@
 
   &--footer {
     justify-content: center;
+
     background-color: transparent;
   }
 
@@ -22,5 +23,13 @@
 
   &:active .logo__svg-glasses--footer {
     fill: fade(@pink, 30%);
+  }
+}
+
+@media (min-width: @desktop) {
+  .logo {
+    width: max-content;
+
+    background-color: transparent;
   }
 }

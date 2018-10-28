@@ -1,15 +1,30 @@
 .header {
   width: 100%;
-  min-height: 106px;
 
-  .image("bg-back-mobile@1x.jpg", #1d2631);
-  background-size: cover;
+  .image("bg-back-mobile@1x.jpg", #1d2631, 50%, -32%);
 }
 
 .header__caption {
   width: min-content;
+  min-height: 109px;
   margin: 0 auto;
 
   .font-light(24px, 30px, @white);
   text-align: center;
+}
+
+@media (min-width: @tablet) {
+  .header {
+    background-image: url("../../img/bg-back-tablet@1x.jpg");
+    background-position-y: 100%;
+  }
+}
+
+@media (min-width: @desktop) {
+  .header {
+    padding-top: 110px;
+
+    background-image: url("../../img/bg-back-desktop@1x.jpg");
+    background-position-y: 0;
+  }
 }

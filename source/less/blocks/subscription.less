@@ -1,6 +1,18 @@
 .subscription {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 90px;
+  padding-bottom: 40px;
+
   .image("bg-triangle-white.svg", @grey);
   background-size: 100% auto;
+}
+
+.subscription__tariffs-list {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
 }
 
 .subscription__tariff {
@@ -10,23 +22,22 @@
 }
 
 .subscription__tariff-caption {
-  position: relative;
-
   height: 100px;
   width: 100%;
 
   background-color: @sapphire;
 
   &--hit {
-    .icon(74px, 73px, 0, 0, @image:true, "bg-hit.svg");
+    position: relative;
+
+  .icon(74px, 73px, 0, auto, @image:true, "bg-hit.svg");
   }
 
   &--hit::after {
     content: "ХИТ";
 
     position: absolute;
-    top: 1.6%;
-    left: 0;
+    top: 4.5%;
 
     padding-left: 15px;
 
@@ -45,8 +56,11 @@
   text-align: center;
 
   border-left: 2px solid @white;
+  /*
   box-shadow: 0 0 0 2px @white;
+*/
 }
+
 
 .subscription__tariff-title {
   width: 100%;
@@ -67,7 +81,7 @@
 .subscription__tariff-options {
   vertical-align: middle;
   width: 100%; //temporarily
-  height: 62px;
+  height: fit-content;
 
   text-align: left;
 
@@ -77,6 +91,8 @@
 }
 
 .subscription__option-name {
+  padding-left: 23px;
+
   .font-regular(@line-height:30px);
   text-transform: uppercase;
 }
@@ -128,5 +144,171 @@
 
   &--disabled::after {
     transform: rotate(-45deg);
+  }
+}
+
+@media (min-width: @tablet){
+  .subscription {
+    padding-bottom: 68px;
+  }
+
+.subscription__toggles {
+  display: none;
+}
+  .slider__wrapper {
+    position: relative;
+  }
+
+  .subscription__tariffs-list {
+    margin-left: 25%;
+    padding-bottom: 0;
+  }
+
+
+
+  .subscription__tariff {
+    width: 100%; //temporarily
+    min-width: 155px;
+  }
+
+  .subscription__tariff-marker {
+    height: 80px;
+  }
+
+  .subscription__tariff-name {
+    font-size: 16px;
+  }
+
+  .subscription__tariff-price {
+    font-size: 18px;
+  }
+
+
+
+  .subscription__tariff:not(:first-child) .subscription__option-name {
+    font-size: 0;
+  }
+
+  .subscription__tariff:first-child .subscription__option-name {
+    top: auto;
+    left: 0;
+
+    height: 46px;
+    padding-top: 8px;
+    padding-left: 16px;
+
+    text-transform: none;
+  }
+
+  .subscription__option-name {
+    position: absolute;
+    z-index: 10;
+
+    display: block;
+    width: 27%;
+    min-width: 155px;
+
+    &::after {
+      content: "";
+
+      position: relative;
+      z-index: -1;
+
+      display: block;
+      box-sizing: content-box;
+      width: 100%;
+      min-width: 155px;
+      height: 46px;
+
+      background-color: @white;
+      border: 2px solid #e5e5e5;
+      border-radius: 0 4px 0 0;
+
+      transform: translate(-15px, -80%);
+    }
+  }
+
+
+
+
+
+  .subscription__option-are {
+    height: 46px;
+    margin: 0 auto;
+  }
+
+  .subscription__option-are--enabled::before {
+    margin: 0 25px;
+  }
+
+  .subscription__option-are--disabled::before,
+  .subscription__option-are--disabled::after {
+    margin: 0 10px;
+  }
+
+  .subscription__tariff-caption--hit::before {
+    background-size: 80%;
+  }
+
+  .subscription__tariff-caption--hit::after {
+    top: 2.5%;
+    padding-left: 7px;
+  }
+}
+
+@media (min-width: 960px) {
+  .subscription {
+    padding-top: 148px;
+    padding-bottom: 95px;
+  }
+
+  .subscription__tariff-marker {
+    height: 97px;
+  }
+
+  .subscription__tariff-name {
+    font-size: 18px;
+  }
+
+  .subscription__tariff-price {
+    font-size: 24px;
+  }
+
+  .subscription__option-name {
+    font-size: 18px;
+
+
+    &::after {
+      height: 60px;
+      transform: translate(-19px, -74%);
+    }
+  }
+
+  .subscription__tariff:first-child .subscription__option-name {
+    height: 60px;
+    padding-top: 15px;
+    padding-left: 22px;
+  }
+
+  .subscription__option-are {
+    height: 60px;
+  }
+
+  .subscription__option-are--enabled::before {
+    margin: 12px 25px;
+  }
+
+  .subscription__option-are--disabled::before,
+  .subscription__option-are--disabled::after {
+    margin: -3px 10px;
+  }
+
+  .subscription__tariff-caption--hit::before {
+    background-size: 100%;
+  }
+
+  .subscription__tariff-caption--hit::after {
+    top: 5%;
+    padding-left: 15px;
   }
 }
