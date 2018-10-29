@@ -37,6 +37,7 @@
 }
 
 .page-navigation--closed .page-navigation__button {
+
   &::before {
     content: "";
 
@@ -51,10 +52,12 @@
     background-color: @white;
     box-shadow: 0 3px 0 -1px fade(@white, 30%), 0 11px 0 0 @white, 0 19px 0 -1px fade(@white, 30%), 0 22px 0 0 @white;
   }
+
   .navigation-dynamic(@pink, @pseudo-before:true, @shadow:@pink);
 }
 
 .page-navigation--opened .page-navigation__button {
+
   &::before,
   &::after {
     content: "";
@@ -78,6 +81,7 @@
   &::after {
     transform: rotate(-45deg);
   }
+
   .navigation-dynamic(@pink, @pseudo-before:true);
   .navigation-dynamic(@pink, @pseudo-after:true);
 }

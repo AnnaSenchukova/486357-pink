@@ -3,77 +3,70 @@
   flex-direction: column;
   align-items: center;
   padding-top: 90px;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
 
   .image("bg-triangle-white.svg", @grey);
   background-size: 100% auto;
 }
 
-.subscription__tariffs-list {
-  display: flex;
-  justify-content: center;
+.subscription__tariffs {
+ width: 100%;
   padding-bottom: 40px;
-}
-
-.subscription__tariff {
-  width: 276px; //temporarily
 
   border-collapse: collapse;
 }
 
-.subscription__tariff-caption {
-  height: 100px;
+.subscription__tariffs-description {
   width: 100%;
+}
+
+.subscription__description {
+  min-width: 276px;
+ height: 100px;
+  margin: 0;
+
+  .font-bold(@color:@white);
+  text-align: center;
+  text-transform: uppercase;
 
   background-color: @sapphire;
+  border-left: 2px solid @white;
+
+  &--hidden {
+    position: absolute;
+    z-index: -1;
+
+    width: 0;
+    height: 0;
+
+    font-size: 0;
+
+    border: none;
+  }
 
   &--hit {
     position: relative;
 
-  .icon(74px, 73px, 0, auto, @image:true, "bg-hit.svg");
+    .icon(74px, 73px, 0, 0, @image:true, "bg-hit.svg");
   }
 
   &--hit::after {
     content: "ХИТ";
 
     position: absolute;
-    top: 4.5%;
+    top: 10%;
+    left: 5%;
 
-    padding-left: 15px;
-
-    .font-bold(14px, @color:@white);
+    .font-regular(14px, 30px, @color:@white);
     text-transform: uppercase;
 
     transform: rotate(-45deg);
   }
 }
 
-.subscription__tariff-marker {
-  vertical-align: middle;
-  height: 100px;
-  width: 100%;
+.subscription__price {
+  display: block;
 
-  text-align: center;
-
-  border-left: 2px solid @white;
-  /*
-  box-shadow: 0 0 0 2px @white;
-*/
-}
-
-
-.subscription__tariff-title {
-  width: 100%;
-}
-
-.subscription__tariff-name {
-  margin: 0;
-
-  .font-bold(@color:@white);
-  text-transform: uppercase;
-}
-
-.subscription__tariff-price {
   .font-light(@color: @white);
   text-transform: uppercase;
 }
@@ -86,34 +79,39 @@
   text-align: left;
 
   background-color: @white;
-  border: 2px solid #e5e5e5;
-  border-top: none;
+  border: none;
 }
 
-.subscription__option-name {
-  padding-left: 23px;
+.subscription__option {
+  position: relative;
+
+  height: 60px;
+  padding-left: 25px;
 
   .font-regular(@line-height:30px);
   text-transform: uppercase;
-}
 
-.subscription__option-are {
-  position: relative;
+  border: 2px solid #e5e5e5;
+  border-top: none;
 
-  display: block;
-  width: 60px;
-  height: 62px;
-  margin-left: -60px;
+  &--hidden {
+    position: absolute;
+    z-index: -1;
 
-  background-color: transparent;
+    font-size: 0;
+  }
 
   &--enabled::before {
     content: "";
 
+    position: absolute;
+    top: 15%;
+    right: 10%;
+
     display: block;
     width: 15px;
     height: 30px;
-    margin: 12px 25px;
+    margin: 0;
 
     border-right: 2px solid #3dc644;
     border-bottom: 2px solid #3dc644;
@@ -127,7 +125,7 @@
 
     position: absolute;
     top: 45%;
-    left: 0;
+    right: 4%;
 
     display: block;
     width: 35px;
@@ -145,118 +143,119 @@
   &--disabled::after {
     transform: rotate(-45deg);
   }
+
 }
 
-@media (min-width: @tablet){
+.subscription__toggles {
+  padding-top: 30px;
+}
+
+@media (min-width: @tablet) {
+
   .subscription {
+    padding-top: 85px;
     padding-bottom: 68px;
   }
 
-.subscription__toggles {
-  display: none;
-}
-  .slider__wrapper {
-    position: relative;
-  }
-
-  .subscription__tariffs-list {
-    margin-left: 25%;
-    padding-bottom: 0;
-  }
-
-
-
-  .subscription__tariff {
-    width: 100%; //temporarily
+  .subscription__description {
+    width: 25%;
     min-width: 155px;
-  }
+    height: 79px;
 
-  .subscription__tariff-marker {
-    height: 80px;
-  }
-
-  .subscription__tariff-name {
     font-size: 16px;
-  }
 
-  .subscription__tariff-price {
-    font-size: 18px;
-  }
+    &--hit::before {
+      background-size: 80%;
+    }
 
-
-
-  .subscription__tariff:not(:first-child) .subscription__option-name {
-    font-size: 0;
-  }
-
-  .subscription__tariff:first-child .subscription__option-name {
-    top: auto;
-    left: 0;
-
-    height: 46px;
-    padding-top: 8px;
-    padding-left: 16px;
-
-    text-transform: none;
-  }
-
-  .subscription__option-name {
-    position: absolute;
-    z-index: 10;
-
-    display: block;
-    width: 27%;
-    min-width: 155px;
-
-    &::after {
-      content: "";
-
-      position: relative;
-      z-index: -1;
-
-      display: block;
-      box-sizing: content-box;
-      width: 100%;
-      min-width: 155px;
-      height: 46px;
-
-      background-color: @white;
-      border: 2px solid #e5e5e5;
-      border-radius: 0 4px 0 0;
-
-      transform: translate(-15px, -80%);
+    &--hit::after {
+      top: 5%;
     }
   }
 
-
-
-
-
-  .subscription__option-are {
-    height: 46px;
-    margin: 0 auto;
+  .subscription__price {
+    font-size: 18px;
   }
 
-  .subscription__option-are--enabled::before {
-    margin: 0 25px;
+  .subscription__option {
+    height: 45px;
+
+    font-size: 0;
+
+    &--hidden {
+      position: static;
+      z-index: 0;
+
+      width: 25%;
+      min-width: 155px;
+      padding-left: 18px;
+
+      font-size: 14px;
+      text-transform: none;
+
+      border-top: 2px solid #e5e5e5;
+    }
+
+      &--enabled::before {
+        right: 50%;
+      }
+
+    &--disabled::before,
+    &--disabled::after {
+      right: 40%;
+    }
+
   }
 
-  .subscription__option-are--disabled::before,
-  .subscription__option-are--disabled::after {
-    margin: 0 10px;
+  .subscription__toggles {
+    display: none;
   }
 
-  .subscription__tariff-caption--hit::before {
-    background-size: 80%;
+}
+
+@media (min-width: @desktop) {
+  .subscription {
+    padding-top: 148px;
+    padding-bottom: 95px;
   }
 
-  .subscription__tariff-caption--hit::after {
-    top: 2.5%;
-    padding-left: 7px;
+  .subscription__description {
+    width: 25%;
+    min-width: 234px;
+    height: 98px;
+
+    font-size: 18px;
+
+    &--hit::before {
+      background-size: 100%;
+    }
+
+    &--hit::after {
+      top: 10%;
+    }
+  }
+
+  .subscription__price {
+    font-size: 24px;
+  }
+
+
+  .subscription__option {
+    height: 60px;
+
+    &--hidden {
+      width: 25%;
+      min-width: 234px;
+      padding-left: 23px;
+
+      font-size: 18px;
+    }
   }
 }
 
-@media (min-width: 960px) {
+/*
+
+@media (min-width: @desktop) {
   .subscription {
     padding-top: 148px;
     padding-bottom: 95px;
@@ -312,3 +311,4 @@
     padding-left: 15px;
   }
 }
+*/

@@ -95,8 +95,8 @@
         Нам есть, что вам предложить!
       </p>
     </div>
-    <div class="advantages__list-wrapper">
-    <ul class="advantages__list container container--advantages">
+    <div class="advantages__list-wrapper container container--advantages">
+    <ul class="advantages__list">
       <li class="advantages__item advantages__item--joy">
         <h3 class="advantages__title">
           Поднимает настроение
@@ -209,7 +209,7 @@
       </p>
     </div>
   </section>
-  <section class="page-main__subscription subscription">
+  <section class="page-main__subscription subscription container">
     <h2 class="visually-hidden">
       Выбирите свой тарифный план
     </h2>
@@ -217,7 +217,104 @@
       <input class="slider__check slide-1" id="tariff-1" type="radio" name="toggle--tariff" value="slide-1--tariff">
       <input class="slider__check slide-2" id="tariff-2" type="radio" name="toggle--tariff" value="slide-2--tariff" checked>
       <input class="slider__check slide-3" id="tariff-3" type="radio" name="toggle--tariff" value="slide-3--tariff">
-      <div class="slider__wrapper container">
+      <div class="slider__wrapper">
+        <table class="subscription__tariffs slider__item">
+          <thead class="subscription__tariffs-caption">
+          <tr class=subscription__tariffs-description>
+            <th class="subscription__description subscription__description--hidden">
+              Тарифный план
+            </th>
+            <th class="subscription__description">
+              База
+              <span class="subscription__price">
+                1,99 USD
+              </span>
+            </th>
+            <th class="subscription__description subscription__description--hit">
+              Стандарт
+              <span class="subscription__price">
+                3,99 USD
+              </span>
+            </th>
+            <th class="subscription__description">
+              Анлим
+              <span class="subscription__price">
+                9,99 USD
+              </span>
+            </th>
+          </tr>
+          </thead>
+          <tr class="subscription__tariff-options">
+            <td class="subscription__option  subscription__option--hidden">
+              Розовый фильтр
+            </td>
+            <td class="subscription__option subscription__option--enabled">
+              Розовый фильтр
+              <span class="visually-hidden">
+                есть
+              </span>
+            </td>
+            <td class="subscription__option subscription__option--enabled">
+              Розовый фильтр
+              <span class="visually-hidden">
+                есть
+              </span>
+            </td>
+            <td class="subscription__option subscription__option--enabled">
+              Розовый фильтр
+              <span class="visually-hidden">
+                есть
+              </span>
+            </td>
+          </tr>
+          <tr class="subscription__tariff-options">
+            <td class="subscription__option subscription__option--hidden">
+              Смайлики
+            </td>
+            <td class="subscription__option subscription__option--disabled">
+              Смайлики
+              <span class="visually-hidden">
+                нет
+              </span>
+            </td>
+            <td class="subscription__option subscription__option--enabled">
+              Смайлики
+              <span class="visually-hidden">
+                есть
+              </span>
+            </td>
+            <td class="subscription__option subscription__option--enabled">
+              Смайлики
+              <span class="visually-hidden">
+                есть
+              </span>
+            </td>
+          </tr>
+          <tr class="subscription__tariff-options">
+            <td class="subscription__option subscription__option--hidden">
+              Комментарии
+            </td>
+            <td class="subscription__option subscription__option--disabled">
+              Комментарии
+              <span class="visually-hidden">
+                нет
+              </span>
+            </td>
+            <td class="subscription__option subscription__option--disabled">
+              Комментарии
+              <span class="visually-hidden">
+                нет
+              </span>
+            </td>
+            <td class="subscription__option subscription__option--enabled">
+              Комментарии
+              <span class="visually-hidden">
+                есть
+              </span>
+            </td>
+          </tr>
+        </table>
+     <!--
       <ul class="subscription__tariffs-list slider__list slider__list--subscription">
         <li class="slider__item slider__item--1 slider__item--tariff-1">
           <table class="subscription__tariff">
@@ -355,7 +452,10 @@
           </table>
         </li>
       </ul>
+      -->
+
       </div>
+
       <p class="subscription__toggles slider__controls">
         <label class="slider__toggle slider__toggle--1" for="tariff-1">
           1
