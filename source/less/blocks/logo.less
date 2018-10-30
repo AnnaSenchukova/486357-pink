@@ -9,27 +9,65 @@
 
   &--footer {
     justify-content: center;
+    padding-bottom: 40px;
 
     background-color: transparent;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover .logo__svg-name--footer,
+    &:focus .logo__svg-name--footer{
+      fill: @pink;
+    }
+
+    &:active .logo__svg-name--footer {
+      fill: fade(@sapphire, 30%);
+    }
+
+    &:active .logo__svg-glasses--footer {
+      fill: fade(@pink, 30%);
+    }
   }
 
-  &:hover .logo__svg-name--footer {
-    fill: @pink;
-  }
 
-  &:active .logo__svg-name--footer {
-    fill: fade(@sapphire, 30%);
-  }
+}
 
-  &:active .logo__svg-glasses--footer {
-    fill: fade(@pink, 30%);
+@media (min-width: @tablet) {
+  .logo {
+    &--footer {
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 33.33%;
+      min-height: 100%;
+      padding-bottom: 0;
+    }
   }
 }
+
 
 @media (min-width: @desktop) {
   .logo {
     width: max-content;
 
     background-color: transparent;
+
+    &--footer {
+      position: relative;
+
+      width: 33.33%;
+
+      .icon(146px, 40px, 0, 0, true, "logo-pink-blue-desktop.svg");
+
+      &:focus::before {
+        opacity: 0.3;
+      }
+    }
+
+  }
+
+  .logo__svg--footer {
+    opacity: 0;
   }
 }
