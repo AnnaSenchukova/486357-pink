@@ -470,10 +470,11 @@
     </div>
   </section>
   <section class="contacts">
+    <div class="contacts__wrapper container">
     <h2 class="visually-hidden">
       Контактная информация
     </h2>
-    <div class="contacts__caption">
+    <div class="contacts__wrapper contacts__wrapper--caption">
     <p class="contacts__slogan">
       Остались вопросы?
     </p>
@@ -481,18 +482,23 @@
       Свяжитесь с нами!
     </p>
     </div>
+      <div class="contacts__wrapper contacts__wrapper--item">
     <p class="contacts__title">
       Звоните:
     </p>
     <p class="contacts__description">
       +7 (812) 555-66-66
     </p>
+      </div>
+      <div class="contacts__wrapper contacts__wrapper--item">
     <p class="contacts__title">
       Пишите:
     </p>
     <p class="contacts__description">
       mail@htmlacademy.ru
     </p>
+      </div>
+      <div class="contacts__wrapper contacts__wrapper--item">
     <p class="contacts__title">
       Приезжайте в гости:
     </p>
@@ -500,7 +506,11 @@
       ул. Большая<br>
       Конюшенная, 19/8
     </p>
-    <section class="contacts__map map"></section>
+      </div>
+    </div>
+    <section class="contacts__map map">
+      <div class="map__decoration"></div>
+    </section>
   </section>
 </main>
 <footer class="page-footer">
