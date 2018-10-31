@@ -1,6 +1,4 @@
 .article {
-  width: 0;
-
   font-size: 0;
 }
 
@@ -11,13 +9,16 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    padding: 0 20px;
+    padding-top: 100px;
+    padding-bottom: 60px;
 
     background-color: transparent;
     &::before {
       content: "24";
       position: absolute;
-      top:55%;
-      left:3%;
+      top: 55%;
+      left: 37px;
       z-index: 10;
 
       display: block;
@@ -36,8 +37,8 @@
     &::after {
       content: "";
       position: absolute;
-      top:50%;
-      left:0;
+      top: 50%;
+      left: 20px;
 
       display: block;
       width: 298px;
@@ -50,7 +51,7 @@
   }
 
   .article__wrapper {
-    width: 50%;//310px
+    width: 50%; //310px
     margin: 0;
   }
 
@@ -79,10 +80,13 @@
 
 @media (min-width: @desktop) {
   .article {
+    padding: 0 10px;
+    padding-top: 170px;
+    padding-bottom: 119px;
 
     &::before {
-      top:55%;
-      left:3.5%;
+      top: 55%;
+      left: 33px;
 
       width: 253px;
       height: 253px;
@@ -95,21 +99,21 @@
     }
 
     &::after {
-      left:10px;
+      left: 10px;
 
       background-size: 100%;
     }
   }
 
   .article__wrapper {
-    width: 61%;//580px from 940px
+    width: 61%; //580px from 940px
   }
 
   .article__title {
     padding-right: 0;
     padding-bottom: 26px;
 
-   line-height: 30px;
+    line-height: 30px;
   }
 
   .article__descriptions {

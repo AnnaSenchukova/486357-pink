@@ -1,7 +1,7 @@
 .header {
   width: 100%;
 
-  .image("bg-back-mobile@1x.jpg", #1d2631, 50%, -32%);
+  .image("bg-back-mobile@1x.jpg", #1d2631, 50%, -30%);
 }
 
 .header__caption {
@@ -16,6 +16,7 @@
 @media (min-width: @tablet) {
 
   .header {
+    min-width: 660px; //?
     .image("bg-back-tablet@1x.jpg", #1d2631, 50%, 100%);
   }
 }
@@ -23,6 +24,7 @@
 @media (min-width: @desktop) {
 
   .header {
+    min-width: 960px;//?
     padding-top: 110px;
 
     .image("bg-back-desktop@1x.jpg", #1d2631, 50%, 0);

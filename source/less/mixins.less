@@ -47,6 +47,50 @@
   }
 }
 
+
+.logo-dynamic(@color-base, @color-decoration, @glasses:none, @color-glasses:transpandent,  @stars:none, @color-stars:transpandent) {
+  &:focus {
+    outline: none;
+  }
+
+  &:hover .logo__svg-word,
+  &:focus .logo__svg-word {
+    fill: @color-decoration;
+  }
+
+  &:active .logo__svg-word {
+    fill: fade(@color-base, 30%);
+  }
+
+  & when not (@glasses = none) {
+
+    &:hover .logo__svg-glasses,
+    &:focus .logo__svg-glasses {
+      fill: @color-decoration;
+    }
+
+    &:active .logo__svg-glasses {
+      fill: fade(@color-glasses, 30%);
+    }
+  }
+
+  & when not (@stars = none) {
+
+    &:hover .logo__svg-stars,
+    &:focus .logo__svg-stars {
+      fill: @color-decoration;
+    }
+
+    &:active .logo__svg-stars {
+      fill: fade(@color-stars, 30%);
+      &--i {
+        fill: fade(@color-glasses, 30%);
+      }
+    }
+  }
+
+}
+
 .form-dynamic(@pseudo:none) {
   border: 2px solid #e5e5e5;
 

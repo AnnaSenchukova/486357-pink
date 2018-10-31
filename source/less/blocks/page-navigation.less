@@ -17,7 +17,7 @@
 }
 
 .page-navigation__logo {
-  padding: 0 20px; //20px mobile and tablet
+  padding-left: 20px; //20px mobile and tablet
 }
 
 .page-navigation--closed .page-navigation__logo {
@@ -43,7 +43,7 @@
 
     position: absolute;
     top: 30%;
-    right: 0;
+    right: 20px;
 
     display: block;
     width: 100%;
@@ -64,7 +64,7 @@
 
     position: absolute;
     top: 45%;
-    right: 40%;
+    right: 20px;
 
     display: block;
     width: 23px;
@@ -95,13 +95,16 @@
   .page-navigation {
     display: flex;
     justify-content: space-between;
+    /*
     max-width: @desktop;
     height: 100%;
     margin: 0 auto;
     padding: 0 10px;
+    */
   }
 
   .page-navigation .page-navigation__logo {
+    align-items: flex-start;
     flex-grow: 1;
     padding: 0;
   }
