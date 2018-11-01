@@ -5,28 +5,44 @@
 }
 
 .contest__slogan {
-  margin: 0;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 6.25%;
+  padding-top: 53px;
+  padding-bottom: 48px;
 
   .font-regular(@line-height:30px);
   text-align: center;
+
+  &--hidden {
+    padding: 0;
+    font-size: 0;
+  }
 }
 
 .contest__form {
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
   margin: 0;
   padding: 0;
+  padding-bottom: 70px;
+}
+
+.contest__wrapper {
+  width: 100%;
+  margin: 0;
+
+  &:nth-child(2n):not(:last-child) {
+    background-color: @grey;
+  }
 }
 
 .contest__item {
   width: 100%;
-  margin: 0;
-  padding: 0;
+  padding: 0 20px;
 
   border: none;
-
-  &:nth-child(2n) {
-    background-color: @grey;
-  }
 }
 
 .contest__title,
@@ -53,7 +69,7 @@
 
   background-color: transparent;
   border: 2px solid #e5e5e5;
-  border-radius: 3%;
+  border-radius: 3px;
 
   .form-dynamic();
 
@@ -181,4 +197,108 @@
 
 .contest__note-star {
   color: @pink;
+}
+
+@media (min-width: @tablet) {
+  .contest {
+ min-width: 660px;//?
+  }
+
+  .contest__slogan {
+    padding: 0 12%;
+    padding-top: 100px;
+    padding-bottom: 78px;
+
+    font-size: 18px;
+
+    &--hidden {
+      padding: 0;
+      font-size:18px;
+    }
+  }
+
+  .contest__form {
+    padding-bottom: 40px;
+  }
+
+  .contest__wrapper {
+    &:nth-child(2n):not(:last-child) {
+      background-color: @white;
+    }
+    &--name {
+      order: 1;
+    }
+
+    &--advantages {
+      order: 4;
+    }
+
+    &--contacts {
+      order: 3;
+    }
+
+    &--app {
+      order: 2;
+    }
+
+    &--emotion {
+      order: 5;
+    }
+
+    &--button {
+      order: 6;
+    }
+  }
+
+}
+
+@media (min-width: @desktop) {
+  .contest {
+    min-width: 960px;//?
+  }
+
+  .contest__slogan {
+    padding: 0 10.7%;
+    padding-top: 100px;
+    padding-bottom: 85px;
+
+    &--hidden {
+      padding: 0;
+    }
+  }
+
+  .contest__form {
+    justify-content: space-between;
+    padding-bottom: 50px;
+  }
+
+  .contest__wrapper {
+
+    &:first-child,
+    &:nth-child(4) {
+      width: 50%;
+    }
+
+    &:first-child .contest__item,
+    &:nth-child(4) .contest__item  {
+      min-width: auto;
+      max-width: 480px;
+    }
+
+    &:first-child .contest__item {
+      padding-right: 0;
+      margin-right: 0;
+      margin-left: auto;
+    }
+
+    &:nth-child(4) .contest__item {
+      padding-left: 0;
+      margin-left: 0;
+      margin-right: auto;
+    }
+  }
+
+  .contest__item {
+    padding:  0 10px;
+  }
 }
