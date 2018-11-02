@@ -26,42 +26,78 @@
   width: 100%;
   margin: 0;
   padding: 0;
-  padding-bottom: 70px;
 }
 
 .contest__wrapper {
   width: 100%;
-  margin: 0;
+  padding: 0 20px;
+
+  &:not(:last-child) {
+    padding-top: 43px;
+    padding-bottom: 41px;
+  }
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &:nth-last-child(2){
+    padding-bottom: 0;
+  }
+
+  &:last-child {
+    padding: 50px 20px;
+  }
 
   &:nth-child(2n):not(:last-child) {
     background-color: @grey;
   }
+
 }
 
 .contest__item {
   width: 100%;
-  padding: 0 20px;
+  padding: 0;
 
   border: none;
 }
 
-.contest__title,
-.contest__note {
+.contest__title {
   display: block;
   width: 100%;
   margin: 0;
+  padding-left: 22px;
+  padding-bottom: 15px;
 
   .font-regular(@line-height:30px, @color:@pink);
   text-transform: uppercase;
 
   &--question {
     text-align: center;
+    padding: 0;
+    padding-bottom: 38px;
+
   }
+
+
+
+  &--hidden {
+    position: absolute;
+
+    width: 0;
+
+    clip: rect(0 0 0 0);
+  }
+
+
+  &--textarea {
+    padding-bottom: 15px;
+  }
+
 }
 
 .contest__field {
   width: 100%;
-  min-width: 280px; //temporarity
   height: 60px;
   padding-left: 23px;
 
@@ -77,9 +113,14 @@
     color: @sapphire;
   }
 
+  &:not(:last-child) {
+    margin-bottom: 27px;
+  }
+
   &--textarea {
+    min-height: 200px;
     margin: 0;
-    padding: 0 20px;
+    padding: 22px 20px;
   }
 }
 
@@ -104,10 +145,6 @@
     display: block;
     min-height: 39px;
     padding-left: 63px;
-  }
-
-  & + .contest__label:not(:last-child) {
-    margin-bottom: 21px;
   }
 
   &--checkbox {
@@ -145,6 +182,10 @@
       border-right: 2px solid @pink;
       border-bottom: 2px solid @pink;
       transform: rotate(45deg);
+    }
+
+    & + .contest__label:not(:last-child) {
+      margin-bottom: 43px;
     }
   }
 
@@ -184,25 +225,32 @@
       background-color: @pink;
       border-radius: 50%;
     }
+
+    & + .contest__label:not(:last-child) {
+      margin-bottom: 37px;
+    }
   }
+
 }
 
 .contest__note {
+  display: block;
+  width: 100%;
   margin: 0;
+  padding: 0;
+  padding-top: 40px;
 
   .font-regular(@line-height:30px, @color:@sapphire);
   text-align: center;
   text-transform: uppercase;
 }
 
+
 .contest__note-star {
   color: @pink;
 }
 
 @media (min-width: @tablet) {
-  .contest {
- min-width: 660px;//?
-  }
 
   .contest__slogan {
     padding: 0 12%;
@@ -215,10 +263,6 @@
       padding: 0;
       font-size:18px;
     }
-  }
-
-  .contest__form {
-    padding-bottom: 40px;
   }
 
   .contest__wrapper {
@@ -248,14 +292,59 @@
     &--button {
       order: 6;
     }
+
+    &:not(:first-child) .contest__item {
+      border: 2px solid #e5e5e5;
+    }
   }
+
+  .contest__wrapper-item {
+    &--name {
+      display: flex;
+      flex-wrap: wrap;
+
+    }
+  }
+
+    .contest__title {
+    width: fit-content;
+
+    &--question {
+      padding: 0 30px;
+    }
+    &--hidden {
+      position: static;
+    }
+  }
+
+  .contest__wrapper--name .contest__field {
+    width: auto;
+    margin-bottom: 0;
+    min-width: 84%;
+    flex-grow: 2;
+
+    &:not(:last-of-type) {
+      margin-bottom: 52px;
+    }
+  }
+
+  .contest__wrapper--name .contest__title {
+    align-self: center;
+    height: inherit;
+    padding: 0;
+    padding-right: 20px;
+
+    &:not(:last-of-type) {
+      margin-bottom: 52px;
+    }
+  }
+
+
 
 }
 
 @media (min-width: @desktop) {
-  .contest {
-    min-width: 960px;//?
-  }
+
 
   .contest__slogan {
     padding: 0 10.7%;
@@ -267,38 +356,46 @@
     }
   }
 
+  /*
   .contest__form {
-    justify-content: space-between;
-    padding-bottom: 50px;
+    justify-content: space-between; ?
   }
+  */
 
   .contest__wrapper {
-
+padding: 0 10px;
     &:first-child,
     &:nth-child(4) {
       width: 50%;
     }
 
+
+
+    &:first-child {
+      padding-right: 36px;
+    }
+
+    &:nth-child(4) {
+      padding-top: 0;
+      padding-left: 36px;
+    }
+
+
     &:first-child .contest__item,
     &:nth-child(4) .contest__item  {
       min-width: auto;
-      max-width: 480px;
+      max-width: 435px;
+      height: 100%;
     }
 
     &:first-child .contest__item {
-      padding-right: 0;
       margin-right: 0;
       margin-left: auto;
     }
 
     &:nth-child(4) .contest__item {
-      padding-left: 0;
       margin-left: 0;
       margin-right: auto;
     }
-  }
-
-  .contest__item {
-    padding:  0 10px;
   }
 }

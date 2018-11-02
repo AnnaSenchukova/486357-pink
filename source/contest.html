@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -83,7 +83,8 @@
     <form class="contest__form" method="post" action="https://echo.htmlacademy.ru">
       <div class="contest__wrapper contest__wrapper--name">
       <fieldset class="contest__item container">
-        <label class="contest__title" for="surname">
+        <div class="contest__wrapper-item contest__wrapper-item--name">
+        <label class="contest__title contest" for="surname">
           Фамилия:
         </label>
         <input class="contest__field" id="surname" type="text" name="surname" placeholder="Укажите фамилию *" required autofocus>
@@ -95,6 +96,7 @@
           Отчество:
         </label>
         <input class="contest__field" id="patronymic" type="text" name="patronymic" placeholder="Ну и отчество тоже">
+        </div>
       </fieldset>
       </div>
       <div class="contest__wrapper contest__wrapper--advantages">
@@ -102,6 +104,7 @@
         <legend class="contest__title contest__title--question">
           Ваши безбашенные достижения в путешествии
         </legend>
+        <div class="contest__wrapper-item">
         <input class="contest__input contest__input--checkbox" id="selfie" type="checkbox" name="selfie" value="self-advantages" checked>
         <label class="contest__label" for="selfie">
           Сделал селфи с акулой
@@ -126,21 +129,24 @@
         <label class="contest__label" for="hotel">
           Разгромил отель
         </label>
+        </div>
       </fieldset>
       </div>
       <div class="contest__wrapper contest__wrapper--contacts">
       <fieldset class="contest__item container">
-        <legend class = "contest__title contest__title--question">
+        <legend class = "contest__title contest__title--question contest__title--hidden">
           Контактная информация
         </legend>
-        <label class="contest__title" for="telephone">
+        <div class="contest__wrapper-item contest__wrapper-item--contacts">
+        <label class="contest__title contest__title--telephone" for="telephone">
           Номер телефона
         </label>
         <input class="contest__field" id="telephone" type="tel" placeholder="Номер, пожалуйста">
-        <label class="contest__title" for="email">
+        <label class="contest__title contest__title--post" for="email">
           Адрес почты
         </label>
-        <input class="contest__field" id="email" type="email" placeholder="Введите почту *" required>
+          <input class="contest__field" id="email" type="email" placeholder="Введите почту *" required>
+        </div>
       </fieldset>
       </div>
       <div class="contest__wrapper contest__wrapper--app">
@@ -148,6 +154,7 @@
         <legend class="contest__title contest__title--question">
           С каким приложением путешествовали?
         </legend>
+        <div class="contest__wrapper-item">
         <input class="contest__input contest__input--radio" id="iOS" type="radio" name="platform" value="iOS" checked>
         <label class="contest__label" for="iOS">
           Pink для iOS
@@ -160,14 +167,17 @@
         <label class="contest__label" for="windows">
           Windows Phone
         </label>
+        </div>
       </fieldset>
       </div>
       <div class="contest__wrapper contest__wrapper--emotion">
       <fieldset class="contest__item container">
-        <legend class="contest__title contest__title--question">
+        <legend class="contest__title contest__title--question  contest__title--textarea ">
           Опишите свои эмоции
         </legend>
-        <textarea class="contest__field contest__field--textarea" name="comment" id="comment" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+        <div class="contest__wrapper-item">
+          <textarea class="contest__field contest__field--textarea" name="comment" id="comment" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+        </div>
       </fieldset>
       </div>
       <div class="contest__wrapper contest__wrapper--button container">
