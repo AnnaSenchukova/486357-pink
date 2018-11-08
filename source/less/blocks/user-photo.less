@@ -18,6 +18,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    height: 100%;
     padding: 0 20px;
 
     background-color: transparent;
@@ -25,6 +26,10 @@
 }
 
 .user-photo__wrapper-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   padding: 26px 5.5%;
 
   background-color: @grey;
@@ -36,7 +41,11 @@
   margin-bottom: 20px;
 
   &:not(.user-photo__item--panorama) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     max-width: 280px;
+    height: auto;
 
     background-color: @grey;
   }
@@ -52,6 +61,7 @@
 
 .user-photo__image {
   display: block;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -128,25 +138,81 @@
 @media (min-width: @tablet){
 
   .user-photo__wrapper-inner {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 30px 4.5%;
-    height: 100%;
+    position: relative;
+
+    padding: 30px 28px;
   }
+
   .user-photo__item {
     margin: 0;
     margin-bottom: 30px;
 
-    &:not(.user-photo__item--panorama) {
-    height: auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+    &:not(.user-photo__item--panorama){
+      width: 48.4%; //width 300px
+      max-width: none; //300px
+    }
+  }
 
+  .user-photo__item--panorama .user-photo__link {
+    &::before {
+      top: 54px;
+    }
+  }
+
+  .user-photo__description {
+    padding-bottom: 20px;
+  }
+
+  .user-photo__likes {
+  &::before {
+    left: auto;
+    right: 30px;
+  }
+  }
+
+  .user-photo__item--panorama .user-photo__likes {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+
+    width: fit-content;
+
+    &::before {
+      right: 0;
+    }
+
+  }
+
+  .user-photo__likes-text {
+    margin-left: 0;
+  }
+
+  .user-photo__likes-count {
+    margin-right: 30px;
+  }
+}
+
+@media (min-width: @desktop){
+
+  .user-photo__wrapper {
+    &--container {
+      padding: 0 10px;
     }
   }
 
 
+  .user-photo__item {
+    margin-bottom: 54px;
+
+    &:not(.user-photo__item--panorama){
+      width: 31.92%; //width 300px
+    }
+  }
+
+  .user-photo__item--panorama .user-photo__link {
+    &::before {
+      top: 57px;
+    }
+  }
 
 }

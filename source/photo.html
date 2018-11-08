@@ -82,11 +82,14 @@
 
       <article class="user-photo__item user-photo__item--panorama">
         <a class="user-photo__link" href="#">
-          <img class="user-photo__image" src="img/panorama-mobile@1x.jpg" width="320" height="137" alt="Фото загруженное пользователем">
+          <picture>
+            <source media="(min-width: 940px)" srcset="img/panorama-desktop@1x.jpg">
+            <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg">
+            <img class="user-photo__image" src="img/panorama-mobile@1x.jpg" alt="Фото загруженное пользователем: bungee jumping">
+          </picture>
         </a>
         <div class="user-photo__wrapper user-photo__wrapper--container container">
-
-        <div class="user-photo__wrapper-inner">
+          <div class="user-photo__wrapper-inner">
           <blockquote class="user-photo__description">
           <a class="user-photo__author" href="http://page-author.ru">
             Анна
@@ -114,7 +117,11 @@
 
       <article class="user-photo__item">
         <a class="user-photo__link" href="#">
-          <img class="user-photo__image" src="img/photo-car-mobile@1x.jpg" width="280" height="180" alt="Фото загруженное пользователем">
+          <picture>
+            <source media="(min-width: 940px)" srcset="img/photo-car-desktop@1x.jpg">
+            <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg">
+          <img class="user-photo__image" src="img/photo-car-mobile@1x.jpg" alt="Фото загруженное пользователем: автомобиль">
+          </picture>
         </a>
         <div class="user-photo__wrapper-inner">
           <blockquote class="user-photo__description">
@@ -141,7 +148,11 @@
 
       <article class="user-photo__item">
         <a class="user-photo__link" href="#">
-          <img class="user-photo__image" src="img/photo-drumset-mobile@1x.jpg" width="280" height="180" alt="Фото загруженное пользователем">
+          <picture>
+            <source media="(min-width: 940px)" srcset="img/photo-drumset-desktop@1x.jpg">
+            <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg">
+          <img class="user-photo__image" src="img/photo-drumset-mobile@1x.jpg" alt="Фото загруженное пользователем: барабанные установки">
+          </picture>
         </a>
         <div class="user-photo__wrapper-inner">
           <blockquote class="user-photo__description">
@@ -167,7 +178,11 @@
       </article>
       <article class="user-photo__item">
         <a class="user-photo__link" href="#">
-          <img class="user-photo__image" src="img/photo-window-mobile@1x.jpg" width="280" height="180" alt="Фото загруженное пользователем">
+          <picture>
+          <source media="(min-width: 940px)" srcset="img/photo-window-desktop@1x.jpg">
+          <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.jpg">
+          <img class="user-photo__image" src="img/photo-window-mobile@1x.jpg" alt="Фото загруженное пользователем: окно на крыше">
+          </picture>
         </a>
         <div class="user-photo__wrapper-inner">
           <blockquote class="user-photo__description">
@@ -193,7 +208,11 @@
       </article>
       <article class="user-photo__item">
         <a class="user-photo__link" href="#">
-          <img class="user-photo__image" src="img/photo-fair-mobile@1x.jpg" width="280" height="180" alt="Фото загруженное пользователем">
+          <picture>
+            <source media="(min-width: 940px)" srcset="img/photo-fair-desktop@1x.jpg">
+            <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.jpg">
+            <img class="user-photo__image" src="img/photo-fair-mobile@1x.jpg" alt="Фото загруженное пользователем: бахчевой рынок">
+          </picture>
         </a>
         <div class="user-photo__wrapper-inner">
           <blockquote class="user-photo__description">
@@ -219,7 +238,11 @@
       </article>
       <article class="user-photo__item">
         <a class="user-photo__link" href="#">
-          <img class="user-photo__image" src="img/photo-pov-mobile@1x.jpg" width="280" height="180" alt="Фото загруженное пользователем">
+          <picture>
+            <source media="(min-width: 940px)" srcset="img/photo-pov-desktop@1x.jpg">
+            <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.jpg">
+          <img class="user-photo__image" src="img/photo-pov-mobile@1x.jpg" alt="Фото загруженное пользователем: на сопке">
+          </picture>
         </a>
         <div class="user-photo__wrapper-inner">
           <blockquote class="user-photo__description">
@@ -245,7 +268,11 @@
       </article>
       <article class="user-photo__item">
         <a class="user-photo__link" href="#">
-          <img class="user-photo__image" src="img/photo-wing-mobile@1x.jpg" width="280" height="180" alt="Фото загруженное пользователем">
+          <picture>
+            <source media="(min-width: 940px)" srcset="img/photo-wing-desktop@1x.jpg">
+            <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.jpg">
+          <img class="user-photo__image" src="img/photo-wing-mobile@1x.jpg" alt="Фото загруженное пользователем: крыло самолета">
+          </picture>
         </a>
         <div class="user-photo__wrapper-inner">
           <blockquote class="user-photo__description">
@@ -284,7 +311,11 @@
     </p>
     <form class="photo-editor__form container" method="post" action="https://echo.htmlacademy.ru">
       <div class="photo-editor__image-upload">
-        <img class="photo-editor__image" src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="Загружнное фото">
+        <picture>
+          <source media="(min-width: 940px)" srcset="img/photo-road-desktop@1x.jpg">
+          <source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg">
+        <img class="photo-editor__image" src="img/photo-road-mobile@1x.jpg" alt="Загружнное фото">
+        </picture>
       </div>
       <fieldset class="photo-editor__options">
         <legend class="visually-hidden">
