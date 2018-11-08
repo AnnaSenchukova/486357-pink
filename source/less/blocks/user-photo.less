@@ -1,5 +1,6 @@
 .user-photo {
   position: relative;
+
   width: 100%;
 
   background-color: @white;
@@ -12,36 +13,39 @@
   text-align: center;
 }
 
+.user-photo__wrapper {
+  &--container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
 
-
-/*
-
-.user-photo__list {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
+    background-color: transparent;
+  }
 }
 
-*/
+.user-photo__wrapper-inner {
+  padding: 26px 5.5%;
+
+  background-color: @grey;
+}
 
 .user-photo__item {
- /* max-width: 280px; //temporarity + margin*/
-
   width: 100%;
   margin: 0 auto;
   margin-bottom: 20px;
-  
+
   &:not(.user-photo__item--panorama) {
     max-width: 280px;
+
     background-color: @grey;
   }
-
 }
 
 .user-photo__link {
   position: relative;
+
+  display: block;
   width: 100%;
   height: auto;
 }
@@ -51,29 +55,39 @@
   margin: 0 auto;
 }
 
-.user-photo__item--panorama  .user-photo__image{
+.user-photo__item--panorama .user-photo__link {
+
+  &::before {
+    content: "Панорама дня";
+
+    position: absolute;
+    top: 0;
+    right: 20px;
+    z-index: 10;
+
+    display: inline-block;
+    vertical-align: middle;
+    width: 140px;
+    height: 35px;
+    padding-top: 5px;
+
+    .font-bold(12px, 24px, @white);
+    text-transform: uppercase;
+    text-align: center;
+
+    background-color: @pink;
+  }
+}
+
+.user-photo__item--panorama .user-photo__image {
   width: 100%;
   height: 100%;
 }
 
-
-.user-photo__wrapper{
-  padding: 26px 5.5%;
-  background-color: @grey;
-  &--container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 0 20px;
-    background-color: transparent;
-  }
-}
-
-
-
 .user-photo__description {
   width: 100%;
   margin: 0;
+  padding-bottom: 17px;
 }
 
 .user-photo__author {
@@ -108,5 +122,31 @@
 }
 
 .user-photo__likes-text {
-  margin-left: 15px;
+  margin-left: 32px;
+}
+
+@media (min-width: @tablet){
+
+  .user-photo__wrapper-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 4.5%;
+    height: 100%;
+  }
+  .user-photo__item {
+    margin: 0;
+    margin-bottom: 30px;
+
+    &:not(.user-photo__item--panorama) {
+    height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+    }
+  }
+
+
+
 }
