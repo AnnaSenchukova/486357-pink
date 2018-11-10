@@ -2,16 +2,16 @@
   display: flex;
 
   &--header {
-   position: relative;
+    position: relative;
 
     justify-content: flex-start;
-   align-items: center;
-   width: 100%;
-   min-height: 65px;
+    align-items: center;
+    width: 100%;
+    min-height: 65px;
 
-   background-color: @sapphire;
+    background-color: @sapphire;
 
-   .logo-dynamic(@white, @pink);
+    .logo-dynamic(@white, @pink);
   }
 
   &--footer {
@@ -22,19 +22,17 @@
 
     .logo-dynamic(@sapphire, @pink, @glasses:true, @pink);
   }
-
 }
 
 .logo__image {
-
   &--header {
     position: absolute;
     top: 50%;
     left: 22px;
+
     clip: rect(15px, auto, auto, 70px);
     transform: translate(-50%, -70%);
   }
-
 }
 
 .logo__svg-stars {
@@ -45,15 +43,11 @@
   display: none;
 }
 
-
-
 @media (min-width: @tablet) {
   .logo {
-
     &--header {
       .logo-dynamic(@white, @pink, @glasses:true, @white);
     }
-
 
     &--footer {
       justify-content: flex-start;
@@ -66,7 +60,6 @@
     }
   }
 
-
   .logo__image {
     &--header {
       position: unset;
@@ -74,10 +67,6 @@
     }
   }
 }
-
-
-
-
 
 @media (min-width: @desktop) {
   .logo {
@@ -99,7 +88,6 @@
   }
 
   .logo__svg-glasses {
-
     &--all {
       display: none;
     }

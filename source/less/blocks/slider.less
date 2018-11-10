@@ -30,8 +30,8 @@
 
 .slider__pagination {
   position: absolute;
-  top:50%;
-  left:50%;
+  top: 50%;
+  left: 50%;
 
   display: flex;
   justify-content: space-between;
@@ -54,13 +54,12 @@
   border: none;
   opacity: 0.3;
 
-
   &::before {
     content: "";
 
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
 
     width: 22px;
     height: 22px;
@@ -73,13 +72,14 @@
   &--prev::before {
     top: 50%;
     left: 10%;
+
     transform: translateY(-50%) rotate(-135deg);
   }
 
-
   &--next::before {
     top: 50%;
-    left:50%;
+    left: 50%;
+
     transform: translateY(-50%) rotate(45deg);
   }
 
@@ -102,47 +102,46 @@
   text-align: center;
 }
 
+.slider__toggle {
+  position: relative;
 
-  .slider__toggle {
-    position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 50px;
 
-    display: inline-block;
-    vertical-align: middle;
-    width: 20px;
-    height: 50px;
+  font-size: 0;
 
-    font-size: 0;
+  background-color: transparent;
 
-    background-color: transparent;
+  &::before {
+    content: "";
 
-    &::before {
-      content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
 
-      position: absolute;
-      top: 50%;
-      left: 50%;
+    width: 6px;
+    height: 6px;
+    margin: 0;
+    margin-right: 15px;
+    padding: 0;
 
-      width: 6px;
-      height: 6px;
-      margin: 0;
-      margin-right: 15px;
-      padding: 0;
+    background-color: fade(@sapphire, 30%);
+    border: none;
+    border-radius: 50%;
 
-      background-color: fade(@sapphire, 30%);
-      border: none;
-      border-radius: 50%;
-
-      transform: translate(-50%, -50%);
-    }
-    &:hover::before {
-      background-color: fade(@sapphire, 60%);
-    }
-
-    &:active::before {
-      background-color: fade(@sapphire, 10%);
-    }
+    transform: translate(-50%, -50%);
   }
 
+  &:hover::before {
+    background-color: fade(@sapphire, 60%);
+  }
+
+  &:active::before {
+    background-color: fade(@sapphire, 10%);
+  }
+}
 
 .slide-1:checked ~ .slider__list .slider__item--1,
 .slide-2:checked ~ .slider__list .slider__item--2,
@@ -165,6 +164,7 @@
   background-color: #ffffff;
   border-radius: 50%;
   border: 2px solid @sapphire;
+
   transform: translate(-50%, -50%);
 }
 
@@ -184,7 +184,6 @@
   .slide-2:checked ~ .slider__wrapper .slider__item {
     transform: translateX(0%);
     transition: 0.5s;
-
   }
 
   .slide-3:checked ~ .slider__wrapper .slider__item {

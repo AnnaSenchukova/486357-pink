@@ -63,7 +63,6 @@
   }
 
   & when not (@glasses = none) {
-
     &:hover .logo__svg-glasses,
     &:focus .logo__svg-glasses {
       fill: @color-decoration;
@@ -75,7 +74,6 @@
   }
 
   & when not (@stars = none) {
-
     &:hover .logo__svg-stars,
     &:focus .logo__svg-stars {
       fill: @color-decoration;
@@ -83,12 +81,12 @@
 
     &:active .logo__svg-stars {
       fill: fade(@color-stars, 30%);
+
       &--i {
         fill: fade(@color-glasses, 30%);
       }
     }
   }
-
 }
 
 .form-dynamic(@pseudo:none) {
