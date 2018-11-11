@@ -1,11 +1,23 @@
-.promotion__caption {
-  font-size: 0;
+.promotion {
+  position: relative;
+
+  width: 100%;
+
+  &--image::before {
+    content: "";
+
+    display: block;
+    width: 300px;
+    height: 463px;
+    margin: 0 auto;
+
+    .image("iphone-hand-mobile@1x.png", transpandent, 0, bottom);
+    background-size: auto;
+  }
 }
 
-.promotion__image {
-  display: block;
-  margin: 0 auto;
-  padding-right: 65px;
+.promotion__caption {
+  font-size: 0;
 }
 
 .promotion__wrapper {
@@ -34,7 +46,7 @@
   width: min-content;
 
   &:not(:last-child) {
-    margin-right: 35px; //возможно временно
+    margin-right: 35px;
   }
 }
 
@@ -69,38 +81,45 @@
   text-align: center;
 }
 
-
-
 @media (min-width: @tablet) {
   .promotion {
     position: relative;
 
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    padding-top: 73px;
+    padding-bottom: 110px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    &--image::before {
+      content: "";
+
+      position: absolute;
+      right: -3%;
+      bottom: 0;
+
+      width: 520px;
+      height: 100%;
+      margin: 0;
+
+      .image("iphone-hand-tablet@1x.png", transpandent, 100%, 100%);
+    }
   }
 
   .promotion__caption {
     position: relative;
     z-index: 10;
+
     width: min-content;
     margin: 0;
-    padding-left: 50px;
+    padding-left: 58px;
     padding-top: 30px;
     padding-bottom: 35px;
 
     .font-light(40px, 48px, @white);
     text-align: center;
-  }
-
-  .promotion__image {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-
-    height: 545px;
-    margin: 0;
-    padding: 0;
   }
 
   .promotion__wrapper {
@@ -122,7 +141,23 @@
 }
 
 @media (min-width: @desktop) {
+  .promotion {
+    padding-top: 83px;
+    padding-bottom: 120px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    &--image::before {
+      width: 720px;
+      right: -12%;
+
+      .image("iphone-hand-desktop@1x.png", transpandent, 100%, 100%);
+    }
+  }
+
   .promotion__caption {
+    padding-left: 35px;
+
     font-size: 50px;
     line-height: 58px;
   }

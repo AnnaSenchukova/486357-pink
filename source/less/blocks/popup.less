@@ -6,6 +6,7 @@
 
   display: none;
   width: 100%;
+  max-width: 460px;
   padding-bottom: 50px;
 
   box-shadow: 0 7px 15px 0 fade(#000101, 15%);
@@ -28,6 +29,7 @@
 .popup__caption {
   margin: 0;
   padding-top: 45px;
+  padding-bottom: 38px;
 
   .font-bold(@line-height: 24px);
   text-align: center;
@@ -42,4 +44,93 @@
   text-align: center;
 
   background-color: @white;
+}
+
+.popup--warning .popup__description {
+  padding: 0 7%;
+  padding-bottom: 45px;
+}
+
+.popup--submit .popup__description {
+  margin-bottom: 48px;
+  padding-right: 11%;
+  padding-bottom: 38px;
+  padding-left: 11%;
+}
+
+.popup__button {
+  width: 87.5%;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet) {
+  .popup {
+    width: 69.7%;
+  }
+
+  .popup__caption {
+    padding: 0 23%;
+    padding-top: 45px;
+
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .popup__description {
+    padding-bottom: 40px;
+
+    font-size: 18px;
+  }
+
+  .popup--warning .popup__description {
+    padding-left: 17.5%;
+    padding-right: 17.5%;
+    padding-top: 38px;
+  }
+
+  .popup--submit .popup__description {
+    padding-left: 19%;
+    padding-right: 19%;
+    padding-top: 30px;
+  }
+
+  .popup__button {
+    width: 65%;
+  }
+}
+
+@media (min-width: @desktop) {
+  .popup {
+    width: 83%;
+
+    &--warning {
+      background-color: @grey;
+    }
+  }
+
+  .popup__caption {
+    padding-top: 50px;
+  }
+
+  .popup__description {
+    margin-bottom: 50px;
+  }
+
+  .popup--warning .popup__description,
+  .popup--submit .popup__description {
+    padding-left: 25%;
+    padding-right: 25%;
+  }
+
+  .popup--warning .popup__description {
+    padding-bottom: 61px;
+  }
+
+  .popup--submit .popup__description {
+    padding-bottom: 41px;
+  }
+
+  .popup__button {
+    width: 59%;
+  }
 }

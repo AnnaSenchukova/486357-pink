@@ -1,35 +1,103 @@
 .logo {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  min-height: 65px;
 
-  background-color: @sapphire;
+  &--header {
+    position: relative;
+
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    min-height: 65px;
+
+    background-color: @sapphire;
+
+    .logo-dynamic(@white, @pink);
+  }
 
   &--footer {
     justify-content: center;
+    padding-bottom: 40px;
 
     background-color: transparent;
+
+    .logo-dynamic(@sapphire, @pink, @glasses:true, @pink);
+  }
+}
+
+.logo__image {
+  &--header {
+    position: absolute;
+    top: 50%;
+    left: 22px;
+
+    clip: rect(15px, auto, auto, 70px);
+    transform: translate(-50%, -70%);
+  }
+}
+
+.logo__svg-stars {
+  display: none;
+}
+
+.logo__svg-glasses--stars {
+  display: none;
+}
+
+@media (min-width: @tablet) {
+  .logo {
+    &--header {
+      .logo-dynamic(@white, @pink, @glasses:true, @white);
+    }
+
+    &--footer {
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 33.33%;
+      min-height: 100%;
+      padding-bottom: 0;
+
+      .logo-dynamic(@sapphire, @pink, @glasses:true, @pink);
+    }
   }
 
-  &:hover .logo__svg-name--footer {
-    fill: @pink;
-  }
-
-  &:active .logo__svg-name--footer {
-    fill: fade(@sapphire, 30%);
-  }
-
-  &:active .logo__svg-glasses--footer {
-    fill: fade(@pink, 30%);
+  .logo__image {
+    &--header {
+      position: unset;
+      transform: none;
+    }
   }
 }
 
 @media (min-width: @desktop) {
   .logo {
-    width: max-content;
-
     background-color: transparent;
+
+    &--header {
+      width: max-content;
+
+      .logo-dynamic(@white, @pink, @glasses:true, @white, @stars:true, @pink);
+    }
+
+    &--footer {
+      position: relative;
+
+      width: 33.33%;
+
+      .logo-dynamic(@sapphire, @pink, @glasses:true, @pink, @stars:true, @sapphire);
+    }
+  }
+
+  .logo__svg-glasses {
+    &--all {
+      display: none;
+    }
+
+    &--stars {
+      display: block;
+    }
+  }
+
+  .logo__svg-stars {
+    display: block;
   }
 }

@@ -1,67 +1,17 @@
 .container {
   margin: 0 auto;
-  padding: 0 20px;
-
-  &--promotion {
-    padding: 0;
-    padding-top: 109px;
-  }
-
-  &--advantages {
-    padding-top: 50px;
-  }
-
-  &--comments {
-    padding-top: 50px;
-    padding-bottom: 40px;
-  }
 }
 
-@media (min-width: @tablet){
+@media (min-width: @tablet) {
   .container {
-   width: 96.5%;
-    padding-left:0;
-    padding-right: 0;
-
-    &--promotion {
-      padding-top: 73px;
-      padding-bottom: 110px;
-    }
-
-    &--advantages {
-      width: 620px;
-    }
-
-    &--article {
-      width: 620px;
-      padding-top: 100px;
-      padding-bottom: 60px;
-    }
-
-    &--comments {
-      padding-left: 0;
-      padding-right: 0;
-    }
+    width: 100%;
+    min-width: 620px;
   }
 }
 
 @media (min-width: @desktop) {
   .container {
     width: 100%;
-    max-width: 940px;
-
-    &--promotion {
-      padding-top: 83px;
-      padding-bottom: 120px; //+10
-    }
-
-    &--article {
-      padding-top: 170px;
-      padding-bottom: 119px;
-    }
-
-    &--comments {
-      padding-top: 190px;
-    }
+    max-width: 960px;
   }
 }
