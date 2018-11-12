@@ -403,9 +403,10 @@
   }
 
   .contest__title {
-    width: fit-content;
+    width: auto;
 
     &--legend {
+      margin: 0 auto;
       padding: 0 30px;
 
       line-height: 30px;
@@ -574,7 +575,7 @@
   }
 
   .contest__input--checkbox + .contest__label {
-    width: 35%;
+    width: 33%;
 
     &:last-of-type,
     &:nth-last-of-type(2) {
@@ -582,7 +583,7 @@
       min-width: 210px;
     }
 
-    :nth-of-type(2n) {
+    &:nth-of-type(2n) {
       margin-bottom: 0;
     }
 
@@ -614,4 +615,5 @@
   .contest__wrapper--emotion .contest__field {
     min-height: 127px;
   }
+
 }
