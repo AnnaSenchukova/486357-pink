@@ -27,14 +27,37 @@
 .logo__image {
   display: none;
 
+  &--header {
+    fill:@white;
+
+    color:@white;
+
+    .logo-stars {
+      fill:@pink;
+    }
+  }
+
+  &--footer {
+    fill:@pink;
+
+    color:@sapphire;
+
+    .logo-stars {
+      fill:@sapphire;
+    }
+  }
+
   &--mobile {
     display: block;
   }
 
   &:hover:not(:active),
   &:focus:not(:active) {
-    .logo__element {
-      fill: @pink;
+    color:@pink;
+    fill: @pink;
+
+    .logo-stars {
+      fill:@pink;
     }
   }
 
@@ -55,9 +78,8 @@
   }
 
   .logo__image {
-    &--header {
-      display: none;
-    }
+    display: none;
+
 
     &--tablet {
       display: block;
