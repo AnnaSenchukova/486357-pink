@@ -38,6 +38,8 @@
     "node": "8.12"
   },
   "dependencies": {
+    "imagemin": "^6.0.0",
+    "imagemin-webp": "^4.1.0",
     "normalize.less": "^1.0.0",
     "svgxuse": "^1.2.6"
   }
