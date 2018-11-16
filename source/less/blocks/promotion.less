@@ -6,6 +6,9 @@
   &--image::before {
     content: "";
 
+    position: relative;
+    left:-20px;
+
     display: block;
     width: 300px;
     height: 463px;
@@ -29,7 +32,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 0 20px;
   padding-top: 28px;
   padding-bottom: 35px;
 
@@ -95,13 +97,12 @@
     justify-content: flex-start;
     padding-top: 73px;
     padding-bottom: 110px;
-    padding-left: 20px;
-    padding-right: 20px;
 
     &--image::before {
       content: "";
 
       position: absolute;
+      left: auto;
       right: -3%;
       bottom: 0;
 
@@ -125,7 +126,6 @@
     width: 100%;
     max-width: 235px;
     margin: 0;
-    margin-left: 35px;
     padding-top: 30px;
     padding-bottom: 35px;
 
@@ -136,10 +136,9 @@
   .promotion__wrapper {
     z-index: 10;
 
-    width: 300px;
-
+    width: 50%;
+    max-width: 300px;
     margin: 0;
-    padding: 0;
 
     background-color: transparent;
   }
@@ -155,8 +154,6 @@
   .promotion {
     padding-top: 83px;
     padding-bottom: 120px;
-    padding-left: 10px;
-    padding-right: 10px;
 
     &--image::before {
       width: 720px;
@@ -180,3 +177,5 @@
     font-size: 21px;
   }
 }
+
+

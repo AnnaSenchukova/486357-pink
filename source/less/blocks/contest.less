@@ -31,7 +31,6 @@
 
 .contest__wrapper {
   width: 100%;
-  padding: 0 20px;
   padding-top: 43px;
   padding-bottom: 41px;
 
@@ -484,23 +483,20 @@
   }
 
   .contest__wrapper {
-    padding: 0 10px;
     padding-bottom: 60px;
 
-    &:first-child,
-    &:nth-child(4) {
+    &--name,
+    &--app {
       width: 50%;
     }
 
-    &:first-child {
+    &--name {
       display: flex;
       align-items: flex-end;
-      padding-right: 36px;
     }
 
-    &:nth-child(4) {
+    &--app {
       padding-top: 0;
-      padding-left: 36px;
     }
 
     &:last-child {
@@ -521,17 +517,15 @@
     min-width: auto;
     max-width: 435px;
     height: 100%;
+    margin: 0;
   }
 
   .contest__wrapper:first-child .contest__item {
     height: fit-content;
-    margin-right: 0;
-    margin-left: auto;
   }
 
-  .contest__wrapper:nth-child(4) .contest__item {
-    margin-left: 0;
-    margin-right: auto;
+  .contest__wrapper {
+   .container-modification();
   }
 
   .contest__wrapper-inner {
@@ -575,7 +569,7 @@
   }
 
   .contest__input--checkbox + .contest__label {
-    width: 33%;
+    width: 35%;
 
     &:last-of-type,
     &:nth-last-of-type(2) {
@@ -585,30 +579,7 @@
 
     &:nth-of-type(2n) {
       margin-bottom: 0;
-    }
-
-    &--selfie {
-      order: 1;
-    }
-
-    &--beach {
-      order: 4;
-    }
-
-    &--chack {
-      order: 2;
-    }
-
-    &--gift {
-      order: 5;
-    }
-
-    &--tower {
-      order: 3;
-    }
-
-    &--hotel {
-      order: 6;
+      order:2;
     }
   }
 

@@ -30,30 +30,22 @@
       <ul class="page-navigation__list site-list">
         <li class="site-list__item">
           <a class="site-list__link" href="index.html">
-            <p class="site-list__link-content">
-              Главная
-            </p>
+            Главная
           </a>
         </li>
         <li class="site-list__item">
           <a class="site-list__link" href="photo.html">
-            <p class="site-list__link-content">
-              Фотографии
-            </p>
+            Фотографии
           </a>
         </li>
-        <li class="site-list__item site-list__item--active">
+        <li class="site-list__item">
           <a class="site-list__link site-list__link--active">
-            <p class="site-list__link-content">
-              Конкурс
-            </p>
+            Конкурс
           </a>
         </li>
         <li class="site-list__item">
           <a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <p class="site-list__link-content">
-              HTML Academy
-            </p>
+            HTML Academy
           </a>
         </li>
       </ul>
@@ -78,7 +70,8 @@
     </p>
     <form class="contest__form" method="post" action="https://echo.htmlacademy.ru">
       <div class="contest__wrapper contest__wrapper--name">
-        <fieldset class="contest__item container">
+        <div class="container container--modification container--left">
+        <fieldset class="contest__item">
           <div class="contest__wrapper-inner contest__wrapper-inner--name">
             <label class="contest__title contest" for="surname">
               Фамилия:
@@ -94,42 +87,46 @@
             <input class="contest__field" id="patronymic" type="text" name="patronymic" placeholder="Ну и отчество тоже">
           </div>
         </fieldset>
+        </div>
       </div>
       <div class="contest__wrapper contest__wrapper--advantages">
-        <fieldset class="contest__item container">
+        <div class="container">
+        <fieldset class="contest__item">
           <legend class="contest__title contest__title--legend">
             Ваши безбашенные достижения в путешествии
           </legend>
           <div class="contest__wrapper-inner contest__wrapper-inner--advantages">
             <input class="contest__input contest__input--checkbox" id="selfie" type="checkbox" name="selfie" value="self-advantages" checked>
-            <label class="contest__label contest__label--selfie" for="selfie">
+            <label class="contest__label" for="selfie">
               Сделал селфи с акулой
             </label>
             <input class="contest__input contest__input--checkbox" id="beach" type="checkbox" name="beach" value="self-advantages" checked>
-            <label class="contest__label contest__label--beach" for="beach">
+            <label class="contest__label" for="beach">
               Обгорел на пляже
             </label>
             <input class="contest__input contest__input--checkbox" id="chack" type="checkbox" name="chack" value="self-advantages">
-            <label class="contest__label contest__label--chack" for="chack">
+            <label class="contest__label" for="chack">
               Видел Чака Норриса
             </label>
             <input class="contest__input contest__input--checkbox" id="gift" type="checkbox" name=gift value="self-advantages">
-            <label class="contest__label contest__label--gift" for="gift">
+            <label class="contest__label" for="gift">
               Накупил сувениров
             </label>
             <input class="contest__input contest__input--checkbox" id="tower" type="checkbox" name=tower value="self-advantages" checked>
-            <label class="contest__label contest__label--tower" for="tower">
+            <label class="contest__label" for="tower">
               Удержал башню
             </label>
             <input class="contest__input contest__input--checkbox" id="hotel" type="checkbox" name=hotel value="self-advantages">
-            <label class="contest__label contest__label--hotel" for="hotel">
+            <label class="contest__label" for="hotel">
               Разгромил отель
             </label>
           </div>
         </fieldset>
+        </div>
       </div>
       <div class="contest__wrapper contest__wrapper--contacts">
-        <fieldset class="contest__item container">
+        <div class="container">
+        <fieldset class="contest__item">
           <legend class="contest__title contest__title--legend contest__title--hidden">
             Контактная информация
           </legend>
@@ -148,8 +145,10 @@
             </div>
           </div>
         </fieldset>
+        </div>
       </div>
       <div class="contest__wrapper contest__wrapper--app">
+        <div class="container container--modification container--right">
         <fieldset class="contest__item container">
           <legend class="contest__title contest__title--legend">
             С каким приложением путешествовали?
@@ -169,9 +168,11 @@
             </label>
           </div>
         </fieldset>
+        </div>
       </div>
       <div class="contest__wrapper contest__wrapper--emotion">
-        <fieldset class="contest__item container">
+        <div class="container">
+        <fieldset class="contest__item">
           <legend class="contest__title contest__title--legend">
             Опишите свои эмоции
           </legend>
@@ -179,6 +180,7 @@
             <textarea class="contest__field contest__field--textarea" name="comment" id="comment" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </div>
         </fieldset>
+        </div>
       </div>
       <div class="contest__wrapper contest__wrapper--button container">
         <button class="contest__button button button--form" type="submit">
@@ -255,17 +257,19 @@
         </a>
       </li>
     </ul>
-    <a class="page-footer__copyright-link copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">
-      <p class="copyright-link__description">
+    <div class="copyright">
+    <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss">
+      <p class="copyright__description">
         Разработано
       </p>
       <p class="visually-hidden">
         HTML Academy
       </p>
-      <svg class="copyright-link__svg" width="26.943px" height="34.09px">
+      <svg class="copyright__svg" width="26.943px" height="34.09px">
         <use xlink:href="img/svgsprite.svg#logo-academy"></use>
       </svg>
     </a>
+  </div>
   </div>
 </footer>
 <script src="js/picturefill.js"></script>

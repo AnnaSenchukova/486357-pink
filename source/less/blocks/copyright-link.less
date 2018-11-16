@@ -1,8 +1,11 @@
-.copyright-link {
+.copyright {
   display: flex;
   justify-content: center;
   align-items: center;
-
+}
+.copyright__link {
+  display: flex;
+  align-items: center;
   fill:@pink;
 
   &:hover {
@@ -14,21 +17,16 @@
   }
 }
 
-.copyright-link__svg {
-
-}
-
-.copyright-link__description {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0;
+.copyright__description {
+  margin-top: 0;
+  margin-bottom: 0;
   padding-right: 15px;
 
   .font-regular(@line-height:18px);
 }
 
 @media (min-width: @tablet) {
-  .copyright-link {
+  .copyright {
     justify-content: flex-end;
     align-items: center;
     width: 33.3%;
@@ -37,7 +35,7 @@
 }
 
 @media (min-width: @desktop) {
-  .copyright-link__description {
+  .copyright__description {
     font-size: 18px;
   }
 }
