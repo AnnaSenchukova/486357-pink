@@ -47,47 +47,56 @@
   }
 }
 
-
-.logo-dynamic(@color-base, @color-decoration, @glasses:none, @color-glasses:transpandent,  @stars:none, @color-stars:transpandent) {
-  &:focus {
-    outline: none;
-  }
-
-  &:hover .logo__svg-word,
-  &:focus .logo__svg-word {
-    fill: @color-decoration;
-  }
-
-  &:active .logo__svg-word {
-    fill: fade(@color-base, 30%);
-  }
-
-  & when not (@glasses = none) {
-    &:hover .logo__svg-glasses,
-    &:focus .logo__svg-glasses {
-      fill: @color-decoration;
+.container-modification(@margin-fix:36px) {
+  .container {
+    &--modification {
+      width: auto;
+      min-width: auto;
     }
-
-    &:active .logo__svg-glasses {
-      fill: fade(@color-glasses, 30%);
+    &--left {
+      margin-right: @margin-fix;
+      padding-right: 0;
     }
-  }
-
-  & when not (@stars = none) {
-    &:hover .logo__svg-stars,
-    &:focus .logo__svg-stars {
-      fill: @color-decoration;
-    }
-
-    &:active .logo__svg-stars {
-      fill: fade(@color-stars, 30%);
-
-      &--i {
-        fill: fade(@color-glasses, 30%);
-      }
+    &--right {
+      margin-left: @margin-fix;
+      padding-left: 0;
     }
   }
 }
+
+.decoration-triangle(@position-center:none, @height-triangle:35px, @height-triangle-tablet:50px, @height-triangle-desktop:90px) {
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: @height-triangle solid @white;
+    border-right: 99vw solid transparent;
+
+    & when not (@position-center = none) {
+
+      border-left: 49vw solid transparent;
+      border-right: 49vw solid transparent;
+      border-top: @height-triangle solid @white;
+    }
+
+    @media (min-width: @tablet) {
+      border-top: @height-triangle-tablet solid @white;
+    }
+
+    @media (min-width: @desktop) {
+      border-top: @height-triangle-desktop solid @white;
+    }
+  }
+}
+
+
+
 
 .form-dynamic(@pseudo:none) {
   border: 2px solid #e5e5e5;
@@ -112,21 +121,32 @@
       border-color: @pink;
       outline: none;
     }
+
+    &:checked  {
+      + .contest__label::after {
+        display: inline-block;
+      }
+    }
   }
 }
+
 
 .navigation-dynamic(@color-link:@white, @link:none, @pseudo-before:none, @pseudo-after: none, @svg:none, @shadow:none) {
 
   & when not (@link = none) {
     color: @white;
 
-    &:hover:not(.site-list__link--active) {
-      color: @pink;
+    &:hover {
+      .site-list__link:not(.site-list__link--active) {
+        color: @pink;
+      }
     }
 
-    &:active:not(.site-list__link--active) {
+    &:active {
+      .site-list__link:not(.site-list__link--active) {
       color: fade(@color-link, 30%);
     }
+  }
   }
 
   & when not (@pseudo-before = none) {

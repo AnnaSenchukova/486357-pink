@@ -6,13 +6,21 @@
   &--image::before {
     content: "";
 
+    position: relative;
+    left:-20px;
+
     display: block;
     width: 300px;
     height: 463px;
     margin: 0 auto;
 
     .image("iphone-hand-mobile@1x.png", transpandent, 0, bottom);
-    background-size: auto;
+
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/iphone-hand-mobile@2x.png");
+      background-size: 268px auto;
+    }
   }
 }
 
@@ -24,7 +32,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 0 20px;
   padding-top: 28px;
   padding-bottom: 35px;
 
@@ -90,13 +97,12 @@
     justify-content: flex-start;
     padding-top: 73px;
     padding-bottom: 110px;
-    padding-left: 20px;
-    padding-right: 20px;
 
     &--image::before {
       content: "";
 
       position: absolute;
+      left: auto;
       right: -3%;
       bottom: 0;
 
@@ -105,6 +111,11 @@
       margin: 0;
 
       .image("iphone-hand-tablet@1x.png", transpandent, 100%, 100%);
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/iphone-hand-tablet@2x.png");
+        background-size: 700px auto;
+      }
     }
   }
 
@@ -112,9 +123,9 @@
     position: relative;
     z-index: 10;
 
-    width: min-content;
+    width: 100%;
+    max-width: 235px;
     margin: 0;
-    padding-left: 58px;
     padding-top: 30px;
     padding-bottom: 35px;
 
@@ -125,10 +136,9 @@
   .promotion__wrapper {
     z-index: 10;
 
-    width: 300px;
-
+    width: 50%;
+    max-width: 300px;
     margin: 0;
-    padding: 0;
 
     background-color: transparent;
   }
@@ -144,20 +154,21 @@
   .promotion {
     padding-top: 83px;
     padding-bottom: 120px;
-    padding-left: 10px;
-    padding-right: 10px;
 
     &--image::before {
       width: 720px;
       right: -12%;
 
       .image("iphone-hand-desktop@1x.png", transpandent, 100%, 100%);
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/iphone-hand-desktop@2x.png");
+        background-size: 1050px auto;
+      }
     }
   }
 
   .promotion__caption {
-    padding-left: 35px;
-
     font-size: 50px;
     line-height: 58px;
   }
@@ -166,3 +177,5 @@
     font-size: 21px;
   }
 }
+
+

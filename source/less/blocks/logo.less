@@ -10,8 +10,6 @@
     min-height: 65px;
 
     background-color: @sapphire;
-
-    .logo-dynamic(@white, @pink);
   }
 
   &--footer {
@@ -19,51 +17,72 @@
     padding-bottom: 40px;
 
     background-color: transparent;
+  }
 
-    .logo-dynamic(@sapphire, @pink, @glasses:true, @pink);
+  &:focus {
+    outline: none;
   }
 }
 
 .logo__image {
+  display: none;
+
   &--header {
-    position: absolute;
-    top: 50%;
-    left: 22px;
+    fill:@white;
 
-    clip: rect(15px, auto, auto, 70px);
-    transform: translate(-50%, -70%);
+    color:@white;
+
+    .logo-stars {
+      fill:@pink;
+    }
   }
-}
 
-.logo__svg-stars {
-  display: none;
-}
+  &--footer {
+    fill:@pink;
 
-.logo__svg-glasses--stars {
-  display: none;
+    color:@sapphire;
+
+    .logo-stars {
+      fill:@sapphire;
+    }
+  }
+
+  &--mobile {
+    display: block;
+  }
+
+  &:hover:not(:active),
+  &:focus:not(:active) {
+    color:@pink;
+    fill: @pink;
+
+    .logo-stars {
+      fill:@pink;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet) {
   .logo {
-    &--header {
-      .logo-dynamic(@white, @pink, @glasses:true, @white);
-    }
-
-    &--footer {
+   &--footer {
       justify-content: flex-start;
       align-items: flex-start;
       width: 33.33%;
       min-height: 100%;
       padding-bottom: 0;
-
-      .logo-dynamic(@sapphire, @pink, @glasses:true, @pink);
     }
   }
 
   .logo__image {
-    &--header {
-      position: unset;
-      transform: none;
+    display: none;
+
+
+    &--tablet {
+      display: block;
     }
   }
 }
@@ -74,30 +93,20 @@
 
     &--header {
       width: max-content;
-
-      .logo-dynamic(@white, @pink, @glasses:true, @white, @stars:true, @pink);
     }
 
     &--footer {
       position: relative;
 
       width: 33.33%;
-
-      .logo-dynamic(@sapphire, @pink, @glasses:true, @pink, @stars:true, @sapphire);
     }
   }
 
-  .logo__svg-glasses {
-    &--all {
-      display: none;
-    }
+  .logo__image {
+    display: none;
 
-    &--stars {
+    &--desktop {
       display: block;
     }
-  }
-
-  .logo__svg-stars {
-    display: block;
   }
 }
