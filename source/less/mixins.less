@@ -50,7 +50,7 @@
 .container-modification(@margin-fix:36px) {
   .container {
     &--modification {
-      width: fit-content;
+      width: auto;
       min-width: auto;
     }
     &--left {
@@ -65,28 +65,24 @@
 }
 
 .decoration-triangle(@position-center:none, @height-triangle:35px, @height-triangle-tablet:50px, @height-triangle-desktop:90px) {
-  overflow: hidden;
   &::before {
     content: "";
 
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
 
     display: block;
     width: 0;
     height: 0;
     border-top: @height-triangle solid @white;
-    border-right: 100vw solid transparent;
+    border-right: 99vw solid transparent;
 
     & when not (@position-center = none) {
-      left: 50%;
 
-      border-left: 50vw solid transparent;
-      border-right: 50vw solid transparent;
+      border-left: 49vw solid transparent;
+      border-right: 49vw solid transparent;
       border-top: @height-triangle solid @white;
-
-      transform: translateX(-50%);
     }
 
     @media (min-width: @tablet) {
