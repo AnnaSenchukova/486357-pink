@@ -65,6 +65,7 @@
 }
 
 .decoration-triangle(@position-center:none, @height-triangle:35px, @height-triangle-tablet:50px, @height-triangle-desktop:90px) {
+  overflow: hidden;
   &::before {
     content: "";
 
@@ -76,13 +77,13 @@
     width: 0;
     height: 0;
     border-top: @height-triangle solid @white;
-    border-right: 97vw solid transparent;
+    border-right: 100vw solid transparent;
 
     & when not (@position-center = none) {
       left: 50%;
 
-      border-left: 49vw solid transparent;
-      border-right: 49vw solid transparent;
+      border-left: 50vw solid transparent;
+      border-right: 50vw solid transparent;
       border-top: @height-triangle solid @white;
 
       transform: translateX(-50%);
@@ -97,6 +98,9 @@
     }
   }
 }
+
+
+
 
 .form-dynamic(@pseudo:none) {
   border: 2px solid #e5e5e5;
@@ -121,8 +125,15 @@
       border-color: @pink;
       outline: none;
     }
+
+    &:checked  {
+      + .contest__label::after {
+        display: inline-block;
+      }
+    }
   }
 }
+
 
 .navigation-dynamic(@color-link:@white, @link:none, @pseudo-before:none, @pseudo-after: none, @svg:none, @shadow:none) {
 
