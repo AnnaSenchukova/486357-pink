@@ -63,7 +63,7 @@
       Анкета для участия в конкурсе
     </h2>
     <p class="contest__slogan container">
-      Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!
+      Поделитесь своей историей и получите шанс выиграть ценный приз &#8212; 1000 миль на вашу бонусную карту!
       <span class="contest__slogan contest__slogan--hidden">
         Пожалуйста, заполните форму ниже:
       </span>
@@ -71,7 +71,7 @@
     <form class="contest__form" method="post" action="https://echo.htmlacademy.ru">
       <div class="contest__wrapper contest__wrapper--name">
         <div class="container container--modification container--left">
-        <fieldset class="contest__item">
+        <fieldset class="contest__item contest__item--name">
           <div class="contest__wrapper-inner contest__wrapper-inner--name">
             <label class="contest__title contest" for="surname">
               Фамилия:
@@ -191,7 +191,13 @@
             *
           </span>
           <span class="contest__note-text">
-            — обязательные поля
+            — обязательные
+          </span>
+            <span class="contest__note-text contest__note-text--hidden">
+              для заполнения
+            </span>
+          <span class="contest__note-text">
+            поля
           </span>
         </p>
       </div>

@@ -7,9 +7,7 @@
 .contest__slogan {
   width: 100%;
   margin: 0 auto;
-  padding: 0 6.25%;
-  padding-top: 53px;
-  padding-bottom: 48px;
+  padding-top: 45px;
 
   .font-regular(@line-height:30px);
   text-align: center;
@@ -29,50 +27,18 @@
   padding: 0;
 }
 
-.contest__wrapper {
-  width: 100%;
-  padding-top: 43px;
-  padding-bottom: 41px;
-
-  &:first-child {
-    padding-top: 0;
-  }
-
-  &:last-child {
-    padding-top: 10px;
-    padding-bottom: 25px;
-  }
-
-  &:nth-child(2n):not(:last-child) {
-    background-color: @grey;
-  }
-}
-
 .contest__item {
   width: 100%;
+  margin-top: 38px;
+  margin-bottom: 42px;
+  margin-left: 0;
   padding: 0;
 
-  border: none;
-}
+  border:none;
 
-.contest__wrapper-inner {
-  padding: 0;
-
-  &--advantages {
-    padding-top: 59px;
+  &--name {
+   margin-top: 30px;
   }
-
-  &--app {
-    padding-top: 40px;
-  }
-
-  &--emotion {
-    padding-top: 15px;
-  }
-}
-
-.contest__wrapper-inner--contacts > .contest__wrapper-inner:first-child {
-  margin-bottom: 27px;
 }
 
 .contest__title {
@@ -80,6 +46,7 @@
   width: 100%;
   margin: 0;
   padding-left: 22px;
+  padding-bottom: 4px;
 
   .font-regular(@line-height:30px, @color:@pink);
   text-transform: uppercase;
@@ -102,9 +69,9 @@
 
 .contest__field {
   width: 100%;
-  height: 60px;
-  margin-bottom: 27px;
-  padding-left: 23px;
+  height: 63px;
+  margin-bottom: 18px;
+  padding-left: 20px;
 
   .font-regular(18px, 30px);
 
@@ -140,8 +107,9 @@
     display: block;
     width: 100%;
     min-height: 40px;
-    margin-bottom: 37px;
-    padding-left: 63px;
+    margin-bottom: 42px;
+    padding-top: 4px;
+    padding-left: 69px;
 
     &:last-of-type {
       margin-bottom: 0;
@@ -156,8 +124,8 @@
 
       display: inline-block;
       vertical-align: middle;
-      width: 40px;
-      height: 40px;
+      width: 39px;
+      height: 39px;
 
       background-color: transparent;
       border: 2px solid #e5e5e5;
@@ -180,10 +148,10 @@
       border-radius: 10%;
     }
 
-   &::after {
+    &::after {
       width: 11px;
       height: 22px;
-      margin: 12px 14px;
+      margin: 13px 14px;
 
       border-right: 2px solid @pink;
       border-bottom: 2px solid @pink;
@@ -192,6 +160,7 @@
   }
 
   &--radio {
+    margin-bottom: 36px;
     &::before {
       padding-bottom: 0;
       border-radius: 50%;
@@ -219,7 +188,66 @@
   height: 40px;
 
   .form-dynamic(@pseudo:true);
+}
+
+
+
+.contest__wrapper {
+  width: 100%;
+
+  &:nth-child(2n):not(:last-child) {
+    background-color: @grey;
   }
+
+  &--name {
+    .contest-item {
+      margin-top: 30px;
+      border: none;
+    }
+  }
+
+
+  &--emotion {
+    .contest-item {
+      margin-bottom: 50px;
+    }
+
+    .contest__field {
+      min-height: 202px;
+      margin: 0;
+      padding: 12px 18px;
+    }
+  }
+
+  &--button {
+    padding-bottom: 10px;
+  }
+}
+
+.contest__wrapper-inner {
+  padding-top:0;
+  padding-bottom:0;
+
+  &--advantages {
+    padding-top: 39px;
+  }
+
+  &--app {
+    padding-top: 35px;
+  }
+
+  &--telephone {
+    padding-bottom: 18px;
+
+    .contest__title {
+      margin-top: -7px;
+    }
+  }
+
+  &--emotion {
+    padding-top: 15px;
+  }
+}
 
 
 
@@ -228,16 +256,25 @@
   width: 100%;
   margin: 0;
   padding: 0;
-  padding-top: 40px;
+  padding-top: 35px;
 
   .font-regular(@line-height:30px, @color:@sapphire);
   text-align: center;
   text-transform: uppercase;
+
+
+}
+
+.contest__note-text{
+  &--hidden {
+    display: none;
+  }
 }
 
 .contest__note-star {
   color: @pink;
 }
+
 
 @media (min-width: @tablet) {
   .contest__slogan {
@@ -253,13 +290,33 @@
     }
   }
 
-  .contest__wrapper {
-    padding-top: 0;
-    padding-bottom: 60px;
+  .contest__item {
+    margin: 0;
+    margin-bottom: 67px;
+    padding-left: 60px;
+    padding-right: 60px;
 
-    &:last-child {
-      padding-top: 7px;
+    border: 2px solid #e5e5e5;
+    border-radius: 3px;
+  }
+
+  .contest__title {
+    width: auto;
+    padding-bottom: 0;
+
+    &--legend {
+      margin: 0 auto;
+      padding: 0 30px;
+
+      line-height: 30px;
     }
+
+    &--hidden {
+      position: static;
+    }
+  }
+
+  .contest__wrapper {
 
     &:nth-child(2n):not(:last-child) {
       background-color: @white;
@@ -267,6 +324,33 @@
 
     &--name {
       order: 1;
+
+      .contest__item {
+        border: none;
+      }
+
+      .contest__title {
+        align-self: center;
+        height: inherit;
+        margin-bottom: 52px;
+        padding: 0;
+        padding-right: 20px;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+
+      .contest__field {
+        flex-grow: 2;
+        width: auto;
+        margin-bottom: 52px;
+        min-width: 80%;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
     }
 
     &--advantages {
@@ -283,6 +367,9 @@
 
     &--emotion {
       order: 5;
+      .contest__field {
+        min-height: 193px;
+      }
     }
 
     &--button {
@@ -291,17 +378,23 @@
       justify-content: space-between;
       align-items: center;
       order: 6;
-    }
-  }
 
-  .contest__wrapper:not(:first-child) .contest__item {
-    border: 2px solid #e5e5e5;
+      .contest__button {
+        width: 45.5%;
+      }
+
+      .contest__note {
+        width: 45.5%;
+        padding: 0;
+
+        text-align: right;
+      }
+    }
   }
 
   .contest__wrapper-inner {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 60px;
 
     &--name {
       padding: 0;
@@ -317,64 +410,6 @@
       padding-bottom: 30px;
     }
 
-    &--telephone,
-    &--email {
-      width: 100%;
-      padding: 0;
-      position: relative;
-    }
-
-    &--telephone {
-      margin-bottom: 40px;
-      .icon(19.7px, 19.7px, 15%, auto, @image: true, "icon-phone.svg");
-
-      &::before {
-        z-index: 10;
-        right: 0;
-
-        transform: translateX(-100%);
-      }
-
-      &::after {
-        content: "";
-
-        position: absolute;
-        top: 0;
-        right: 0;
-
-        display: block;
-        width: 60px;
-        height: 60px;
-
-        background-color: #e5e5e5;
-      }
-    }
-
-    &--email {
-      .icon(19px, 14px, 18%, auto, @image: true, "icon-mail.svg");
-
-      &::before {
-        z-index: 10;
-        right: 0;
-
-        transform: translateX(-100%);
-      }
-
-      &::after {
-        content: "";
-
-        position: absolute;
-        top: 0;
-        right: 0;
-
-        display: block;
-        width: 60px;
-        height: 60px;
-
-        background-color: #e5e5e5;
-      }
-    }
-
     &--app {
       padding-top: 48px;
       padding-bottom: 53px;
@@ -384,81 +419,66 @@
       padding-top: 40px;
       padding-bottom: 52px;
     }
-  }
 
+    &--telephone,
+    &--email {
+      width: 100%;
+      padding: 0;
+      position: relative;
 
-  .contest__title {
-    width: auto;
+      .contest__title {
+        order: 1;
+        padding: 0;
+        padding-left: 20px;
+      }
 
-    &--legend {
-      margin: 0 auto;
-      padding: 0 30px;
+      .contest__field {
+        z-index: 20;
 
-      line-height: 30px;
+        order: 0;
+        margin-bottom: 20px;
+      }
+      &::before {
+        content: "";
+        z-index: 10;
+        right: 0;
+
+        transform: translateX(-100%);
+      }
+
+      &::after {
+        content: "";
+
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        display: block;
+        width: 60px;
+        height: 62px;
+
+        background-color: #e5e5e5;
+        border-radius: 0 3px 3px 0;
+      }
     }
 
-    &--hidden {
-      position: static;
+    &--telephone {
+      margin-bottom: 40px;
+      .icon(19.7px, 19.7px, 21%, auto, @image: true, "icon-phone.svg");
     }
-  }
 
-  .contest__wrapper--name .contest__field {
-    flex-grow: 2;
-    width: auto;
-    margin-bottom: 0;
-    min-width: 84%;
-
-    &:not(:last-of-type) {
-      margin-bottom: 52px;
+    &--email {
+      .icon(19px, 14px, 23%, auto, @image: true, "icon-mail.svg");
     }
-  }
 
-  .contest__wrapper--name .contest__title {
-    align-self: center;
-    height: inherit;
-    margin-bottom: 52px;
-    padding: 0;
-    padding-right: 20px;
-
-    &:last-of-type {
-      margin-bottom: 0;
-    }
-  }
-
-  .contest__wrapper-inner--contacts .contest__field {
-    z-index: 20;
-
-    order: 0;
-    margin-bottom: 20px;
-  }
-
-  .contest__wrapper-inner--contacts .contest__title {
-    order: 1;
-    padding: 0;
-    padding-left: 20px;
-  }
-
-  .contest__wrapper--emotion .contest__field {
-    min-height: 193px;
-  }
-
-  .contest__button {
-    width: 45.5%;
-  }
-
-  .contest__note {
-    width: 45.5%;
-    padding: 0;
-
-    text-align: right;
   }
 }
 
 @media (min-width: @desktop) {
   .contest__slogan {
-    padding: 0 10.7%;
-    padding-top: 100px;
-    padding-bottom: 80px;
+    padding: 0 10%;
+    padding-top: 92px;
+    padding-bottom: 65px;
 
     &--hidden {
       padding: 0;
@@ -469,108 +489,147 @@
     justify-content: space-between;
   }
 
+  .contest__item {
+    margin-bottom: 51px;
+  }
+
   .contest__wrapper {
-    padding-bottom: 60px;
+    .container-modification();
 
     &--name,
     &--app {
       width: 50%;
+
+      .contest__item {
+        min-width: auto;
+        max-width: 436px;
+        height: 100%;
+      }
     }
 
     &--name {
       display: flex;
       align-items: flex-end;
+
+      .contest__item {
+        height: fit-content;
+        padding-right: 0;
+        padding-left: 0;
+      }
+
+
+      .contest__field {
+        min-width: 75%;
+      }
     }
 
     &--app {
-      padding-top: 0;
+      .contest__item {
+        padding-left: 74px;
+        padding-right: 0;
+        padding-bottom: 0;
+      }
+      .contest__title {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
     }
 
-    &:last-child {
-      padding-bottom: 57px;
-    }
 
-    &--contacts {
-      justify-content: space-between;
+
+    &--emotion {
+      .contest__item {
+        margin-bottom: 64px;
+      }
+      .contest__field {
+        min-height: 128px;
+        padding: 14px 16px;
+      }
     }
 
     &--button {
-      padding-top: 5px;
+      .contest__button {
+        width: 31.8%;
+        min-height: 63px;
+      }
+
+      .contest__note-text {
+        &--hidden {
+          display: inline-block;
+        }
+      }
     }
-  }
 
-  .contest__wrapper:first-child .contest__item,
-  .contest__wrapper:nth-child(4) .contest__item {
-    min-width: auto;
-    max-width: 435px;
-    height: 100%;
-    margin: 0;
-  }
-
-  .contest__wrapper:first-child .contest__item {
-    height: fit-content;
-  }
-
-  .contest__wrapper {
-   .container-modification();
   }
 
   .contest__wrapper-inner {
+    &--name {
+      padding-top: 0;
+    }
+
     &--advantages {
       justify-content: space-between;
       align-content: space-between;
-      padding-top: 50px;
-      padding-bottom: 55px;
+      padding-top: 38px;
+      padding-bottom: 54px;
+
+      .contest__label {
+        width: 33%;
+        margin-bottom: 42px;
+
+        &:first-of-type,
+        &:nth-of-type(2) {
+          margin-right: 20px;
+        }
+
+        &:last-of-type,
+        &:nth-last-of-type(2) {
+          width: fit-content;
+          min-width: 210px;
+          margin-right: 0;
+        }
+
+        &:nth-of-type(2n) {
+          margin-bottom: 0;
+          order:2;
+        }
+      }
     }
 
     &--contacts {
       justify-content: space-between;
-      padding-bottom: 20px;
+      padding-top: 28px;
+      padding-bottom: 13px;
+    }
+
+    &--telephone,
+    &--email {
+      width: 45.5%;
+
+      .contest__field {
+        z-index: 20;
+
+        margin-bottom: 10px;
+      }
+
+      .contest__title {
+        padding-left: 17px;
+      }
+    }
+
+    &--telephone {
+      margin: 0;
     }
 
     &--app {
-      padding-top: 50px;
-      padding-bottom: 55px;
+      padding-top: 40px;
+      padding-bottom: 54px;
     }
 
     &--emotion {
-      padding-top: 38px;
-      padding-bottom: 45px;
+      padding-top: 28px;
+      padding-bottom: 44px;
     }
   }
 
-  .contest__wrapper-inner--contacts > .contest__wrapper-inner {
-    width: 45.5%;
-
-    &:first-child {
-      margin: 0;
-    }
-  }
-
-  .contest__wrapper--name .contest__field {
-    min-width: 75%;
-  }
-
-  .contest__wrapper-inner--contacts .contest__field {
-    z-index: 20;
-  }
-
-  .contest__input--checkbox + .contest__label {
-    width: 33%;
-
-    &:last-of-type,
-    &:nth-last-of-type(2) {
-      width: fit-content;
-      min-width: 210px;
-    }
-
-    &:nth-of-type(2n) {
-      margin-bottom: 0;
-      order:2;
-    }
-  }
-
-  .contest__wrapper--emotion .contest__field {
-    min-height: 127px;
-  }
 }

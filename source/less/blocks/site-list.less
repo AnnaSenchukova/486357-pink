@@ -8,8 +8,8 @@
 
 .site-list__item {
   width: inherit;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 
   text-align: center;
 
@@ -30,19 +30,23 @@
   .site-list {
     display: flex;
     justify-content: space-between;
-    width: 65%; //622px from 960px
-    min-width: 600px;
     margin: 0;
   }
 
   .site-list__item {
     position: relative;
 
+    width: 25%;
+    min-width: 170px;
+
     background-color: transparent;
     border: none;
 
     &:last-child {
+      min-width: 160px;
+
         text-align: right;
+
     }
   }
 

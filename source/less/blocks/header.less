@@ -1,7 +1,7 @@
 .header {
   width: 100%;
 
-  .image("bg-back-mobile@1x.jpg", #1d2631, 50%, 0); //-30% for page index !
+  .image("bg-back-mobile@1x.jpg", #1d2631, 50%, 23.8%); //-30% for page index !
   overflow: hidden;
 
 
@@ -13,11 +13,10 @@
 
 .header__caption {
   width: 100%;
-  min-height: 109px;
+  //min-height: 109px;
   margin: 0 auto;
-  padding: 0 15%;
-  padding-top: 34px;
-  padding-bottom: 50px;
+  padding-top: 28px;
+  padding-bottom: 52px;
 
   .font-light(24px, 30px, @white);
   text-align: center;
@@ -49,7 +48,7 @@
   .header {
     padding-top: 110px;
 
-    .image("bg-back-desktop@1x.jpg", #1d2631, 50%, 0);
+    .image("bg-back-desktop@1x.jpg", #1d2631, 50%, -2.5%);
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/bg-back-desktop@2x.jpg");
@@ -58,8 +57,8 @@
   }
 
   .header__caption {
-    padding-top: 75px;
-    padding-bottom: 95px;
+    padding-top: 65px;
+    padding-bottom: 103px;
 
     font-size: 50px;
     line-height: 58px;

@@ -4,6 +4,7 @@
 
 .page-navigation__logo {
   padding-left: 20px; //20px mobile and tablet
+  border-bottom: 1px solid @black;
 }
 
 @media (max-width: @except-desktop) {
@@ -65,15 +66,15 @@
       content: "";
 
       position: absolute;
-      top: 45%;
+      top: 47%;
       right: 0;
 
       display: block;
-      width: 23px;
-      height: 3px;
+      width: 30px;
+      height: 4px;
 
       background-color: @white;
-      border-radius: 30%;
+      border-radius: 5px;
     }
 
     &::before {
@@ -102,7 +103,9 @@
 
   .page-navigation .page-navigation__logo {
     align-items: flex-start;
-    flex-grow: 1;
-    padding: 0;
+    padding-left: 0;
+    padding-right: 122px;
+
+    border-bottom:none;
   }
 }
