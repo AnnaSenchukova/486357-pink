@@ -4,8 +4,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 90px;
-  padding-bottom: 30px;
+  padding-top: 100px;
+  padding-bottom: 28px;
 
   background-color: @grey;
 
@@ -24,7 +24,7 @@
 }
 
 .subscription__description {
-  min-width: 276px;
+  min-width: 277px;
   height: 100px;
   margin: 0;
 
@@ -57,8 +57,8 @@
     content: "ХИТ";
 
     position: absolute;
-    top: 10%;
-    left: 5%;
+    top: 13%;
+    left: 3%;
 
     .font-regular(14px, 30px, @color:@white);
     text-transform: uppercase;
@@ -89,7 +89,7 @@
   position: relative;
 
   height: 60px;
-  padding-left: 25px;
+  padding-left: 20px;
 
   .font-regular(@line-height:30px);
   text-transform: uppercase;
@@ -108,16 +108,17 @@
     content: "";
 
     position: absolute;
-    top: 15%;
-    right: 10%;
+    top: 17%;
+    right: 9%;
 
     display: block;
     width: 15px;
     height: 30px;
     margin: 0;
 
-    border-right: 2px solid #3dc644;
-    border-bottom: 2px solid #3dc644;
+    border-right: 3px solid #3dc644;
+    border-bottom: 3px solid #3dc644;
+    border-radius: 3px;
 
     transform: rotate(45deg);
   }
@@ -127,16 +128,15 @@
     content: "";
 
     position: absolute;
-    top: 45%;
-    right: 4%;
+    top: 46%;
+    right: 5%;
 
     display: block;
     width: 35px;
     height: 3px;
-    margin: -3px 10px;
 
     background-color: #f25b26;
-    border-radius: 30%;
+    border-radius: 25%;
   }
 
   &--disabled::before {
@@ -149,7 +149,7 @@
 }
 
 .subscription__toggles {
-  padding-top: 30px;
+  padding-top: 22px;
 }
 
 @media (min-width: @tablet) {

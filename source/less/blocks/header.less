@@ -4,6 +4,9 @@
   .image("bg-back-mobile@1x.jpg", #1d2631, 50%, 23.8%); //-30% for page index !
   overflow: hidden;
 
+  &--image {
+    background-position-y: -32%;
+  }
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../img/bg-back-mobile@2x.jpg");
@@ -36,6 +39,7 @@
   }
 
   .header__caption {
+    min-height: 329px;
     padding-top: 70px;
     padding-bottom: 79px;
 
@@ -57,8 +61,9 @@
   }
 
   .header__caption {
+    min-height: 284px;
+    padding: 0 16%;
     padding-top: 65px;
-    padding-bottom: 103px;
 
     font-size: 50px;
     line-height: 58px;

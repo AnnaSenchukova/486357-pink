@@ -193,16 +193,14 @@
   }
 
   .photo-editor__slogan {
-    padding: 0 16.6%;
-
     font-size: 18px;
 
     &:first-of-type {
-      padding-top: 50px;
+      padding-top: 45px;
     }
 
     &:last-of-type {
-      padding-bottom: 70px;
+      padding-bottom: 69px;
     }
   }
 
@@ -249,8 +247,10 @@
   }
 
   .photo-editor__options-label {
-    width: 35px;
+    width: auto;
     height: auto;
+    padding-top: 8px;
+    padding-left: 2px;
 
     fill: @pink;
     opacity: 1;
@@ -265,8 +265,9 @@
   }
 
   .photo-editor__label-svg {
+height: auto;
     &--scale {
-      width: 23px;
+      width: 24px;
     }
 
     &--fill {
@@ -274,7 +275,9 @@
     }
 
     &--brightness {
-      width: 16px;
+      width: 22px;
+      padding-bottom: 6px;
+      padding-left: 6px;
     }
   }
 
@@ -282,9 +285,9 @@
     position: static;
 
     display: block;
-    width: 70%;
-    min-width: 200px;
-    height: 70px;
+    width: 68%;
+    min-width: 202px;
+    height: 69px;
     margin-right: 18px;
     padding-top: 35px;
 
@@ -293,9 +296,23 @@
     }
   }
 
+  .photo-editor__options-toggle {
+    &--scale {
+      left: 72%;
+    }
+
+    &--fill {
+      left: 12%;
+    }
+
+    &--brightness {
+      left: 47%;
+    }
+  }
+
   .photo-editor__options-item:first-child .photo-editor__options-scale {
     height: 56px;
-    padding-top: 20px;
+    padding-top: 19px;
   }
 
   .photo-editor__options-line {
@@ -312,7 +329,7 @@
 
   .photo-editor__button {
     &:first-child {
-      margin-bottom: 25px;
+      margin-bottom: 24px;
     }
   }
 }
@@ -326,12 +343,17 @@
     padding: 0 20.3%;
 
     &:first-of-type {
-      padding-top: 15px;
+      padding-top: 7px;
     }
 
     &:last-of-type {
-      padding-bottom: 70px;
+      padding-bottom: 65px;
     }
+  }
+
+  .photo-editor__form {
+    padding-top: 58px;
+    padding-bottom: 57px;
   }
 
   .photo-editor__image-upload {
@@ -344,7 +366,8 @@
   }
 
   .photo-editor__options-label {
-    width: 48px;
+    width: 69px;
+    padding: 0;
   }
 
   .photo-editor__label-svg {
@@ -361,6 +384,7 @@
     &--brightness {
       width: 31px;
       height: 31px;
+      padding: 0;
     }
   }
 
@@ -370,11 +394,15 @@
 
   .photo-editor__options-toggle {
     &--scale {
-      left: 30%;
+      left: 24%;
     }
 
     &--fill {
-      left: 90%;
+      left: 86%;
+    }
+
+    &--brightness {
+      left: 55%;
     }
   }
 
@@ -386,11 +414,12 @@
   }
 
   .photo-editor__button {
-    width: 44.6%;
+    width: 44%;
     margin: 0;
 
     &:first-child {
       margin-bottom: 0;
+      margin-left: 10px;
     }
   }
 }

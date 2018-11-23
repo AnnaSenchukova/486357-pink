@@ -82,8 +82,8 @@
     display: inline-block;
     vertical-align: middle;
     width: 140px;
-    height: 35px;
-    padding-top: 5px;
+    height: 36px;
+    padding-top: 6px;
 
     .font-bold(12px, 24px, @white);
     text-transform: uppercase;
@@ -145,8 +145,8 @@
 @media (min-width: @tablet) {
   .user-photo__slogan {
     padding: 0 16.6%;
-    padding-top: 100px;
-    padding-bottom: 83px;
+    padding-top: 92px;
+    padding-bottom: 76px;
 
     font-size: 18px;
   }
@@ -155,17 +155,28 @@
     position: relative;
 
     width: 100%;
+    min-height: 155px;
 
-    padding: 30px 28px;
+    padding: 24px 28px;
+    padding-bottom: 22px;
   }
 
   .user-photo__item {
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 
     &:not(.user-photo__item--panorama) {
       width: 48.4%; //width 300px
       max-width: none; //300px
+    }
+
+    &--panorama {
+      margin-bottom: 50px;
+
+      .user-photo__wrapper-inner {
+        padding-bottom: 0;
+        min-height: 121px;
+      }
     }
   }
 
@@ -176,26 +187,31 @@
   }
 
   .user-photo__description {
-    padding-bottom: 20px;
+    padding-bottom: 12px;
   }
 
   .user-photo__likes {
     &::before {
       left: auto;
-      right: 30px;
+      right: 2px;
     }
   }
 
   .user-photo__item--panorama .user-photo__likes {
     position: absolute;
-    top: 30px;
+    top: 25px;
     right: 30px;
 
     width: fit-content;
 
     &::before {
-      right: 0;
+      right: -3px;
+      top: 5px;
     }
+  }
+
+  .user-photo__item--panorama .user-photo__image {
+    min-height: 509px;
   }
 
   .user-photo__likes-text {
@@ -210,23 +226,36 @@
 @media (min-width: @desktop) {
   .user-photo__slogan {
     padding: 0 20.3%;
-    padding-top: 100px;
-    padding-bottom: 93px;
+    padding-top: 92px;
+    padding-bottom: 88px;
 
     font-size: 18px;
   }
 
   .user-photo__item {
-    margin-bottom: 54px;
+    margin-bottom: 53px;
 
     &:not(.user-photo__item--panorama) {
       width: 31.92%; //width 300px
     }
   }
 
-  .user-photo__item--panorama .user-photo__link {
-    &::before {
-      top: 57px;
+  .user-photo__item--panorama {
+    margin-bottom: 50px;
+    .user-photo__link {
+      &::before {
+        top: 54px;
+        right: 10px;
+      }
+    }
+
+    .user-photo__image {
+      min-height: 506px;
+    }
+
+    .user-photo__wrapper-inner {
+      min-height: auto;
+      padding-bottom: 11px;
     }
   }
 }
