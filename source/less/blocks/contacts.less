@@ -55,22 +55,23 @@
   .contacts__wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
 
     padding-bottom: 30px;
 
     &--caption {
       flex-direction: column;
       width: 100%;
-      padding: 55px 0;
+      padding-top: 46px;
+      padding-bottom: 40px;
     }
 
     &--item {
-      width: 50%;
+      width: 48%;
       flex-direction: column;
 
       &:not(:last-child) {
-        padding-bottom: 55px;
+        padding-bottom: 44px;
       }
 
       &:last-child {
@@ -83,20 +84,25 @@
   .contacts__slogan {
     .font-light(40px, 48px);
   }
+
+  .contest__title {
+    padding-bottom: 27px;
+  }
 }
 
 @media (min-width: @desktop) {
   .contacts__wrapper {
-    justify-content: space-around;
+    justify-content: space-between;
+    padding-bottom: 48px;
 
     &--caption {
-      padding-top: 75px;
-      padding-bottom: 65px;
+      padding-top: 65px;
+      padding-bottom: 55px;
     }
 
     &--item {
       justify-content: flex-start;
-      width: 33.33%;
+      width: 32%;
 
       &:not(:last-child) {
         padding-bottom: 0;
@@ -117,6 +123,6 @@
   }
 
   .contacts__title {
-    padding-bottom: 30px;
+    padding-bottom: 20px;
   }
 }

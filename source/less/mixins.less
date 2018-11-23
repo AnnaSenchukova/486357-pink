@@ -65,7 +65,7 @@
   }
 }
 
-.decoration-triangle(@position-center:none, @height-triangle:35px, @height-triangle-tablet:50px, @height-triangle-desktop:90px) {
+.decoration-triangle(@position-center:none, @height-triangle:35px, @height-triangle-tablet:50px, @height-triangle-desktop:73px) {
   &::before {
     content: "";
 
@@ -77,17 +77,22 @@
     width: 0;
     height: 0;
     border-top: @height-triangle solid @white;
-    border-right: 99vw solid transparent;
+    border-right: 100vw solid transparent;
 
     & when not (@position-center = none) {
 
-      border-left: 49vw solid transparent;
-      border-right: 49vw solid transparent;
+      border-left: 50vw solid transparent;
+      border-right: 50vw solid transparent;
       border-top: @height-triangle solid @white;
     }
 
     @media (min-width: @tablet) {
       border-top: @height-triangle-tablet solid @white;
+
+      & when not (@position-center = none) {
+        border-top: 67px solid @white;
+      }
+
     }
 
     @media (min-width: @desktop) {

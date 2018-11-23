@@ -24,6 +24,11 @@
 
   .font-light(24px, 30px, @white);
   text-align: center;
+
+  &--photo {
+    padding-left:20%;
+    padding-right: 20%;
+  }
 }
 
 @media (min-width: @tablet) {
@@ -31,6 +36,10 @@
     position: relative;
 
     .image("bg-back-tablet@1x.jpg", #1d2631, 50%, 27%);
+
+    &--image {
+      background-position-y: 100%;
+    }
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/bg-back-tablet@2x.jpg");
@@ -54,6 +63,11 @@
 
     .image("bg-back-desktop@1x.jpg", #1d2631, 50%, -2.5%);
 
+    &--image {
+      background-position-x: 50%;
+      background-position-y: 12px;
+    }
+
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/bg-back-desktop@2x.jpg");
       background-size: 2560px auto;
@@ -62,10 +76,15 @@
 
   .header__caption {
     min-height: 284px;
-    padding: 0 16%;
+    padding: 0 10%;
     padding-top: 65px;
 
     font-size: 50px;
     line-height: 58px;
+
+   &--photo {
+     padding-left: 16%;
+     padding-right: 16%;
+   }
   }
 }

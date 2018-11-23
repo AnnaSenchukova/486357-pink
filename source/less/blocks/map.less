@@ -33,24 +33,32 @@
 
 @media (min-width: @tablet) {
   .map {
-    height: 375px;
+    height: 373px;
 
-    .image("bg-map-tablet@1x.jpg", @grey, 50%, 73%);
+    .image("bg-map-tablet@1x.jpg", @grey, 50%, 73.6%);
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/bg-map-tablet@2x.jpg");
+    }
+
+    &::after {
+      top:55%;
     }
   }
 
   @media (min-width: @desktop) {
     .map {
-      height: 500px;
+      height: 474px;
 
       .image("bg-map-desktop@1x.jpg", @grey, 50%, 58.5%);
 
       @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
         background-image: url("../img/bg-map-desktop@2x.jpg");
       }
+      &::after {
+        top:52%;
+      }
     }
+
   }
 }
