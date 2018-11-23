@@ -9,7 +9,7 @@
 
   background-color: @grey;
 
- .decoration-triangle();
+  .decoration-triangle();
 }
 
 .subscription__tariffs {
@@ -75,11 +75,11 @@
 }
 
 .subscription__tariff-options {
-  vertical-align: middle;
-  width: 100%; //temporarily
+  width: 100%;
   height: fit-content;
 
   text-align: left;
+  vertical-align: middle;
 
   background-color: @white;
   border: none;
@@ -158,7 +158,6 @@
     padding-bottom: 67px;
   }
 
-
   .subscription__description {
     width: 25%;
     min-width: 155px;
@@ -200,13 +199,13 @@
     }
 
     &--enabled::before {
-      top:9%;
+      top: 9%;
       right: 44%;
     }
 
     &--disabled::before,
     &--disabled::after {
-      top:44%;
+      top: 44%;
       right: 38%;
     }
   }
@@ -224,7 +223,6 @@
 
   .subscription__description {
     width: 25%;
-   // min-width: 234px;
     height: 98px;
 
     font-size: 18px;
@@ -247,20 +245,19 @@
 
     &--hidden {
       width: 25%;
-     // min-width: 233px;
       padding-left: 23px;
 
       font-size: 18px;
     }
 
     &--enabled::before {
-      top:23%;
+      top: 23%;
       right: 47%;
     }
 
     &--disabled::before,
     &--disabled::after {
-      top:50%;
+      top: 50%;
       right: 43%;
     }
   }

@@ -29,7 +29,6 @@
   width: 100%;
   padding-top: 81px;
 
-
   background-color: @grey;
 
   .decoration-triangle();
@@ -113,15 +112,15 @@
 
     &::before {
       bottom: 0;
-
-      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-        background-image: url("../img/iphone-screen-3-tablet@2x.png");
-        background-size: 268px auto;
-      }
     }
 
     &::after {
       display: none;
+    }
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/iphone-screen-3-tablet@2x.png");
+      background-size: 268px auto;
     }
   }
 
@@ -180,7 +179,7 @@
     width: 32%;
     padding-bottom: 0;
 
-   &:last-child {
+    &:last-child {
       padding-bottom: 0;
     }
 

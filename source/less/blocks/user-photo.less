@@ -133,6 +133,7 @@
   text-transform: uppercase;
 
   .icon(15px, 15px, 18%, 0, @image: true, "icon-heart.svg");
+
   &::before {
     background-size: 15px;
   }
@@ -166,8 +167,8 @@
     margin-bottom: 20px;
 
     &:not(.user-photo__item--panorama) {
-      width: 48.4%; //width 300px
-      max-width: none; //300px
+      width: 48.4%;
+      max-width: none;
     }
 
     &--panorama {
@@ -236,26 +237,27 @@
     margin-bottom: 53px;
 
     &:not(.user-photo__item--panorama) {
-      width: 31.92%; //width 300px
+      width: 31.92%;
     }
-  }
 
-  .user-photo__item--panorama {
-    margin-bottom: 50px;
-    .user-photo__link {
-      &::before {
-        top: 54px;
-        right: 10px;
+    .user-photo__item--panorama {
+      margin-bottom: 50px;
+
+      .user-photo__link {
+        &::before {
+          top: 54px;
+          right: 10px;
+        }
       }
-    }
 
-    .user-photo__image {
-      min-height: 506px;
-    }
+      .user-photo__image {
+        min-height: 506px;
+      }
 
-    .user-photo__wrapper-inner {
-      min-height: auto;
-      padding-bottom: 11px;
+      .user-photo__wrapper-inner {
+        min-height: auto;
+        padding-bottom: 11px;
+      }
     }
   }
 }
