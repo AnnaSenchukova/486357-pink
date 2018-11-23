@@ -58,7 +58,6 @@ gulp.task("webp", function () {
 gulp.task("copy", function () {
  return gulp.src([
  "source/fonts/**/*.{woff,woff2}",
- "source/img/**",
  "source/js/**"
  ], {
  base: "source"
@@ -73,7 +72,9 @@ gulp.task("clean", function () {
 gulp.task("build", gulp.series(
 "clean",
 "copy",
-"css"
+"css",
+'webp',
+'images'
 ));
 gulp.task("start", gulp.series(
  "build",
