@@ -181,6 +181,7 @@
 
 .contest__input {
   position: absolute;
+  left: 0;
   z-index: -1;
 
   display: block;
@@ -285,8 +286,6 @@
   .contest__item {
     margin: 0;
     margin-bottom: 52px;
-    padding-left: 60px;
-    padding-right: 60px;
 
     border: 2px solid #e5e5e5;
     border-radius: 3px;
@@ -409,6 +408,8 @@
   .contest__wrapper-inner {
     display: flex;
     flex-wrap: wrap;
+    padding-left: 60px;
+    padding-right: 60px;
 
     &--name {
       padding: 0;
@@ -543,9 +544,7 @@
 
     &--app {
       .contest__item {
-        padding-left: 74px;
-        padding-right: 0;
-        padding-bottom: 0;
+        padding: 0;
       }
 
       .contest__title {
@@ -650,6 +649,7 @@
     &--app {
       padding-top: 39px;
       padding-bottom: 55px;
+      padding-left: 74px;
     }
 
     &--emotion {

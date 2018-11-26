@@ -28,16 +28,20 @@
   border: 3px solid fade(@sapphire, 10%);
   border-radius: 50%;
 
+  &::before {
+    background-size: 100%;
+  }
+
   &--tw {
-    .icon(18px, 19px, 35%, 27.8%, @image:true, "icon-twitter.svg");
+    .icon(19px, 16px, 35%, 33%, @image:true, "icon-twitter.svg");
   }
 
   &--fb {
-    .icon(18px, 19px, 27%, 40%, @image:true, "icon-facebook.svg");
+    .icon(11px, 19px, 23%, 39%, @image:true, "icon-facebook.svg");
   }
 
   &--youtube {
-    .icon(18px, 19px, 33%, 40%, @image:true, "icon-youtube.svg");
+    .icon(15px, 14px, 33%, 40%, @image:true, "icon-youtube.svg");
   }
 
   &:hover {
@@ -64,67 +68,16 @@
       margin-right: 5.8%;
     }
   }
-
-  .social__link {
-    &::before {
-      width: 21px;
-      height: 20px;
-    }
-
-    &--tw,
-    &--fb {
-      &::before {
-        background-size: 21px 20px;
-      }
-    }
-
-    &--tw {
-      &::before {
-        top: 30%;
-      }
-    }
-
-    &--fb {
-      &::before {
-        left: 27%;
-      }
-    }
-
-    &--youtube {
-      &::before {
-        top: 26%;
-        left: 36%;
-
-        background-size: 17px 20px;
-      }
-    }
-  }
 }
 
 @media (min-width: @desktop) {
+  .social {
+    margin-left: 5px;
+  }
+
   .social__item {
     &:not(:last-child) {
       margin-right: 12px;
-    }
-  }
-
-  .social__link {
-    &--tw {
-      &::before {
-        left: 35%;
-      }
-    }
-
-    &--fb {
-      &::before {
-        left: 33%;
-      }
-    }
-
-    &--youtube {
-      &::before {
-        left: 40%;
-      }
     }
   }
 }

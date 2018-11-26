@@ -11,15 +11,17 @@
   <div class="page-header__wrapper container">
     <nav class="page-navigation page-navigation--nojs">
       <a class="page-navigation__logo logo logo--header" aria-label="Логотип промо-сайта для приложения Pink">
-        <svg class="logo__image logo__image--header logo__image--mobile" width="75px" height="23">
+        <svg class="logo__image logo__image--header logo__image--mobile" width="75" height="23">
           <use xlink:href="img/svgsprite.svg#logo-word"></use>
         </svg>
-        <svg class="logo__image logo__image--header logo__image--tablet" width="147px" height="50px">
+        <svg class="logo__image logo__image--header logo__image--tablet" width="147" height="50">
           <use xlink:href="img/svgsprite.svg#logo-with-glasses"></use>
         </svg>
-        <svg class="logo__image logo__image--header logo__image--desktop" width="147px" height="50px">
+        <svg class="logo__image logo__image--header logo__image--desktop" width="147" height="50">
           <use xlink:href="img/svgsprite.svg#logo-with-stars"></use>
-          <use class="logo-stars" xlink:href="img/svgsprite.svg#logo-stars"></use>
+          <svg class="logo__stars">
+            <use class="logo-stars" xlink:href="img/svgsprite.svg#logo-stars"></use>
+          </svg>
         </svg>
       </a>
       <button class="page-navigation__button button button--navigation" type="button">
@@ -441,5 +443,6 @@
 </footer>
 <script src="js/picturefill.js"></script>
 <script src="js/svg4everybody.js"></script>
+<script>svg4everybody();</script>
 </body>
 </html>
