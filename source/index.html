@@ -69,21 +69,21 @@
         </a>
         <ul class="promotion__market">
           <li class="promotion__market-item">
-            <a class="promotion__market-link promotion__market-link--itunes">
+            <a class="promotion__market-link promotion__market-link--itunes" href="https://www.apple.com/ru/itunes/">
             <span class="visually-hidden">
               iTunes
             </span>
             </a>
           </li>
           <li class="promotion__market-item">
-            <a class="promotion__market-link promotion__market-link--android">
+            <a class="promotion__market-link promotion__market-link--android" href="https://play.google.com/store">
             <span class="visually-hidden">
               Android
             </span>
             </a>
           </li>
           <li class="promotion__market-item">
-            <a class="promotion__market-link promotion__market-link--microsoft">
+            <a class="promotion__market-link promotion__market-link--microsoft" href="https://www.microsoft.com/ru-ru/store/apps/windows">
             <span class="visually-hidden">
               Microsoft Store
             </span>
@@ -386,12 +386,14 @@
         </p>
       </div>
     </div>
-    <section class="contacts__map map"></section>
+    <section class="contacts__map map">
+      <div class="map__image"></div>
+    </section>
   </section>
 </main>
 <footer class="page-footer page-footer--hidden">
   <div class="page-footer__wrapper container">
-    <a class="page-footer__logo logo logo--footer">
+    <a class="page-footer__logo logo logo--footer" aria-label="Логотип промо-сайта для приложения Pink">
       <svg class="logo__image logo__image--footer logo__image--mobile" width="147px" height="50px">
         <use xlink:href="img/svgsprite.svg#logo-with-glasses"></use>
       </svg>
@@ -444,5 +446,7 @@
 <script src="js/picturefill.js"></script>
 <script src="js/svg4everybody.js"></script>
 <script>svg4everybody();</script>
+<script src="js/script.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEPgUTh-jVy6qLG93pUjyffkqFJcHVmlI&callback=initMap"></script>
 </body>
 </html>

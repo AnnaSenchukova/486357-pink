@@ -24,6 +24,10 @@
   .font-bold(@line-height: 32px, @color:@white);
   text-align: center;
   text-transform: uppercase;
+
+  &--active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @desktop) {
@@ -58,8 +62,10 @@
     text-transform: capitalize;
 
     &--active {
-      border-bottom: 2px solid @white;
       padding-bottom: 10px;
+
+      border-bottom: 2px solid @white;
+      opacity: 1;
     }
   }
 }
