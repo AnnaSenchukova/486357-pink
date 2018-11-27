@@ -14,7 +14,7 @@ function initMap() {
       position: new google.maps.LatLng(59.936000, 30.321462),
       map: map,
       icon: image,
-      animation: google.maps.Animation.BOUNCE,
+      animation: google.maps.Animation.DROP,
       title: text
   });
 }

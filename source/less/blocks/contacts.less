@@ -51,6 +51,25 @@
 
   .font-light(@color:@pink);
   text-align: center;
+
+  &--post {
+    &:hover,
+    &:focus {
+      color: @sapphire;
+
+      background: linear-gradient(to bottom, @sapphire 0, @sapphire 100%);
+      background-repeat: repeat-x;
+      background-position: 0 96%;
+      background-size: 1px 1px;
+      outline: none;
+    }
+
+    &:active {
+      color: fade(@sapphire, 30%);
+
+      background: none;
+    }
+  }
 }
 
 @media (min-width: @tablet) {
@@ -86,8 +105,12 @@
     .font-light(40px, 48px);
   }
 
-  .contest__title {
-    padding-bottom: 27px;
+  .contacts__description {
+    &--post {
+      &:hover {
+        background-position: 0 100%;
+      }
+    }
   }
 }
 
