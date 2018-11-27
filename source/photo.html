@@ -333,12 +333,12 @@
                     <use xlink:href="img/svgsprite.svg#scale"></use>
                   </svg>
                 </label>
-                <div class="photo-editor__options-scale photo-editor__options-scale--active">
-                  <input class="visually-hidden photo-editor__options-input" id="scale" type="range" min="0" max="100" step="10" value="80">
-                  <div class="photo-editor__options-line">
-                    <div class="photo-editor__options-toggle photo-editor__options-toggle--scale"></div>
-                  </div>
-                </div>
+                <div class="photo-editor__options-scale photo-editor__options-scale--active"
+                     aria-label="Шкала изменения размера изображения">
+
+
+                    <input class="photo-editor__input" id="scale" type="range" min="0" max="100" step="1" value="78">
+                                </div>
               </li>
               <li class="photo-editor__options-item">
                 <label class="photo-editor__options-label" for="fill">
@@ -347,11 +347,13 @@
                     <use xlink:href="img/svgsprite.svg#fill"></use>
                   </svg>
                 </label>
-                <div class="photo-editor__options-scale">
-                  <input class="visually-hidden photo-editor__options-input" id="fill" type="range" min="0" max="100" step="10" value="80">
-                  <div class="photo-editor__options-line">
-                    <div class="photo-editor__options-toggle photo-editor__options-toggle--fill"></div>
-                  </div>
+                <div class="photo-editor__options-scale" aria-label="Шкала интенсивности цвета заливки">
+
+
+
+                    <input class="photo-editor__input" id="fill" type="range" min="0" max="100" step="1" value="13">
+
+
                 </div>
               </li>
               <li class="photo-editor__options-item">
@@ -361,11 +363,11 @@
                     <use xlink:href="img/svgsprite.svg#brightness"></use>
                   </svg>
                 </label>
-                <div class="photo-editor__options-scale">
-                  <input class="visually-hidden photo-editor__options-input" id="brightness" type="range" min="0" max="100" step="10" value="80">
-                  <div class="photo-editor__options-line">
-                    <div class="photo-editor__options-toggle photo-editor__options-toggle--brightness"></div>
-                  </div>
+                <div class="photo-editor__options-scale" aria-label="Шкала изменения контрастности">
+
+
+                    <input class="photo-editor__input" id="brightness" type="range" min="0" max="100" step="1" value="50">
+
                 </div>
               </li>
             </ul>
@@ -373,7 +375,7 @@
               <button class="photo-editor__button button button--active" type="submit">
                 Запостить
               </button>
-              <button class="photo-editor__button button button--disabled" type="button">
+              <button class="photo-editor__button button button--disabled" type="reset">
                 Отмена
               </button>
             </div>
