@@ -138,7 +138,8 @@
   & when not (@link = none) {
     color: @white;
 
-    &:hover {
+    &:hover,
+    &:focus {
       .site-list__link:not(.site-list__link--active) {
         color: @pink;
       }
@@ -152,7 +153,8 @@
   }
 
   & when not (@pseudo-before = none) {
-    &:hover::before {
+    &:hover::before,
+    &:focus::before {
       background-color: @pink;
 
       & when not(@shadow = none) {
@@ -171,7 +173,8 @@
   }
 
   & when not (@pseudo-after = none) {
-    &:hover::after {
+    &:hover::after,
+    &:focus::after {
       content: "";
 
       background-color: @pink;
@@ -187,7 +190,8 @@
   & when not (@svg = none) {
     fill: @white;
 
-    &:hover {
+    &:hover,
+    &:focus {
       fill: @pink;
     }
 
