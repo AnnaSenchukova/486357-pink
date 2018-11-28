@@ -5,7 +5,7 @@ pageNavigation.classList.remove('page-navigation--nojs');
 pageNavigation.classList.add('page-navigation--closed');
 
 navigationButton.addEventListener('click', function () {
-  if(pageNavigation.classList.contains('page-navigation--closed')) {
+  if (pageNavigation.classList.contains('page-navigation--closed')) {
     pageNavigation.classList.add('page-navigation--opened');
     pageNavigation.classList.remove('page-navigation--closed');
   } else {

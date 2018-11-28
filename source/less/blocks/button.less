@@ -9,6 +9,12 @@
 
   background-color: transparent;
 
+  &:disabled {
+    color: @white;
+
+    background-color: #e5e5e5;
+  }
+
   &--navigation {
     position: absolute;
     top: 0;
@@ -125,12 +131,6 @@
       color: fade(@white, 30%);
 
       background-color: #1c9b5e;
-    }
-
-    &--disabled {
-      color: @white;
-
-      background-color: #e5e5e5;
     }
   }
 }

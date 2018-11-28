@@ -28,6 +28,7 @@
 
   .page-navigation--closed .page-navigation__logo {
     background-color: fade(@black, 30%);
+    border-bottom: none;
   }
 
   .page-navigation--closed .page-navigation__list {
@@ -35,7 +36,11 @@
   }
 
   .page-navigation--opened .page-navigation__list {
+    position: relative;
+    z-index: 10;
+
     display: block;
+    margin-bottom: -67px;
   }
 
   .page-navigation--nojs .page-navigation__list {
@@ -90,6 +95,25 @@
 
   .page-navigation--nojs .page-navigation__button {
     display: none;
+  }
+
+  @media (min-width: @tablet) {
+    .page-navigation--opened .page-navigation__list {
+      margin-bottom: -112px;
+    }
+
+    .page-navigation--closed .page-navigation__button {
+      &::before {
+        top: 39%;
+      }
+    }
+
+    .page-navigation--opened .page-navigation__button {
+      &::before,
+      &::after {
+        top: 49%;
+      }
+    }
   }
 }
 

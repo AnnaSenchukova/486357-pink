@@ -140,7 +140,6 @@
   margin: 0 auto;
   padding: 0;
   background-color: transparent;
-  outline: none;
   border: none;
 
   appearance: none;
@@ -201,7 +200,6 @@
     }
   }
 
-
   &::-ms-thumb {
     width: 10px;
     height: 10px;
@@ -214,6 +212,7 @@
     cursor: pointer;
     transition: 0.1s;
 
+    &:focus,
     &:active {
       background-color: @pink;
       outline: none;
@@ -221,49 +220,6 @@
   }
 }
 
-
-/*
-.photo-editor__options-line {
-  position: relative;
-
-  height: 2px;
-  margin: 0 7%;
-
-  background-color: @sapphire;
-}
-
-.photo-editor__options-toggle {
-  position: absolute;
-  top: -300%;
-  left: 50%;
-
-  display: block;
-  width: 14px;
-  height: 14px;
-
-  background-color: @white;
-  border: 2px solid @pink;
-  border-radius: 50%;
-
-  &--scale {
-    left: 79%;
-  }
-
-  &--fill {
-    left: 10%;
-  }
-
-  &--brightness {
-    left: 55%;
-  }
-
-  &:focus,
-  &:active {
-    background-color: @pink;
-    outline: none;
-  }
-}
-*/
 .photo-editor__button-wrapper {
   width: 100%;
 }
@@ -341,21 +297,15 @@
   .photo-editor__options-label {
     width: 30px;
     height: auto;
-    //padding-top: 8px;
-    //padding-left: 2px;
 
     fill: @pink;
     opacity: 1;
 
-    &:hover:not(.photo-editor__options-label--active) {
+    &:hover:not(.photo-editor__options-label--active),
+    &:focus:not(.photo-editor__options-label--active) {
       opacity: 1;
     }
   }
-
-  /*.photo-editor__options-item:first-child .photo-editor__options-label {
-    align-items: flex-start;
-  }
-  */
 
   .photo-editor__label-svg {
     &--scale {
@@ -371,8 +321,6 @@
     &--brightness {
       width: 17px;
       height: 17px;
-      //padding-bottom: 6px;
-      //padding-left: 6px;
     }
   }
 
@@ -387,41 +335,10 @@
     padding: 0;
     padding-bottom: 19px;
 
-
     &--active {
       transform: none;
     }
   }
-
-  .photo-editor__options-item:first-child .photo-editor__options-scale {
-    //height: 56px;
-    //padding-top: 19px;
-  }
-
-/*
-  .photo-editor__options-toggle {
-    &--scale {
-      left: 72%;
-    }
-
-    &--fill {
-      left: 12%;
-    }
-
-    &--brightness {
-      left: 47%;
-    }
-  }
-
-
-
-  .photo-editor__options-line {
-    width: auto;
-    min-width: 100%;
-    margin: 0;
-    margin-top: 9px;
-  }
-  */
 
   .photo-editor__button-wrapper {
     justify-content: flex-start;
@@ -530,7 +447,6 @@
 
     &:first-child {
       margin-bottom: 0;
-      //margin-left: 10px;
     }
   }
 }
