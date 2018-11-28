@@ -135,7 +135,7 @@
       content: "";
 
       position: absolute;
-      bottom: 0;
+      top: 0;
       left: 0;
 
       display: none;
@@ -151,7 +151,7 @@
     &::after {
       width: 11px;
       height: 22px;
-      margin: 13px 12px;
+      margin: 4px 12px;
 
       border-right: 2px solid @pink;
       border-bottom: 2px solid @pink;
@@ -324,6 +324,7 @@
 
       .contest__title {
         align-self: center;
+        max-width: 16%;
         height: inherit;
         margin-bottom: 52px;
         padding: 0;
@@ -337,7 +338,7 @@
       .contest__field {
         flex-grow: 2;
         width: auto;
-        min-width: 83%;
+        min-width: 84%;
         margin-bottom: 52px;
 
         &:last-of-type {
@@ -453,6 +454,7 @@
         order: 0;
         margin-bottom: 10px;
         padding-left: 16px;
+        padding-right: 62px;
       }
 
       &::before {
@@ -539,6 +541,10 @@
 
       .contest__field {
         min-width: 75%;
+      }
+
+      .contest__title {
+        max-width: 25%;
       }
     }
 

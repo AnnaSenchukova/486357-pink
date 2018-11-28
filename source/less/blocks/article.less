@@ -18,7 +18,7 @@
       content: "24";
 
       position: absolute;
-      top: 59%;
+      top: 114px;
       left: 40px;
       z-index: 10;
 
@@ -32,25 +32,21 @@
       background-color: transparent;
       border: 13px solid @pink;
       border-radius: 50%;
-
-      transform: translate(0, -50%);
     }
 
     &::after {
       content: "";
 
       position: absolute;
-      top: 53%;
+      top: 58px;
       left: 20px;
 
       display: block;
       width: 298px;
       height: 345px;
 
-      .image("icon-timer.svg", @x:0, @y:50%);
+      .image("icon-timer.svg", @x:0, @y:0);
       background-size: 80%;
-
-      transform: translate(0, -50%);
     }
   }
 
@@ -88,7 +84,6 @@
     padding-bottom: 114px;
 
     &::before {
-      top: 53%;
       left: 33px;
 
       width: 253px;
@@ -102,7 +97,7 @@
     }
 
     &::after {
-      top: 48%;
+      top: 45px;
       left: 10px;
 
       background-size: 100%;
